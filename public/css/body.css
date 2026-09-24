@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.background {
+.Background {
     display: flex;
     background-image: url("../imagens/background-login.jpg");
     background-size: cover;
@@ -17,9 +17,25 @@
     align-items: center;
 }
 
-.card {
+.Card {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     height: 80%;
     background-color: white;
     border-radius: 10px;
+    justify-content: center;
+    gap: 20px
+}
+
+.Logo {
+    align-items: center;
+    width: 25%;
+    height: auto;
+    align-self: center;
+}
+
+.TituloLogin {
+    font-size: 50px;
+    text-align: center;
 }
