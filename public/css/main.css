@@ -1,0 +1,33 @@
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    align-self: center;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+:root{
+    --fonte-principal: 'Verdana', sans-serif;
+}
+
+.texto_pop_up{
+    font-family: var(--fonte-principal);
+    color: black;
+}
+.btn_postar{
+    width: 20%;
+    height: 10%;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+}
