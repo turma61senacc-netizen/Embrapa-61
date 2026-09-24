@@ -1,0 +1,15 @@
+* {
+    font-family: Verdana;
+}
+
+.edicao_de_acao_cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.postar_acao_topo {
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
