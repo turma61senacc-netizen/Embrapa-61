@@ -1,0 +1,1 @@
+Essa pasta é destinada as telas (HTML/PHP que constroem o sistema e são mostradas para o usuário)
