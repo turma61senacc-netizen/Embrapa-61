@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="pesquisador.css">
 </head>
 <body>
-    <fieldset>
+    <div class="edicao">
         <div class="edicao_de_acao_cabecalho">
             <div class="postar_acao_topo">
                 <label for="titulo_acao" class="titulo">Nome:</label><br>
-                <input type="text" id="titulo_acao" name="titulo_acao" placeholder="Nome da Ação" maxlength="20" size="50" required><br>
+                <input type="text" id="titulo_acao" placeholder="Nome da Ação" required><br>
             </div>
             <div class="postar_acao_topo">
                 <label for="nome_acao" class="titulo">Pesquisador:</label><br>
-                <input type="text" id="nome_acao" name="nome_acao" placeholder="Nome do Pesquisador" maxlength="12" size="50" required><br>
+                <input type="text" id="nome_acao" placeholder="Nome do Pesquisador" required><br>
             </div>
             <div class="postar_acao_topo">
                 <label for="data_acao" class="titulo">Data de Execução:</label><br>
-                <input type="date" id="data_acao" name="date" placeholder="00/00/0000" maxlength="10" size="20" required>
+                <input type="date" id="data_acao" placeholder="00/00/0000" required>
             </div>
         </div>
     
@@ -28,9 +28,20 @@
             id="descricao"
             name="descricao"
             rows="5"
-            cols="126"
             placeholder="Digite a descrição da sua ação aqui...">
         </textarea>
-    </fieldset>
+
+        <label for="acao">Ação:</label>
+        <input type="text" id="acao">
+
+        <label for="url">Comprovante URL:</label>
+        <input type="text" id="url">
+
+        <label>Comprovantes:</label>
+
+        <label for="arquivos" class="comprovantes"></label>
+
+        <input type="file" id="arquivos" multiple accept>
+    </div>
 </body>
 </html>

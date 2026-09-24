@@ -1,12 +1,20 @@
 * {
     font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.edicao {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .edicao_de_acao_cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
 
 .postar_acao_topo {
@@ -16,4 +24,10 @@
 
 .titulo {
     font-weight: bold;
+    width: 100%;
+}
+
+#descricao {
+    width: 95%;
+    padding: 2%;
 }
