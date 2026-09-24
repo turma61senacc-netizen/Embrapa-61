@@ -1,13 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.TelaPin{
-    background-image: url("../imagens/background-login.png");
+
+.background {
+    display: flex;
+    background-image: url("../imagens/background-login.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
 }
