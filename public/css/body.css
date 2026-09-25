@@ -25,7 +25,7 @@
     background-color: white;
     border-radius: 7px;
     gap: 20px;
-    padding: 5%;
+    padding: 4%;
 }
 
 .Logo {
@@ -40,7 +40,7 @@
     font-family: 'Verdana', sans-serif;
     font-weight: bold;
     color: #2C2B2B;
-    margin-top: 5%;
+    margin-top: 3.5%;
 }
 
 .ParagrafoLogin {
@@ -64,9 +64,51 @@
     margin: 0 auto;
     padding: 2%;
     padding-left: 9%;
-    margin-top: 2%;
+    margin-top: 1%;
     border-color: #686868;
     border-style: solid;
     border-width: 0.5px;
     font-family: 'Verdana', sans-serif;
+}
+
+.FuncaoLogin {
+    font-size: 12px;
+    font-family: 'Verdana', sans-serif;
+    margin: 0 auto;
+    width: 55%;
+    margin-top: -2%;
+    /* font-weight: bold; */
+    color: black;
+}
+
+.DropdownLogin {
+    height: 7%;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: -3%;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    border-style: solid;
+    border-radius: 4px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #686868;
+}
+
+.BotaoLogin {
+    background-color: #058914;
+    border: none;
+    height: 15%;
+    width: 55%;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.BotaoLogin:hover {
+    background-color: #04620F;
+    transition: 0.5s;
 }

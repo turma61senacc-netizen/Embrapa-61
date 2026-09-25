@@ -12,7 +12,15 @@
             <img class="Logo" src="public/imagens/embrapa-logo-gado-de-corte-sem-fundo.png">
             <h1 class="TituloLogin">Bem-Vindo</h1>
             <p class="ParagrafoLogin">Por favor, preencha os campos com seus dados.</p>
-            <input class="InputLogin" placeholder="Digite seu E-mail aqui.">
+            <input class="InputLogin" type="email" placeholder="Digite seu E-mail aqui.">
+            <label class="FuncaoLogin" for="funcoes">Selecione sua função:</label>
+            <select class="DropdownLogin" id="funcoes" name="funcoes">
+                <option value="adm">Administrador</option>
+                <option value="pesquisador">Pesquisador</option>
+                <option value="validador">Validador</option>
+                <option value="comite">Comitê</option>
+            </select>
+            <button class="BotaoLogin">ENTRAR</button>
         </div>
     </main>
 </body>
