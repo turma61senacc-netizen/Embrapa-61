@@ -191,3 +191,112 @@ dialog::backdrop {
 .pesquisador-pop--check{
     height: 65%;
 }
+
+.login-background {
+    display: flex;
+    background-image: url("../imagens/fundo_login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    border-radius: 7px;
+    gap: 20px;
+    padding: 4%;
+}
+
+.login-logo {
+    width: 25%;
+    height: auto;
+    align-self: center;
+}
+
+.login-titulo {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    color: #2C2B2B;
+    margin-top: 3.5%;
+}
+
+.login-paragrafo {
+    font-size: 15px;
+    
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-weight: lighter;
+    color: #686868;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.login-input {
+    background-image: url(../imagens/icone_usuario.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    background-size: 10% auto;
+    height: 15%;
+    width: 55%;
+    margin: 0 auto;
+    padding: 2%;
+    padding-left: 9%;
+    margin-top: 1%;
+    border-color: #686868;
+    border-style: solid;
+    border-width: 0.5px;
+    font-family: 'Verdana', sans-serif;
+}
+
+.login-funcao {
+    font-size: 12px;
+    font-family: 'Verdana', sans-serif;
+    margin: 0 auto;
+    width: 55%;
+    margin-top: -2%;
+    /* font-weight: bold; */
+    color: black;
+}
+
+.login-dropdown {
+    height: 7%;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: -3%;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    border-style: solid;
+    border-radius: 4px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #686868;
+}
+
+.login-botao {
+    background-color: #058914;
+    border: none;
+    height: 15%;
+    width: 55%;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-botao:hover {
+    background-color: #04620F;
+    transition: 0.5s;
+}
