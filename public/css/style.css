@@ -28,30 +28,24 @@
     border-radius: 7px;
     gap: 20px;
     padding: 4%;
+    position: relative;
 }
 
 .Logo {
     width: 25%;
     height: auto;
     align-self: center;
+    margin-bottom: 5%;
 }
 
 .TituloPIN {
-    font-size: 30px;
+    font-size: 18px;
     text-align: center;
     font-family: 'Verdana', sans-serif;
     font-weight: bold;
     color: #2C2B2B;
     margin-top: 5%;
-}
-
-.ParagrafoPIN {
-    font-size: 15px;
-    text-align: center;
-    font-family: 'Verdana', sans-serif;
-    font-weight: lighter;
-    color: #686868;
-    max-width: 40%;
+    margin-bottom: 1%;
 }
 
 .InputPIN {
@@ -59,28 +53,39 @@
     width: 55%;
     margin: 2%;
     padding: 2%;
-    color: #B3B3B3;
+    color: #020202;
     border-color: #D0D0D0;
     border-style: solid;
     border-width: 0.5px;
     font-family: 'Verdana', sans-serif;
+    font-size: 20px;
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .BotaoPIN {
     background-color: #058914;
     border: none;
-    height: 15%;
-    width: 55%;
+    height: 10%;
+    width: 48%;
     margin: 0 auto;
     color: white;
     font-family: 'Verdana', sans-serif;
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    margin-bottom: 5%;
 }
 
 .BotaoPIN:hover {
     background-color: #04620F;
     transition: 0.5s;
+}
+
+#IconeVoltar{
+    background-color: white;
+    border: none;
+    position: relative;
+    left: -52%;
+    top: -10%;
 }
