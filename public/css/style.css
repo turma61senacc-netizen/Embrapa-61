@@ -38,7 +38,7 @@
     margin-bottom: 5%;
 }
 
-.TituloPIN {
+.TituloPin {
     font-size: 18px;
     text-align: center;
     font-family: 'Verdana', sans-serif;
@@ -48,7 +48,7 @@
     margin-bottom: 1%;
 }
 
-.InputPIN {
+.InputPin {
     height: 15%;
     width: 55%;
     margin: 2%;
@@ -63,7 +63,7 @@
     margin-bottom: 1%;
 }
 
-.BotaoPIN {
+.botao-verificar-pin {
     background-color: #058914;
     border: none;
     height: 10%;
@@ -82,7 +82,7 @@
     transition: 0.5s;
 }
 
-#IconeVoltar{
+#botao-voltar-menu{
     background-color: white;
     border: none;
     position: relative;
