@@ -397,3 +397,257 @@ dialog::backdrop {
 .administrador-main--caixa_comparacao span { 
     color: #16b94e; 
 }
+
+* {
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.editar-acao-centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editar-acao-edicao {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.editar-acao-cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.editar-acao-postar_acao_topo {
+    margin-right: 1%;
+    margin-bottom: 1%;
+    width: 30%;
+}
+
+.editar-acao-titulo {
+    font-weight: bold;
+    width: 100%;
+}
+
+#editar-acao-descricao {
+    width: 100%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.editar-acao-edicao {
+    width: 95%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    padding: 3% 3%;
+    margin-bottom: 1%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+#editar-acao-campo_arquivos {
+    display: none;
+}
+
+.editar-acao-caixa_comprovantes {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.editar-acao-caixa_comprovantes:hover {
+    background-color: #f5f5f5;
+}
+
+.editar-acao-botoes_edicao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.editar-acao-botao_cancelar,
+.editar-acao-botao_atualizar {
+    width: 225px;
+    height: 38px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.editar-acao-botao_cancelar {
+    background-color: white;
+    border: 2px solid #CD0000;
+    color: #CD0000;
+}
+
+.editar-acao-botao_cancelar:hover {
+    background-color: #CD0000;
+    color: white;
+}
+
+.editar-acao-botao_atualizar {
+    background-color: #172983;
+    border: 2px solid #172983;
+    color: white;
+}
+
+.editar-acao-botao_atualizar:hover {
+    background-color: #058914;
+    border-color: #058914;
+}
+
+#editar-acao {
+    width: 100%;
+    padding: 1%;
+}
+
+#editar-acao-url {
+    width: 100%;
+    padding: 1%;
+}
+
+#editar-acao-arquivos {
+    width: 24%;
+    padding: 0.2%;
+}
+
+.editar-acao-comprovante {
+    margin: 0 0 1%;
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.editar-acao-botao-upload {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    font-size: 13px;
+    color: #fff;
+    background: #3b74ff;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 9.3%;
+}
+
+.editar-acao-botao-upload:hover {
+    background: #2f62e0;
+}
+
+.editar-acao-botao-upload:focus-visible,
+#arquivos:focus-visible + .comprovantes {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.editar-acao-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7%;
+    min-height: 10%;
+    padding: 1%;
+    border: 1px solid #000;
+    border-radius: 12px
+}
+
+.editar-acao-arquivo {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 15%;
+    padding: 0.5% 1%;
+    background: #eff0f2;
+    border-radius: 5%;
+}
+
+.editar-acao-arquivo-icone {
+    flex-shrink: 0;
+    width: 15%;
+    height: 80%;
+}
+
+.editar-acao-arquivo-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.editar-acao-arquivo-nome {
+    font-size: 13px;
+    line-height: 1.2;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.editar-acao-arquivo-tamanho {
+    font-size: 11px;
+    line-height: 1.2;
+    color: #888;
+}
+
+.editar-acao-arquivo-acoes {
+    display: flex;
+    gap: 4px;
+}
+
+.editar-acao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #808080;
+    cursor: pointer;
+}
+
+.editar-acao svg {
+    width: 22px;
+    height: 22px;
+}
+
+.editar-acao:hover {
+    color: #333;
+}
+
+.editar-acao:focus-visible {
+    outline: 2px solid #3b74ff;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .arquivo {
+        width: 100%;
+    }
+}
