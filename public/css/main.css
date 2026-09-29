@@ -1,3 +1,14 @@
+:root{
+    --fonte-principal: 'Verdana', sans-serif;
+    --azul_btn: #102174;
+    --fundo_circulo: #C4E1FF;
+    --branco: #ffffff;
+    --preto: rgb(0,0,0);
+
+}
+
+
+
 dialog {
     border: none;
     border-radius: 8px;
@@ -8,26 +19,37 @@ dialog {
     text-align: center;
     align-self: center;
 }
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-}
 
-:root{
-    --fonte-principal: 'Verdana', sans-serif;
+dialog::backdrop {
+    background: var(--preto);
 }
 
 .texto_pop_up{
     font-family: var(--fonte-principal);
-    color: black;
+    color: var(--preto);
+}
+.texto_btn{
+    font-family: var(--fonte-principal);
+    color: var(--branco);
 }
 .btn_postar{
-    width: 20%;
-    height: 10%;
+    
+    width: 40%;
+    height: 30%;
+    border-radius: 10%;
+    background-color: var(--azul_btn);
+
 }
 
-div{
+.layout_div{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
     align-items: center;
+}
+
+.circulo_confirmado{
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-color:var(--fundo_circulo);
 }
