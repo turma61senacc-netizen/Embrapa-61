@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/css/main.css">
+</head>
+<body>
+    <div class="editar-acao-centralizar">
+        <div class="editar-acao-edicao">
+            <div class="editar-acao-cabecalho">
+                <div class="editar-acao-postar_acao_topo">
+                    <label for="editar-acao-titulo_acao" class="editar-acao-titulo">Nome:</label><br>
+                    <input type="text" id="editar-acao-titulo_acao" placeholder="Nome da Ação" required><br>
+                </div>
+                <div class="editar-acao-postar_acao_topo">
+                    <label for="editar-acao-nome_acao" class="editar-acao-titulo">Pesquisador:</label><br>
+                    <input type="text" id="editar-acao-nome_acao" placeholder="Nome do Pesquisador" required><br>
+                </div>
+                <div class="editar-acao-postar_acao_topo">
+                    <label for="editar-acao-data_acao" class="editar-acao-titulo">Data de Execução:</label><br>
+                    <input type="date" id="editar-acao-data_acao" placeholder="00/00/0000" required>
+                </div>
+            </div>
+        
+            <label for="editar-acao-descricao" class="editar-acao-titulo">Descrição:</label><br>
+            <textarea
+                id="editar-acao-descricao"
+                name="descricao"
+                rows="5"
+                placeholder="Digite a descrição da sua ação aqui...">
+            </textarea>
+    
+            <label for="editar-acao">Ação:</label>
+            <input type="text" id="editar-acao">
+    
+            <label for="editar-acao-url">Comprovante URL:</label>
+            <input type="text" id="editar-acao-url">
+    
+            <h2 class="editar-acao-comprovante">Comprovantes:</h2>
+
+            <label class="editar-acao-botao-upload" for="editar-acao-arquivos">Adicionar arquivos</label>
+            <input type="file" id="editar-acao-arquivos" multiple hidden>
+
+            <div class="editar-acao-lista" id="editar-acao-listaArquivos"></div>
+            
+            <div class="editar-acao-botoes_edicao">
+                <button class="editar-acao-botao_cancelar">Cancelar</button>
+                <button class="editar-acao-botao_atualizar">Atualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../public/js/script-pesquisador-edicao.js"></script>
+</body>
+</html>
