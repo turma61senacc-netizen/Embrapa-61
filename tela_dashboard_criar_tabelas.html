@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
-    <main class="ContainerPrincipalDashboard">
-        <div class="administrador-tabela--total-ações">
-            <h1>Total de ações realizadas:</h1>
-            <p>35</p>
-        </div>
-        <div class="acoes-aprovadas">
 
-        </div>
-        <div class="acoes-analise">
-            
-        </div>
-        <div class="acoes-analise">
-            
-        </div>
-    </main>
-    
+<body class="body">
+
+    <div class="ContainerPrincipalDashboard">
+
+        <h1 class="titulo-dashboard-topo">Dashboard</h1>
+
+        <main class="cabecalho-total-de-acoes">
+
+            <div class="letras caixa-azul">
+                <h1 class="titulo-caixa">
+                    Total de ações<br>
+                    realizadas:
+                </h1>
+
+                <p class="numero-grande">220</p>
+
+                <div class="espacador-invisivel"></div>
+            </div>
+
+            <div class="letras caixa-verde">
+                <div class="cabecalho-aprovadas">
+                    <img src="image3.png" alt="aprovadas" class="icone-imagem">
+                    <h1 class="titulo-caixa">Aprovadas</h1>
+                </div>
+
+                <p class="numero-grande">110</p>
+                <p class="texto-porcentagem">50%</p>
+
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="letras caixa-azul-claro">
+                <div class="cabecalho-analise">
+                    <img src="public/imagens/image.png" alt="relogio" class="icone-imagem">
+                    <h1 class="titulo-caixa">Em análise</h1>
+                </div>
+
+                <p class="numero-grande">55</p>
+                <p class="texto-porcentagem">25%</p>
+
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" style="width: 25%;"></div>
+                </div>
+            </div>
+
+            <div class="letras caixa-laranja">
+                <div class="cabecalho-negadas">
+                    <img src="image2.png" alt="negadas" class="icone-imagem">
+                    <h1 class="titulo-caixa">Negadas</h1>
+                </div>
+
+                <p class="numero-grande">55</p>
+                <p class="texto-porcentagem">25%</p>
+
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" style="width: 25%;"></div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
 </body>
+
 </html>
