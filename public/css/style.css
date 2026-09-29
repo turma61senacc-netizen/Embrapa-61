@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.background {
+.Background {
     display: flex;
     background-image: url("../imagens/background-login.jpg");
     background-size: cover;
@@ -17,9 +17,70 @@
     align-items: center;
 }
 
-.card {
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 80%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
+    gap: 20px;
+    padding: 4%;
+}
+
+.Logo {
+    width: 25%;
+    height: auto;
+    align-self: center;
+}
+
+.TituloPIN {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    color: #2C2B2B;
+    margin-top: 5%;
+}
+
+.ParagrafoPIN {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-weight: lighter;
+    color: #686868;
+    max-width: 40%;
+}
+
+.InputPIN {
+    height: 15%;
+    width: 55%;
+    margin: 2%;
+    padding: 2%;
+    color: #B3B3B3;
+    border-color: #D0D0D0;
+    border-style: solid;
+    border-width: 0.5px;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+}
+
+.BotaoPIN {
+    background-color: #058914;
+    border: none;
+    height: 15%;
+    width: 55%;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.BotaoPIN:hover {
+    background-color: #04620F;
+    transition: 0.5s;
 }
