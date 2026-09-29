@@ -4,7 +4,7 @@
     --fundo_circulo: #C4E1FF;
     --branco: #ffffff;
     --preto: rgb(0,0,0);
-
+    --fundo_preto_opaco: rgba(0,0,0,0.5);
 }
 
 
@@ -18,26 +18,38 @@ dialog {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     text-align: center;
     align-self: center;
+    overflow-y: hidden;
 }
 
 dialog::backdrop {
-    background: var(--preto);
+    background: var(--fundo_preto_opaco);
 }
 
 .texto_pop_up{
     font-family: var(--fonte-principal);
     color: var(--preto);
+    margin: 0px;
 }
 .texto_btn{
     font-family: var(--fonte-principal);
     color: var(--branco);
+    font-size: 20px;
 }
+
+.tamanho_h1{
+    font-size: 30px;
+}
+
+.tamanho_p{
+    font-size: 20px ;
+}
+
 .btn_postar{
-    
-    width: 40%;
+    width: 20%;
     height: 30%;
-    border-radius: 10%;
+    border-radius: 30%;
     background-color: var(--azul_btn);
+    display: inline-block;
 
 }
 
@@ -45,6 +57,13 @@ dialog::backdrop {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 30%;
+}
+.layout_div_circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
 }
 
 .circulo_confirmado{
@@ -52,4 +71,11 @@ dialog::backdrop {
     height: 220px;
     border-radius: 100%;
     background-color:var(--fundo_circulo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+.espaco_div{
+    margin-bottom: 50px;
 }
