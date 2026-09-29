@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    padding: 5px;
+}
+
+.administrador-main--caixa_resumo_rapido {
+    width: 575px;
+    height: 412px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    padding: 12px 17px;
+}
+
+.administrador-main--caixa_resumo_rapido > h1 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 39px;
+}
+
+.administrador-main--caixa_maior_volume,
+.administrador-main--caixa_menor_volume,
+.administrador-main--caixa_comparacao {
+    width: 100%;
+    height: 88px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    margin-bottom: 26px;
+
+    position: relative;
+
+    padding-left: 98px;
+    padding-top: 12px;
+}
+
+.administrador-main--caixa_maior_volume h1,
+.administrador-main--caixa_menor_volume h1,
+.administrador-main--caixa_comparacao h1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.administrador-main--caixa_maior_volume p,
+.administrador-main--caixa_menor_volume p,
+.administrador-main--caixa_comparacao p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.administrador-main--caixa_maior_volume br,
+.administrador-main--caixa_menor_volume br,
+.administrador-main--caixa_comparacao br {
+    display: none;
+}
+
+.administrador-main--caixa_maior_volume h1,
+.administrador-main--caixa_menor_volume h1,
+.administrador-main--caixa_comparacao h1 {
+    margin-bottom: 5px;
+}
+
+.administrador-main--imagem_caixa_maior_volume,
+.administrador-main--imagem_caixa_menor_volume,
+.administrador-main--imagem_caixa_comparacao {
+    position: absolute;
+
+    width: 66px;
+    height: 66px;
+
+    left: 12px;
+    top: 10px;
+
+    border-radius: 9px;
+
+    object-fit: contain;
+}
+
+.administrador-main--imagem_caixa_maior_volume {
+    background-color: #67c77b;
+}
+
+.administrador-main--imagem_caixa_menor_volume {
+    background-color: #ffb36d;
+}
+
+.administrador-main--imagem_caixa_comparacao {
+    background-color: #83bcec;
+}
+
+.administrador-main--caixa_comparacao span {
+    color: #16b94e;
+}
