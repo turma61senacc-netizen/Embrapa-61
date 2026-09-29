@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../../public/css/estilo2.css">
+    <script src="../../../public/js/java.js"></script>
+</head>
+
+<body class="body">
+
+    <div class="ContainerPrincipalDashboard">
+
+        <div class="topo-dashboard-flex">
+            <div class="espacador-flex-esquerdo"></div>
+            <h1 class="titulo-dashboard-topo">Dashboard</h1>
+            
+            <div class="container-seletor-ano">
+                <button id="btn-seletor-ano" class="botao-calendario-ano"><img src="../../../public/imagens/icone-calendaria.png" alt="Calendário" class="icone-calendario"><span id="ano-atual-texto">2026</span><img src="../../../public/imagens/icone-cetaBaixo.png" alt="Seta" class="icone-seta-abaixo"></button>
+
+                <div id="modal-selecao-ano" class="caixa-modal-ano elemento-oculto">
+                    <p class="titulo-selecionar-ano">Selecionar Ano</p>
+                    
+                    <div class="grade-botoes-anos">
+                        <button class="opcao-ano-btn" data-ano="2025">2025</button>
+                        <button class="opcao-ano-btn ativo" data-ano="2026">2026</button>
+                        <button class="opcao-ano-btn" data-ano="2027">2027</button>
+                        <button class="opcao-ano-btn" data-ano="2028">2028</button>
+                        <button class="opcao-ano-btn" data-ano="2029">2029</button>
+                        <button class="opcao-ano-btn" data-ano="2030">2030</button>
+                    </div>
+
+                    <div class="botoes-modal-acoes">
+                        <button id="btn-cancelar-ano" class="btn-acao-modal cancelar">Cancelar</button>
+                        <button id="btn-aplicar-ano" class="btn-acao-modal aplicar">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="cabecalho-total-de-acoes">
+
+            <div class="letras caixa-azul">
+                <h1 class="titulo-caixa">
+                    Total de ações<br>
+                    realizadas:
+                </h1>
+                <p class="numero-grande" id="txt-total">35</p>
+                <div class="espacador-invisivel"></div>
+            </div>
+
+            <div class="letras caixa-verde">
+                <div class="cabecalho-aprovadas">
+                    <img src="../../../public/imagens/icone-aceito.png" alt="aprovadas" class="icone-imagem">
+                    <h1 class="titulo-caixa">Aprovadas</h1>
+                </div>
+                <p class="numero-grande" id="txt-aprovadas">15</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-aprovadas">42%</p>
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" id="barra-aprovadas" style="width: 42%;"></div>
+                </div>
+            </div>
+
+            <div class="letras caixa-azul-claro">
+                <div class="cabecalho-analise">
+                    <img src="../../../public/imagens/icone-relogio.png" alt="relogio" class="icone-imagem">
+                    <h1 class="titulo-caixa">Em análise</h1>
+                </div>
+                <p class="numero-grande" id="txt-analise">15</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-analise">42%</p>
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" id="barra-analise" style="width: 42%;"></div>
+                </div>
+            </div>
+
+            <div class="letras caixa-laranja">
+                <div class="cabecalho-negadas">
+                    <img src="../../../public/imagens/icone-x.png" alt="negadas" class="icone-imagem">
+                    <h1 class="titulo-caixa">Negadas</h1>
+                </div>
+                <p class="numero-grande" id="txt-negadas">5</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-negadas">15%</p>
+                <div class="barra-progresso-fundo">
+                    <div class="barra-progresso-preenchida" id="barra-negadas" style="width: 15%;"></div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
