@@ -300,8 +300,252 @@ dialog::backdrop {
     background-color: #04620F;
     transition: 0.5s;
 }
+.criar-acao-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 32px;
+    box-sizing: border-box;
+}
 
-/* css do resumo rapido */
+.criar-acao-titulo {
+    text-align: center;
+    font-family: verdana;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.criar-acao-card {
+    width: 100%;
+    min-height: 408px;
+    border: 1px solid #d1d1d1;
+    border-radius: 12px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.criar-acao-linha-superior {
+    display: flex;
+    align-items: flex-start;
+    gap: 38px;
+}
+
+.criar-acao-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.criar-acao-campo label {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.criar-acao-nome {
+    flex: 1;
+    font-family: verdana;
+}
+
+.criar-acao-data {
+    width: 180px;
+    font-family: verdana;
+}
+
+.criar-acao-campo input,
+.criar-acao-campo textarea {
+    font-family: verdana;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+#criar-acao-nome {
+    height: 28px;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: verdana;
+}
+
+#criar-acao-nome::placeholder {
+    color: #b8b8b8;
+    font-weight: 600;
+}
+
+#criar-acao-data {
+    height: 28px;
+    width: 100%;
+    padding: 0 8px;
+    font-size: 12px;
+    font-family: verdana;
+}
+
+.criar-acao-descricao {
+    margin-top: 20px;
+    width: 100%;
+    font-family: verdana;
+}
+
+#criar-acao-descricao {
+    width: 100%;
+    height: 85px;
+    padding: 10px;
+    resize: none;
+    text-align: center;
+    font-size: 12px;
+    font-family: verdana;
+}
+
+#criar-acao-descricao::placeholder {
+    color: #b8b8b8;
+    font-weight: 600;
+}
+
+.criar-acao-campo input:focus,
+.criar-acao-campo textarea:focus {
+    box-shadow:0 1px 4px #5FBCE4;
+}
+
+.criar-acao-formulario {
+    width: 100%;
+}
+
+.criar-acao-campo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.criar-acao-campo label {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: verdana;
+    margin-bottom: 5px;
+}
+
+.criar-acao-acao select {
+    width: 100%;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #b8b8b8;
+    font-family: verdana;
+    font-size: 12px;
+}
+
+.criar-acao-url input {
+    width: 100%;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-family: verdana;
+    font-size: 12px;
+}
+
+.criar-acao-url input::placeholder {
+    color: #b8b8b8;
+    font-weight: 600;
+}
+
+.criar-acao-upload {
+    width: 100%;
+    height: 40px;
+    border: 1px dashed #888;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: verdana;
+}
+
+.criar-acao-upload img {
+    width: 24px;
+    height: 24px;
+}
+
+.criar-acao-upload span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-family: verdana;
+}
+
+.criar-acao-upload small {
+    font-size: 10px;
+    font-family: verdana;
+    color: #555;
+}
+
+.criar-acao-botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.criar-acao-cancelar {
+    width: 142px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #e00000;
+    border: 1px solid #e00000;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.criar-acao-cancelar:hover {
+    background-color: #e00000;
+    color: #ffffff;
+    border: 1px solid #e00000;
+}
+
+.criar-acao-postar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.criar-acao-postar-area p {
+    margin: 0 0 3px;
+    color: #182c7c;
+    font-size: 8px;
+}
+
+.criar-acao-postar {
+    width: 142px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #182c7c;
+    color: #ffffff;
+    border: 1px solid #182c7c;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.criar-acao-postar:hover {
+    background-color: #058914;
+    border: 1px solid #058914;
+}
 
 
 .administrador-main--caixa_resumo_rapido { 
