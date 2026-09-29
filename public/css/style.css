@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+=======
+* {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin:0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+>>>>>>> ac2646bc94795117d4a50fd4ea75ad0d073a4d74
