@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+main {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.pesquisador--main-selecionar_ano {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.botao_seletor_ano {
+  padding: 6px 14px;
+  border: 1px solid #718096;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a365d;
+  cursor: pointer;
+  outline: none;
+}
+
+.pesquisador--main-botoes_esquerda {
+  float: left;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.botao-nova_acao {
+  background-color: #008018;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.botao-nova_acao:hover {
+  background-color: #006116;
+}
+
+.botao-baixar-excel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #2b5797;
+  border: 1px solid #718096;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.botao-baixar-excel:hover {
+  background-color: #f7fafc;
+}
+
+/* Tamanho do Ícone do Excel */
+.icone-excel {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.pesquisador--main-botoes_direita {
+  float: right;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-busca {
+  width: 240px;
+  padding: 8px 12px;
+  border: 1px solid #718096;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  color: #2d3748;
+}
+
+.input-busca::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.seletor-filtrar {
+  padding: 8px 14px;
+  border: 1px solid #718096;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #4a5568;
+  cursor: pointer;
+  outline: none;
+}
