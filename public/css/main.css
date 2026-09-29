@@ -1,3 +1,11 @@
+:root{
+    --fonte-principal: 'Verdana', sans-serif;
+    --azul_btn: #102174;
+    --fundo_circulo: #C4E1FF;
+    --branco: #ffffff;
+    --preto: rgb(0,0,0);
+    --fundo_preto_opaco: rgba(0,0,0,0.5);
+}
 
 /*Estilo da tela do PIN*/
 * {
@@ -105,85 +113,81 @@
     border-radius: 10px; 
  
     padding: 12px 17px; 
+}
 
-    font-family: Verdana;
-} 
- 
-.administrador-main--caixa_resumo_rapido > h1 { 
-    text-align: center; 
-    font-size: 22px; 
-    font-weight: bold; 
- 
-    margin-bottom: 39px; 
-} 
- 
-.administrador-main--caixa_maior_volume, 
-.administrador-main--caixa_menor_volume, 
-.administrador-main--caixa_comparacao { 
-    width: 100%; 
-    height: 88px; 
- 
-    border: 1px solid #d1d5db; 
-    border-radius: 10px; 
- 
-    margin-bottom: 26px; 
- 
-    position: relative; 
- 
-    padding-left: 98px; 
-    padding-top: 12px; 
-} 
- 
-.administrador-main--caixa_maior_volume h1, 
-.administrador-main--caixa_menor_volume h1, 
-.administrador-main--caixa_comparacao h1 { 
-    font-size: 16px; 
-    font-weight: bold; 
-    line-height: 18px; 
-    margin-bottom: 5px; 
-} 
- 
-.administrador-main--caixa_maior_volume p, 
-.administrador-main--caixa_menor_volume p, 
-.administrador-main--caixa_comparacao p { 
-    font-size: 14px; 
-    line-height: 18px; 
-} 
- 
-.administrador-main--caixa_maior_volume br, 
-.administrador-main--caixa_menor_volume br, 
-.administrador-main--caixa_comparacao br { 
-    display: none; 
-} 
- 
-.administrador-main--imagem_caixa_maior_volume, 
-.administrador-main--imagem_caixa_menor_volume, 
-.administrador-main--imagem_caixa_comparacao { 
-    position: absolute; 
- 
-    width: 66px;
-    height: 66px;
 
-    left: 12px; 
-    top: 10px; 
- 
-    border-radius: 9px; 
- 
-    object-fit: contain; 
-} 
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    align-self: center;
+    overflow-y: hidden;
+    justify-self: center;
+}
 
-.administrador-main--imagem_caixa_maior_volume {
-    background-color: #67c77b; 
-} 
- 
-.administrador-main--imagem_caixa_menor_volume { 
-    background-color: #ffb36d; 
-} 
- 
-.administrador-main--imagem_caixa_comparacao { 
-    background-color: #83bcec; 
-} 
- 
-.administrador-main--caixa_comparacao span { 
-    color: #16b94e; 
+dialog::backdrop {
+    background: var(--fundo_preto_opaco);
+}
+
+.pesquisador-pop--texto-pop-up{
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+    margin: 0px;
+}
+.pesquisador-pop--texto-btn{
+    font-family: var(--fonte-principal);
+    color: var(--branco);
+    font-size: 20px;
+}
+
+.pesquisador-pop--tamanho-h1{
+    font-size: 30px;
+}
+
+.pesquisador-pop--tamanho-p{
+    font-size: 20px ;
+}
+
+.pesquisador-pop--btn-postar{
+    width: 20%;
+    height: 30%;
+    border-radius: 30px;
+    background-color: var(--azul_btn);
+    display: inline-block;
+
+}
+
+.pesquisador-pop--layout-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+    justify-content: center;
+}
+.pesquisador-pop--layout-div-circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+}
+
+.pesquisador-pop--circulo-confirmado{
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-color:var(--fundo_circulo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pesquisador-pop--espaco-div{
+    margin-bottom: 70px;
+}
+.pesquisador-pop--check{
+    height: 65%;
 }
