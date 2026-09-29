@@ -1,12 +1,45 @@
 .administrador-header--menu_superior{
+    height: 70px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
-    left: 280px;
+    left: 240px;
+    right: 0px;
+    background-color: #356394;
+}
+
+.administrador-header--elementos_menu{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
 .administrador-header--dados_usuario{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.administrador-header--texto{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.administrador-header--botao_logout{
+    margin-right: 40px;
+    border-radius: 20px;
+    height: 50px;
+    width: 100px;
+    font-size: 1.25rem;
+    background-color: white;
+    color: #08175C;
+}
+
+.administrador-header--botao_logout:hover{
+    background-color: #8E8E93;
+    color: white;
 }
