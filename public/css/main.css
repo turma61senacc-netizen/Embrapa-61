@@ -19,54 +19,56 @@ dialog {
     text-align: center;
     align-self: center;
     overflow-y: hidden;
+    justify-self: center;
 }
 
 dialog::backdrop {
     background: var(--fundo_preto_opaco);
 }
 
-.texto_pop_up{
+.pesquisador-pop--texto-pop-up{
     font-family: var(--fonte-principal);
     color: var(--preto);
     margin: 0px;
 }
-.texto_btn{
+.pesquisador-pop--texto-btn{
     font-family: var(--fonte-principal);
     color: var(--branco);
     font-size: 20px;
 }
 
-.tamanho_h1{
+.pesquisador-pop--tamanho-h1{
     font-size: 30px;
 }
 
-.tamanho_p{
+.pesquisador-pop--tamanho-p{
     font-size: 20px ;
 }
 
-.btn_postar{
+.pesquisador-pop--btn-postar{
     width: 20%;
     height: 30%;
-    border-radius: 30%;
+    border-radius: 30px;
     background-color: var(--azul_btn);
     display: inline-block;
 
 }
 
-.layout_div{
+.pesquisador-pop--layout-div{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 30%;
+    justify-content: center;
 }
-.layout_div_circulo{
+.pesquisador-pop--layout-div-circulo{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 40%;
 }
 
-.circulo_confirmado{
+.pesquisador-pop--circulo-confirmado{
     width: 220px;
     height: 220px;
     border-radius: 100%;
@@ -74,8 +76,11 @@ dialog::backdrop {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 75px;
+
 }
-.espaco_div{
-    margin-bottom: 50px;
+.pesquisador-pop--espaco-div{
+    margin-bottom: 70px;
+}
+.pesquisador-pop--check{
+    height: 65%;
 }
