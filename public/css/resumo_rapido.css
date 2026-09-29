@@ -78,6 +78,9 @@ main {
 .administrador-main--imagem_caixa_comparacao { 
     position: absolute; 
  
+    width: 66px;
+    height: 66px;
+
     left: 12px; 
     top: 10px; 
  
@@ -87,24 +90,14 @@ main {
 } 
 
 .administrador-main--imagem_caixa_maior_volume {
-    width: 58px;
-    height: 58px;
-    left: 16px;
-    top: 14px;
     background-color: #67c77b; 
 } 
  
 .administrador-main--imagem_caixa_menor_volume { 
-    width: 66px; 
-    height: 66px; 
     background-color: #ffb36d; 
 } 
  
 .administrador-main--imagem_caixa_comparacao { 
-    width: 58px;
-    height: 58px;
-    left: 16px;
-    top: 14px;
     background-color: #83bcec; 
 } 
  
