@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/css/main.css">
+</head>
+<body>
+
+    <main class="criar-acao-container">
+        <h1 class="criar-acao-titulo">Criar ação</h1>
+
+        <section class="criar-acao-card">
+
+            <div class="criar-acao-linha-superior">
+                <div class="criar-acao-campo criar-acao-nome">
+
+                    <label for="criar-acao-nome">Nome:</label>
+                    <input
+                        type="text"
+                        id="criar-acao-nome"
+                        placeholder="Digite o nome do artigo aqui...">
+                </div>
+
+                <div class="criar-acao-campo criar-acao-data">
+                    <label for="criar-acao-data">Data de Execução:</label>
+                    <input
+                        type="text"
+                        placeholder="__/__/___"
+                        id="criar-acao-data">
+                </div>
+            </div>
+
+            <div class="criar-acao-campo criar-acao-descricao">
+                <label for="criar-acao-descricao">Descrição:</label>
+                <textarea
+                    id="criar-acao-descricao"
+                    placeholder="Digite a descrição do artigo aqui..."></textarea>
+            </div>
+
+            <div class="criar-acao-formulario">
+
+                <div class="criar-acao-campo criar-acao-acao">
+                    <label for="criar-acao-select">Ação:</label>
+
+                    <select id="criar-acao-select">
+                        <option>Selecionar ação</option>
+                    </select>
+                </div>
+
+                <div class="criar-acao-campo criar-acao-url">
+                    <label for="criar-acao-url">Comprovante URL:</label>
+                    <input
+                        type="text"
+                        id="criar-acao-url"
+                        placeholder="Digite a URL do seu link...">
+                </div>
+
+                <div class="criar-acao-campo criar-acao-comprovantes">
+                    <label>Comprovantes:</label>
+
+                    <div class="criar-acao-upload">
+                        <img src="../../../public/imagens/Arquivo_Upload.png" alt="Upload">
+                        <span>
+                            <b>Arraste seus arquivos aqui ou clique para fazer Upload</b>
+                            <small>(PDF, DOCX, Imagens...)</small>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="criar-acao-botoes">
+                    <button class="criar-acao-cancelar">Cancelar</button>
+
+                    <div class="criar-acao-postar-area">
+                        <p>Sua postagem será revisada em breve</p>
+                        <button class="criar-acao-postar">Postar</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
