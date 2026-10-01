@@ -1,6 +1,7 @@
 :root{
     --fonte-principal: 'Verdana', sans-serif;
     --azul_btn: #102174;
+    --azul_btn_hover: #058914;
     --fundo_circulo: #C4E1FF;
     --branco: #ffffff;
     --preto: rgb(0,0,0);
@@ -175,6 +176,7 @@
     width: 285px;
     height: 48px;
     padding: 10px;
+    transition: ease-in-out 0.1s;
 }
 
 #pesquisador-pop--botao-cancelar {
@@ -187,6 +189,15 @@
     background-color: var(--azul_btn);
     border: none;
     color: white;
+}
+
+#pesquisador-pop--botao-cancelar:hover {
+    background-color: var(--botao_cancelar);
+    color: white;
+}
+
+#pesquisador-pop--botao-salvar:hover {
+    background-color: var(--azul_btn_hover);
 }
 /*---------*/
 
