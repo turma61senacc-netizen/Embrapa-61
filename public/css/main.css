@@ -890,6 +890,15 @@ input[type="text"] {
     border-radius: 4px;
 }
 
+.administrador-tela-empregados--tabela{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: var(--fonte-principal);
+}
+
+.administrador-tela-empregados-tabela-td
+
 @media (max-width: 480px) {
     .arquivo {
         width: 100%;
