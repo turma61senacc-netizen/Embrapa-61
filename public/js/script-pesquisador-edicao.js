@@ -1,5 +1,5 @@
-const INPUT = document.getElementById("editar-acao-arquivos");
-const LISTA = document.getElementById("editar-acao-listaArquivos");
+const INPUT = document.getElementById("pesquisador-main--editar-acao-arquivos");
+const LISTA = document.getElementById("pesquisador-main--editar-acao-listaArquivos");
 
 let arquivosSelecionados = [];
 
@@ -71,15 +71,15 @@ function atualizarLista() {
 
         ITEM.innerHTML = `
             ${criarIconeArquivo(extensaoDoArquivo(arquivo.name))}
-            <div class="editar-acao-arquivo-info">
-                <span class="editar-acao-arquivo-nome"></span>
-                <span class="editar-acao-arquivo-tamanho">
+            <div class="pesquisador-main--editar-acao-arquivo-info">
+                <span class="pesquisador-main--editar-acao-arquivo-nome"></span>
+                <span class="pesquisador-main--editar-acao-arquivo-tamanho">
                     ${formatarTamanho(arquivo.size)}
                 </span>
             </div>
-            <div class="editar-acao-arquivo-acoes">
+            <div class="pesquisador-main--editar-acao-arquivo-acoes">
                 <button type="button"
-                        class="editar-acao"
+                        class="pesquisador-main--editar-acao"
                         data-acao="remover"
                         data-indice="${indice}"
                         aria-label="Remover arquivo">
@@ -87,7 +87,7 @@ function atualizarLista() {
                 </button>
 
                 <button type="button"
-                        class="editar-acao"
+                        class="pesquisador-main--editar-acao"
                         data-acao="baixar"
                         data-indice="${indice}"
                         aria-label="Baixar arquivo">
@@ -96,7 +96,7 @@ function atualizarLista() {
             </div>
         `;
 
-        const NOME = ITEM.querySelector(".editar-acao-arquivo-nome");
+        const NOME = ITEM.querySelector(".pesquisador-main--editar-acao-arquivo-nome");
         NOME.textContent = arquivo.name;
         NOME.title = arquivo.name;
 
