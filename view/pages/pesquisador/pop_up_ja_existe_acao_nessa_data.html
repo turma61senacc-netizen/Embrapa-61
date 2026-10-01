@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-up "Já existe uma ação nessa data de execução."</title>
+    <link rel="stylesheet" href="../../../public/css/main.css">
 </head>
 <body>
-    
+    <button id="pesquisador-pop--botao-abrir-pop-up">Abrir Pop-up</button>
+
+      <dialog id="pesquisador-pop--card-acao-existe-nessa-data">
+         <div id="pesquisador-pop--container-icone">
+            <div id="pesquisador-pop--background-icone"><img src="../../../public/imagens/icone_aviso.png" id="pesquisador-pop--icone-aviso"></div>
+         </div>
+
+         <div id="pesquisador-pop--container-descricao">
+            <h1>Já existe uma ação nesta data de execução.</h1>
+            <span>Tem certeza que deseja prosseguir?</span>
+         </div>
+
+         <div id="pesquisador-pop--botoes">
+            <button id="pesquisador-pop--botao-cancelar">Cancelar</button>
+            <button id="pesquisador-pop--botao-salvar">Salvar</button>
+         </div>
+      </dialog>
+
+      <script src="../../../public/js/pop_up_ja_existe_acao_nessa_data.js"></script>
 </body>
 </html>
