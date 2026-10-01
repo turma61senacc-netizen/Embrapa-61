@@ -642,43 +642,6 @@ dialog::backdrop {
     color: #16b94e; 
 }
 
-.administrador-main--menu_lateral{
-    height: 100vh;
-    background: #356394;
-    width: 280px;
-}
-
-.administrador-main--logo_menu_lateral{
-    display: flex;
-    width: 220px;
-    height: 190px;
-    background-color: white;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.administrador-main--imagem_logo{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.administrador-main--opcao_menu_ativo{
-    display: block;
-    text-decoration: none;
-    background-color: white;
-    color: #356394;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    height: 70px;
-    width: 250px;
-    text-align: center;
-    align-content: center;
-}
-
 * {
     font-family: Verdana;
     margin: 0;
