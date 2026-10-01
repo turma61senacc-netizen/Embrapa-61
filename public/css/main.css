@@ -940,9 +940,8 @@ input[type="text"] {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Feedback visual ao passar o mouse e clicar no botão */
 .administrador-tela-empregados--tabela button:hover {
-  background-color: #c0392b; /* Vermelho mais escuro no hover */
+  background-color: #c0392b;
 }
 
 .administrador-tela-empregados--tabela button:active {
