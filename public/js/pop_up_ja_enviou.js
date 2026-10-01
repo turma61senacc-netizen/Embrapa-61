@@ -1,16 +1,16 @@
-const botaoAbrir = document.getElementById("pesquisador-popup--abrir_id");
-const popUp = document.getElementById("pesquisador-popup--pop-up-enviou");
-const botaoCancelar = document.getElementById("cancelar_id");
-const botaoConfirmar = document.getElementById("confirmar_id");
+const BOTAO_ABRIR = document.getElementById("pesquisador-popup--btn-abrir");
+const POP_UP = document.getElementById("pesquisador-popup--pop-up-enviou");
+const BOTAO_CANCELAR = document.getElementById("pesquisador-popup--btn-cancelar");
+const BOTAO_CONFIRMAR = document.getElementById("pesquisador-popup--btn-confirmar");
 
-botaoAbrir.addEventListener("click", function () {
-    popUp.showModal();
+BOTAO_ABRIR.addEventListener("click", function () {
+    POP_UP.showModal();
 });
 
-botaoCancelar.addEventListener("click", function () {
-    popUp.close();
+BOTAO_CANCELAR.addEventListener("click", function () {
+    POP_UP.close();
 });
 
-botaoConfirmar.addEventListener("click", function () {
-    popUp.close();
+BOTAO_CONFIRMAR.addEventListener("click", function () {
+    POP_UP.close();
 });
