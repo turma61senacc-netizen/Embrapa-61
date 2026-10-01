@@ -1,13 +1,13 @@
-const pop_up_acao_existe_nessa_data = document.getElementById('pesquisador-pop--card-acao-existe-nessa-data');
-const btn_abrir_pop_up = document.getElementById('pesquisador-pop--botao-abrir-pop-up');
-const btn_cancelar_pop_up = document.getElementById('pesquisador-pop--botao-cancelar');
+const POP_UP_ACAO_EXISTE_NESSA_DATA = document.getElementById('pesquisador-pop--card-acao-existe-nessa-data');
+const BOTAO_ABRIR_POP_UP = document.getElementById('pesquisador-pop--botao-abrir-pop-up');
+const BOTAO_CANCELAR_POP_UP = document.getElementById('pesquisador-pop--botao-cancelar');
 
 // Abrir o pop-up
-btn_abrir_pop_up.addEventListener('click', () => {
-  pop_up_acao_existe_nessa_data.showModal();
+BOTAO_ABRIR_POP_UP.addEventListener('click', () => {
+  POP_UP_ACAO_EXISTE_NESSA_DATA.showModal();
 });
 
 // Fechar o pop-up
-btn_cancelar_pop_up.addEventListener('click', () => {
-  pop_up_acao_existe_nessa_data.close();
+BOTAO_CANCELAR_POP_UP.addEventListener('click', () => {
+  POP_UP_ACAO_EXISTE_NESSA_DATA.close();
 });
