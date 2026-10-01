@@ -54,7 +54,7 @@ function formatarTamanho(bytes) {
 
 function criarIconeArquivo(extensao) {
     return `
-    <svg class="editar-acao-arquivo-icone" viewBox="0 0 24 32" aria-hidden="true">
+    <svg class="pesquisador-main--editar-acao-arquivo-icone" viewBox="0 0 24 32" aria-hidden="true">
         <path d="M2 0h14l8 8v22a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#3b74ff"/>
         <path d="M16 0l8 8h-6a2 2 0 0 1-2-2z" fill="#9dbaff"/>
         <text x="12" y="27" text-anchor="middle" font-family="Verdana, sans-serif"
@@ -67,7 +67,7 @@ function atualizarLista() {
 
     arquivosSelecionados.forEach((arquivo, indice) => {
         const ITEM = document.createElement("div");
-        ITEM.className = "editar-acao-arquivo";
+        ITEM.className = "pesquisador-main--editar-acao-arquivo";
 
         ITEM.innerHTML = `
             ${criarIconeArquivo(extensaoDoArquivo(arquivo.name))}
