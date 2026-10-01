@@ -1,5 +1,5 @@
-const input = document.getElementById("editar-acao-arquivos");
-const lista = document.getElementById("editar-acao-listaArquivos");
+const INPUT = document.getElementById("editar-acao-arquivos");
+const LISTA = document.getElementById("editar-acao-listaArquivos");
 
 let arquivosSelecionados = [];
 
@@ -18,31 +18,31 @@ const ICONE_DOWNLOAD = `
     <path d="M12 10.5v6M9.5 14l2.5 2.5 2.5-2.5"/>
 </svg>`;
 
-input.addEventListener("change", () => {
-    for (const arquivo of input.files) {
-        arquivosSelecionados.push(arquivo);
+INPUT.addEventListener("change", () => {
+    for (const ARQUIVO of INPUT.files) {
+        arquivosSelecionados.push(ARQUIVO);
     }
 
     atualizarLista();
-    input.value = "";
+    INPUT.value = "";
 });
 
-lista.addEventListener("click", (evento) => {
-    const botao = evento.target.closest("button[data-acao]");
-    if (!botao) return;
+LISTA.addEventListener("click", (evento) => {
+    const BOTAO = evento.target.closest("button[data-acao]");
+    if (!BOTAO) return;
 
-    const indice = Number(botao.dataset.indice);
+    const indice = Number(BOTAO.dataset.indice);
 
-    if (botao.dataset.acao === "remover") {
+    if (BOTAO.dataset.acao === "remover") {
         removerArquivo(indice);
-    } else if (botao.dataset.acao === "baixar") {
+    } else if (BOTAO.ARQUIVOdataset.acao === "baixar") {
         baixarArquivo(indice);
     }
 });
 
 function extensaoDoArquivo(nome) {
-    const partes = nome.split(".");
-    return partes.length > 1 ? partes.pop().toUpperCase().slice(0, 4) : "ARQ";
+    const PARTES = nome.split(".");
+    return PARTES.length > 1 ? PARTES.pop().toUpperCase().slice(0, 4) : "ARQ";
 }
 
 function formatarTamanho(bytes) {
@@ -63,13 +63,13 @@ function criarIconeArquivo(extensao) {
 }
 
 function atualizarLista() {
-    lista.innerHTML = "";
+    LISTA.innerHTML = "";
 
     arquivosSelecionados.forEach((arquivo, indice) => {
-        const item = document.createElement("div");
-        item.className = "editar-acao-arquivo";
+        const ITEM = document.createElement("div");
+        ITEM.className = "editar-acao-arquivo";
 
-        item.innerHTML = `
+        ITEM.innerHTML = `
             ${criarIconeArquivo(extensaoDoArquivo(arquivo.name))}
             <div class="editar-acao-arquivo-info">
                 <span class="editar-acao-arquivo-nome"></span>
@@ -96,11 +96,11 @@ function atualizarLista() {
             </div>
         `;
 
-        const nome = item.querySelector(".editar-acao-arquivo-nome");
-        nome.textContent = arquivo.name;
-        nome.title = arquivo.name;
+        const NOME = ITEM.querySelector(".editar-acao-arquivo-nome");
+        NOME.textContent = arquivo.name;
+        NOME.title = arquivo.name;
 
-        lista.appendChild(item);
+        LISTA.appendChild(ITEM);
     });
 }
 
@@ -113,10 +113,10 @@ function baixarArquivo(indice) {
     const arquivo = arquivosSelecionados[indice];
     const url = URL.createObjectURL(arquivo);
 
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = arquivo.name;
-    link.click();
+    const LINK = document.createElement("a");
+    LINK.href = url;
+    LINK.download = arquivo.name;
+    LINK.click();
 
     URL.revokeObjectURL(url);
 }
