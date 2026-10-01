@@ -902,8 +902,10 @@ input[type="text"] {
   overflow: hidden; /* Garante que os cantos arredondados funcionem */
 }
 .administrador-tela-empregados--titulo{
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 10px;
 }
 
@@ -953,7 +955,17 @@ input[type="text"] {
 .administrador-tela-empregados--tabela button:active {
   transform: scale(0.96); /* Leve efeito de clique */
 }
-
+.administrador-tela-empregados--botao .administrador-tela-empregados--botao-cadastrar {
+  background-color:#058914;
+  color: white;
+  width: 275px;
+  height: 44px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid #04620F;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 
 @media (max-width: 480px) {
     .arquivo {
