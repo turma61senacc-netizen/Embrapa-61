@@ -890,17 +890,70 @@ input[type="text"] {
     border-radius: 4px;
 }
 
-.administrador-tela-empregados--tabela{
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: var(--fonte-principal);
+/* Configuração principal da tabela */
+.administrador-tela-empregados--tabela {
+  width: 100%;
+  border-collapse: collapse; /* Une as bordas em uma linha única */
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave ao redor */
+  border-radius: 8px;
+  overflow: hidden; /* Garante que os cantos arredondados funcionem */
 }
 .administrador-tela-empregados--titulo{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+/* Estilização do cabeçalho */
+.administrador-tela-empregados--tabela thead tr {
+  background-color: #356394;
+  color: #ffffff;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Espaçamento interno das células (Cabeçalho e Corpo) */
+.administrador-tela-empregados--tabela th,
+.administrador-tela-empregados--tabela td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e0e0e0; /* Linha sutil divisória */
+}
+
+/* Efeito Zebrado: Altera o fundo das linhas pares */
+.administrador-tela-empregados--tabela tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Efeito de Hover: Destaca a linha onde o mouse está passando */
+.administrador-tela-empregados--tabela tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Customização dos botões de ação ("Desativar") */
+.administrador-tela-empregados--tabela button {
+  background-color: #e74c3c; /* Vermelho para indicar ação destrutiva */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Feedback visual ao passar o mouse e clicar no botão */
+.administrador-tela-empregados--tabela button:hover {
+  background-color: #c0392b; /* Vermelho mais escuro no hover */
+}
+
+.administrador-tela-empregados--tabela button:active {
+  transform: scale(0.96); /* Leve efeito de clique */
+}
+
 
 @media (max-width: 480px) {
     .arquivo {
