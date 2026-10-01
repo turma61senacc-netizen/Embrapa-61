@@ -897,8 +897,6 @@ input[type="text"] {
     font-family: var(--fonte-principal);
 }
 
-.administrador-tela-empregados-tabela-td
-
 @media (max-width: 480px) {
     .arquivo {
         width: 100%;
