@@ -112,3 +112,109 @@
     background-color: #04620F;
     transition: 0.5s;
 }
+
+#pesquisador-popup--pop-up-enviou {
+    width: 880px;
+    height: 460px;
+    padding: 0;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    font-family: Verdana, sans-serif;
+}
+
+#pesquisador-popup--pop-up-enviou::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pesquisador-popup--layout-popup-circulo-de-aviso {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.pesquisador-popup--circulo-de-aviso {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe477;
+    border-radius: 50%;
+}
+
+.pesquisador-popup--aviso {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.pesquisador-popup--layout_texto {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+
+.pesquisador-popup--layout_texto h1 {
+    margin: 0;
+    color: #000000;
+    font-family: Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.pesquisador-popup--layout_texto p {
+    margin-top: 14px;
+    color: #111111;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pesquisador-popup--layout-botoes {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+}
+
+.pesquisador-popup--layout-botoes button {
+    width: 215px;
+    height: 38px;
+    font-family: Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.pesquisador-popup--texto-btn-cancelar {
+    background-color: white;
+    color: #ef4444;
+    border: 2px solid #ef4444;
+}
+
+.pesquisador-popup--texto-btn-confirmar {
+    background-color: #4b5da7;
+    color: white;
+    border: 2px solid #4b5da7;
+}
+
+.pesquisador-popup--texto-btn-cancelar:hover {
+    background-color: #fff5f5;
+}
+
+.pesquisador-popup--texto-btn-confirmar:hover {
+    background-color: #3f4f91;
+}
