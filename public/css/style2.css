@@ -4,7 +4,7 @@ body {
 }
 
 
-.fundo {
+.fundo-site {
   position: fixed;
   top: 0;
   right: 0;
@@ -17,7 +17,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.fundo.oculto { display: none; }
+.fundo-site.oculto { display: none; }
 
 
 .popup {
@@ -36,14 +36,14 @@ body {
 }
 
 
-.label {
+label {
   display: block;
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
 }
 
-.textarea {
+textarea {
   box-sizing: border-box;
   width: 100%;
   height: 180px;
