@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Banco de dados simulado contendo os dados de cada ano
+    
     const bancoDeDadosDashboard = {
         "2025": { total: 100, aprovadas: 40, analise: 40, negadas: 20 },
         "2026": { total: 35, aprovadas: 15, analise: 15, negadas: 5 },
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "2030": { total: 500, aprovadas: 250, analise: 150, negadas: 100 }
     };
 
-    // Elementos de controle do modal (nomes iguais aos do seu HTML)
+    
     const btnSeletorAno = document.getElementById('btn-seletor-ano');
     const modalSelecaoAno = document.getElementById('modal-selecao-ano');
     const anoAtualTexto = document.getElementById('ano-atual-texto');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnAplicarAno = document.getElementById('btn-aplicar-ano');
     const botoesOpcaoAno = document.querySelectorAll('.opcao-ano-btn');
 
-    // Elementos dos cards que mudam de valor
+    
     const txtTotal = document.getElementById('txt-total');
     const txtAprovadas = document.getElementById('txt-aprovadas');
     const txtAnalise = document.getElementById('txt-analise');
@@ -31,16 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const barraAnalise = document.getElementById('barra-analise');
     const barraNegadas = document.getElementById('barra-negadas');
 
-    // Ano clicado antes de apertar "Aplicar"
+   
     let anoSelecionadoProvisorio = "2026";
 
-    // Abre ou fecha o modal ao clicar no botão do ano
+    
     btnSeletorAno.addEventListener('click', (evento) => {
         evento.stopPropagation();
         modalSelecaoAno.classList.toggle('elemento-oculto');
     });
 
-    // Troca a seleção visual do ano dentro da grade
+    
     botoesOpcaoAno.forEach(botao => {
         botao.addEventListener('click', () => {
             botoesOpcaoAno.forEach(b => b.classList.remove('ativo'));
@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cancelar: só fecha o modal
+    
     btnCancelarAno.addEventListener('click', () => {
         modalSelecaoAno.classList.add('elemento-oculto');
     });
 
-    // Aplicar: atualiza números, porcentagens e barras
+    
     btnAplicarAno.addEventListener('click', () => {
         anoAtualTexto.innerText = anoSelecionadoProvisorio;
 
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             txtAnalise.innerText = dadosDoAno.analise;
             txtNegadas.innerText = dadosDoAno.negadas;
 
-            const total = dadosDoAno.total || 1; // Evita divisão por zero
+            const total = dadosDoAno.total || 1; 
             const percAprovadas = Math.round((dadosDoAno.aprovadas / total) * 100);
             const percAnalise = Math.round((dadosDoAno.analise / total) * 100);
             const percNegadas = Math.round((dadosDoAno.negadas / total) * 100);
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalSelecaoAno.classList.add('elemento-oculto');
     });
 
-    // Fecha o modal ao clicar fora dele
+    
     document.addEventListener('click', (evento) => {
         if (!modalSelecaoAno.contains(evento.target) && !btnSeletorAno.contains(evento.target)) {
             modalSelecaoAno.classList.add('elemento-oculto');

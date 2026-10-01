@@ -6,14 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/estilo.css">
-
+    <script src="../../../public/js/java.js"></script>
 </head>
 
 <body class="body">
 
     <div class="ContainerPrincipalDashboard">
 
-        <h1 class="titulo-dashboard-topo">Dashboard</h1>
+        <div class="topo-dashboard-flex">
+            <div class="espacador-flex-esquerdo"></div>
+            <h1 class="titulo-dashboard-topo">Dashboard</h1>
+
+            <div class="container-seletor-ano">
+                <button id="btn-seletor-ano" class="botao-calendario-ano">
+                    <img src="../../../public/imagens/icone-calendaria.png" alt="Calendário" class="icone-calendario">
+                    <span id="ano-atual-texto">2026</span>
+                    
+                    <svg class="icone-seta-abaixo" viewBox="0 0 24 24" fill="none" stroke="#0b2046" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+
+                <div id="modal-selecao-ano" class="caixa-modal-ano elemento-oculto">
+                    <p class="titulo-selecionar-ano">Selecionar Ano</p>
+
+                    <div class="grade-botoes-anos">
+                        <button class="opcao-ano-btn" data-ano="2025">2025</button>
+                        <button class="opcao-ano-btn ativo" data-ano="2026">2026</button>
+                        <button class="opcao-ano-btn" data-ano="2027">2027</button>
+                        <button class="opcao-ano-btn" data-ano="2028">2028</button>
+                        <button class="opcao-ano-btn" data-ano="2029">2029</button>
+                        <button class="opcao-ano-btn" data-ano="2030">2030</button>
+                    </div>
+
+                    <div class="botoes-modal-acoes">
+                        <button id="btn-cancelar-ano" class="btn-acao-modal cancelar">Cancelar</button>
+                        <button id="btn-aplicar-ano" class="btn-acao-modal aplicar">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <main class="cabecalho-total-de-acoes">
 
@@ -22,9 +54,7 @@
                     Total de ações<br>
                     realizadas:
                 </h1>
-
-                <p class="numero-grande">220</p>
-
+                <p class="numero-grande" id="txt-total">35</p>
                 <div class="espacador-invisivel"></div>
             </div>
 
@@ -33,12 +63,10 @@
                     <img src="../../../public/imagens/icone-aceito.png" alt="aprovadas" class="icone-imagem">
                     <h1 class="titulo-caixa">Aprovadas</h1>
                 </div>
-
-                <p class="numero-grande">110</p>
-                <p class="texto-porcentagem">50%</p>
-
+                <p class="numero-grande" id="txt-aprovadas">15</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-aprovadas">42%</p>
                 <div class="barra-progresso-fundo">
-                    <div class="barra-progresso-preenchida" style="width: 50%;"></div>
+                    <div class="barra-progresso-preenchida" id="barra-aprovadas" style="width: 42%;"></div>
                 </div>
             </div>
 
@@ -47,12 +75,10 @@
                     <img src="../../../public/imagens/icone-relogio.png" alt="relogio" class="icone-imagem">
                     <h1 class="titulo-caixa">Em análise</h1>
                 </div>
-
-                <p class="numero-grande">55</p>
-                <p class="texto-porcentagem">25%</p>
-
+                <p class="numero-grande" id="txt-analise">15</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-analise">42%</p>
                 <div class="barra-progresso-fundo">
-                    <div class="barra-progresso-preenchida" style="width: 25%;"></div>
+                    <div class="barra-progresso-preenchida" id="barra-analise" style="width: 42%;"></div>
                 </div>
             </div>
 
@@ -61,12 +87,10 @@
                     <img src="../../../public/imagens/icone-x.png" alt="negadas" class="icone-imagem">
                     <h1 class="titulo-caixa">Negadas</h1>
                 </div>
-
-                <p class="numero-grande">55</p>
-                <p class="texto-porcentagem">25%</p>
-
+                <p class="numero-grande" id="txt-negadas">5</p>
+                <p class="texto-porcentagem" id="txt-porcentagem-negadas">15%</p>
                 <div class="barra-progresso-fundo">
-                    <div class="barra-progresso-preenchida" style="width: 25%;"></div>
+                    <div class="barra-progresso-preenchida" id="barra-negadas" style="width: 15%;"></div>
                 </div>
             </div>
 
