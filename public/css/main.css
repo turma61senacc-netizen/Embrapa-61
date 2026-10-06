@@ -1,3 +1,11 @@
+/* Estilo Minhas Ações */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
 main {
   position: relative;
   width: 1440px;
@@ -31,11 +39,15 @@ main {
 }
 
 .botao-nova_acao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background-color: #008018;
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
@@ -43,6 +55,13 @@ main {
 
 .botao-nova_acao:hover {
   background-color: #006116;
+}
+
+
+.icone-mais {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
 
 .botao-baixar-excel {
@@ -84,18 +103,18 @@ main {
 
 .icone-lupa {
   position: absolute;
-  left: 10px;
-  top: 50%;
+  right: 0px;
+  top: 25%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   opacity: 0.6;
   pointer-events: none;
 }
 
 .input-busca {
   width: 240px;
-  padding: 8px 12px 8px 34px;
+  padding: 8px 34px 8px 12px;
   border: 1px solid #718096;
   border-radius: 8px;
   font-size: 13px;
@@ -117,8 +136,19 @@ main {
   color: #4a5568;
   cursor: pointer;
   outline: none;
+  margin-top: 50px;
 }
 
+
+
+
+
+
+
+
+
+
+/* ======== */
 
 
 
