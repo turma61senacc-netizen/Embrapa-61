@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/css/main.css">
+</head>
+<body>
+    <div class="pesquisador-main--editar-acao-centralizar">
+        <div class="pesquisador-main--editar-acao-edicao">
+            <div class="pesquisador-main--editar-acao-cabecalho">
+                <div class="pesquisador-main--editar-acao-postar_acao_topo">
+                    <label for="pesquisador-main--editar-acao-titulo_acao" class="pesquisador-main--editar-acao-titulo">Nome:</label><br>
+                    <input type="text" id="pesquisador-main--editar-acao-titulo_acao" placeholder="Nome da Ação" required><br>
+                </div>
+                <div class="pesquisador-main--editar-acao-postar_acao_topo">
+                    <label for="pesquisador-main--editar-acao-nome_acao" class="pesquisador-main--editar-acao-titulo">Pesquisador:</label><br>
+                    <input type="text" id="pesquisador-main--editar-acao-nome_acao" placeholder="Nome do Pesquisador" required><br>
+                </div>
+                <div class="pesquisador-main--editar-acao-postar_acao_topo">
+                    <label for="pesquisador-main--editar-acao-data_acao" class="pesquisador-main--editar-acao-titulo">Data de Execução:</label><br>
+                    <input type="date" id="pesquisador-main--editar-acao-data_acao" placeholder="00/00/0000" required>
+                </div>
+            </div>
+        
+            <label for="pesquisador-main--editar-acao-descricao" class="pesquisador-main--editar-acao-titulo">Descrição:</label><br>
+            <textarea
+                id="pesquisador-main--editar-acao-descricao"
+                name="descricao"
+                rows="5"
+                placeholder="Digite a descrição da sua ação aqui...">
+            </textarea>
+    
+            <label for="pesquisador-main--editar-acao">Ação:</label>
+            <input type="text" id="pesquisador-main--editar-acao">
+    
+            <label for="pesquisador-main--editar-acao-url">Comprovante URL:</label>
+            <input type="text" id="pesquisador-main--editar-acao-url">
+    
+            <h2 class="pesquisador-main--editar-acao-comprovante">Comprovantes:</h2>
+
+            <label class="pesquisador-main--editar-acao-botao-upload" for="pesquisador-main--editar-acao-arquivos">Adicionar arquivos</label>
+            <input type="file" id="pesquisador-main--editar-acao-arquivos" multiple hidden>
+
+            <div class="pesquisador-main--editar-acao-lista" id="pesquisador-main--editar-acao-listaArquivos"></div>
+            
+            <div class="pesquisador-main--editar-acao-botoes_edicao">
+                <button class="pesquisador-main--editar-acao-botao_cancelar">Cancelar</button>
+                <button class="pesquisador-main--editar-acao-botao_atualizar">Atualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../public/js/script-pesquisador-edicao.js"></script>
+</body>
+</html>
