@@ -1016,12 +1016,10 @@ input[type="text"] {
     background-color: #FFFFFF;
 }
 
-/* garante a fonte em todos os elementos do popup */
 .pesquisador-pop-relatorio--container * {
     font-family: Verdana, Geneva, sans-serif;
 }
 
-/* ----- botão X ----- */
 .pesquisador-pop-relatorio--botao-fechar {
     position: absolute;
     top: 0.3em;
@@ -1039,7 +1037,6 @@ input[type="text"] {
     color: #CD0000;
 }
 
-/* ----- título ----- */
 .pesquisador-pop-relatorio--titulo {
     margin-bottom: 1.8em;
     text-align: center;
@@ -1048,7 +1045,6 @@ input[type="text"] {
     color: #000000;
 }
 
-/* ----- etiqueta "Relatório de Pesquisas" ----- */
 .pesquisador-pop-relatorio--etiqueta {
     display: inline-block;
     margin: 0 0 0.75em 1.3em;
@@ -1060,7 +1056,6 @@ input[type="text"] {
     color: #FFFFFF;
 }
 
-/* ----- área cinza ----- */
 .pesquisador-pop-relatorio--area-cinza {
     display: flex;
     margin: 0 0.875em;
@@ -1086,7 +1081,6 @@ input[type="text"] {
     color: #000000;
 }
 
-/* ----- botões Selecionar anos / Todos os anos ----- */
 .pesquisador-pop-relatorio--grupo-abas {
     display: flex;
     gap: 1.25em;
@@ -1114,7 +1108,7 @@ input[type="text"] {
     color: #000000;
 }
 
-/* ----- checkboxes ----- */
+
 .pesquisador-pop-relatorio--item-checkbox {
     display: flex;
     align-items: center;
