@@ -14,13 +14,17 @@ body {
 .botao-baixar_excel{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background-color: white;
     color: #134593;
-    border: none;
-    padding: 4px 12px;
+    border: 1px solid RGBA(0,0,0,25%);
+    padding: 4px 16px;
     border-radius: 10px;
     cursor: pointer;
-    gap: 12px;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .botao-baixar_excel img{
