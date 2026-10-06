@@ -1,48 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Ações - Pesquisador</title>
-    <link rel="stylesheet" href="../../../public/css/main.css">
-    <link rel="stylesheet" href="../../../public/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Ações - Pesquisador</title>
+  <link rel="stylesheet" href="../../../public/css/main.css">
+  <link rel="stylesheet" href="../../../public/css/style.css">
 </head>
-<body>
-    <main>
+<body class="pesquisador-main--fundo_branco">
+  
+  <main class="pesquisador-main--conteiner_principal">
 
-        <div class="pesquisador--main-selecionar_ano">
-          <select class="botao_seletor_ano">
-            <option value="">2026</option>
-          </select>
+    <div class="pesquisador-main--cabecalho_topo">
+      <h1 class="pesquisador-main--titulo_pagina">Minhas Ações</h1>
+      <div class="pesquisador-main--container_seletor_ano">
+        <select class="pesquisador-main--seletor_ano">
+          <option value="2026">2026</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="pesquisador-main--barra_ferramentas">
+      <div class="pesquisador-main--container_botoes_acao">
+        <button class="pesquisador-main--botao_nova_acao">
+          <img src="../../../public/imagens/imagem_adicionar_acao.png" alt="Adicionar" class="pesquisador-main--icone_adicionar">
+          Nova Ação
+        </button>
+
+        <button class="pesquisador-main--botao_exportar_excel">
+          <img src="../../../public/imagens/icone_excel.png" alt="Excel" class="pesquisador-main--icone_excel">
+          Baixar em Excel
+        </button>
+      </div>
+
+      <div class="pesquisador-main--container_filtros">
+        <div class="pesquisador-main--campo_busca">
+          <input type="text" class="pesquisador-main--input_busca" placeholder="Pesquise...">
+          <img src="../../../public/imagens/icone_pesquisar.png" alt="Pesquisar" class="pesquisador-main--icone_lupa">
         </div>
+        <select class="pesquisador-main--seletor_filtro">
+          <option value="">Filtrar</option>
+        </select>
+      </div>
+    </div>
 
-        <div class="pesquisador--main-botoes_esquerda">
-          <button class="botao-nova_acao">
-            <img src="../../../public/imagens/imagem_adicionar_acao.png" alt="Adicionar" class="icone-mais">
-              Nova Ação
-          </button>
+    <div class="pesquisador-main--container_tabela">
+      <table class="pesquisador-main--tabela">
+        <thead>
+          <tr class="pesquisador-main--linha_cabecalho">
+            <th class="pesquisador-main--cabecalho_titulo">Titulo</th>
+            <th class="pesquisador-main--cabecalho_tipo">Tipo</th>
+            <th class="pesquisador-main--cabecalho_data">Data</th>
+            <th class="pesquisador-main--cabecalho_status">Status</th>
+            <th class="pesquisador-main--cabecalho_acao">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Desempenho de bovinos</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">29/05/2026</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_aprovado">Aprovado</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Produção sustentável</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">21/12/2024</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_analise">Análise</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Redução da degradação do solo</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">10/10/2010</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_recusado">Recusado</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Produtividade de culturas agrícolas</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">15/08/2025</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_analise">Análise</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Uso da água na produtividade agrícola</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">21/04/2026</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_aprovado">Aprovado</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Estratégias de produção sustentável</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">22/05/2026</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_analise">Análise</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Influência da qualidade da pastagem</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">01/01/2026</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_aprovado">Aprovado</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Sistemas de irrigação e sua eficiência</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">01/02/2025</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_analise">Análise</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+          <tr class="pesquisador-main--linha_corpo">
+            <td class="pesquisador-main--celula_titulo">Sistemas de manejo do solo</td>
+            <td class="pesquisador-main--celula_tipo">Artigo Científico</td>
+            <td class="pesquisador-main--celula_data">29/06/2026</td>
+            <td class="pesquisador-main--celula_status pesquisador-main--status_aprovado">Aprovado</td>
+            <td class="pesquisador-main--celula_acao"><button class="pesquisador-main--botao_editar">Editar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-
-          <button class="botao-baixar-excel">
-            <img src="../../../public/imagens/icone_excel.png" alt="Excel" class="icone-excel">
-            Baixar em Excel
-          </button>
-
-        </div>
-
-
-        <div class="pesquisador--main-botoes_direita">
-            <div class="container-busca">
-              <img src="../../../public/imagens/icone_pesquisar.png" alt="Pesquisar" class="icone-lupa">
-              <input type="text" class="input-busca" placeholder="Pesquise...">
-            </div>
-            <select class="seletor-filtrar">
-              <option value="">Filtrar</option>
-            </select>
-        </div>
-
-
-    </main>
-    
+  </main>
 </body>
 </html>
