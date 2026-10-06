@@ -8,3 +8,9 @@ class BotaoExcel extends HTMLElement{
 }
 
 customElements.define('botao-excel', BotaoExcel);
+
+class Dropdown extends HTMLElement{
+    connectedCallback(){
+        const texto = this.innerHTML || "Dropdown";
+    }
+}
