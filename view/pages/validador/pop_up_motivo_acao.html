@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Motivo para rejeição da ação</title>
-  <link rel="stylesheet" href="../../../public/css/style2.css">
+  <link rel="stylesheet" href="../../../public/css/main.css">
 </head>
 <body>
-  <div class="fundo-site" id="fundo-site">
-    <div class="popup" role="dialog" aria-labelledby="tituloPopup">
-      <h2 id="tituloPopup">Motivo para rejeição da ação</h2>
+  <div class="validador-main--fundo" id="pop-validador-fundo">
+    <div class="validador-main--janela" role="dialog">
+      <h2 class="validador--titulo" id="pop-validador-titulo">Motivo para rejeição da ação</h2>
 
-      <label for="razao">Razão</label>
-      <textarea id="razao" placeholder="Explique o porquê a ação foi rejeitada, disserte sobre."></textarea>
-     
+      <label class="validador-main--rotulo" for="pop_validador_razao">Razão</label>
+      <textarea class="validador-main--campo-razao" id="pop-validador-razao" placeholder="Explique por que a ação foi rejeitada, disserte sobre."></textarea>
+      
 
-      <div class="botoes">
-        <button type="button" class="botao botao-cancelar" id="cancelar">Cancelar</button>
-        <button type="button" class="botao botao-enviar" id="enviar">Enviar</button>
+      <div class="validador-main--botoes">
+        <button type="button" class=" validador-main--botao validador-main--botao-cancelar" id="pop-validador-cancelar">Cancelar</button>
+        <button type="button" class="validador-main--botao validador-main--botao-enviar" id="pop-validador-enviar">Enviar</button>
       </div>
     </div>
   </div>
 
-  <script src="pop_up_motivo_acao.js"></script>
+  <script src="../../../public/js/pop_up_motivo_acao.js"></script>
 </body>
 </html>

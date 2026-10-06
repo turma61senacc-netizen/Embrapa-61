@@ -1,43 +1,43 @@
-const fundo         = document.getElementById('fundo');
-const botaoCancelar = document.getElementById('cancelar');
-const botaoEnviar   = document.getElementById('enviar');
-const campoRazao    = document.getElementById('razao');
-const mensagemErro  = document.getElementById('erro');
+const CLASSE_OCULTO   = 'validador-header--oculto';
+const CLASSE_INVALIDO = 'validador-header--campo-invalido';
+const TECLA_FECHAR    = 'Escape';
 
-function abrirPopup() {
-  fundo.classList.remove('oculto');
-  campoRazao.focus();
+const fundo          = document.getElementById('pop-validador-fundo');
+const botao_cancelar = document.getElementById('pop-validador-cancelar');
+const botao_enviar   = document.getElementById('pop-validador-enviar');
+const campo_razao    = document.getElementById('pop-validador-razao');
+
+function abrir_popup() {
+  fundo.classList.remove(CLASSE_OCULTO);
+  campo_razao.focus();
 }
 
-function fecharPopup() {
-  fundo.classList.add('oculto');
-  campoRazao.value = '';
-  campoRazao.classList.remove('invalido');
-  mensagemErro.hidden = true;
+function fechar_popup() {
+  fundo.classList.add(CLASSE_OCULTO);
+  campo_razao.value = '';
+  campo_razao.classList.remove(CLASSE_INVALIDO);
 }
 
-function enviarRazao() {
-  const texto = campoRazao.value.trim();
+function enviar_razao() {
+  const texto = campo_razao.value.trim();
 
   if (!texto) {
-    campoRazao.classList.add('invalido');
-    mensagemErro.hidden = false;
-    campoRazao.focus();
+    campo_razao.classList.add(CLASSE_INVALIDO);
+    campo_razao.focus();
     return;
   }
 
   console.log('Razão enviada:', texto);
-  fecharPopup();
+  fechar_popup();
 }
 
-botaoCancelar.addEventListener('click', fecharPopup);
-botaoEnviar.addEventListener('click', enviarRazao);
+botao_cancelar.addEventListener('click', fechar_popup);
+botao_enviar.addEventListener('click', enviar_razao);
 
-campoRazao.addEventListener('input', () => {
-  campoRazao.classList.remove('invalido');
-  mensagemErro.hidden = true;
+campo_razao.addEventListener('input', () => {
+  campo_razao.classList.remove(CLASSE_INVALIDO);
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') fecharPopup();
+  if (e.key === TECLA_FECHAR) fechar_popup();
 });
