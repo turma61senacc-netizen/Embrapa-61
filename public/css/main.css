@@ -895,3 +895,184 @@ input[type="text"] {
         width: 100%;
     }
 }
+
+
+.pesquisador-pop-relatorio--container {
+    position: relative;
+    width: 41.25em;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.75em 0.5em 0.9em;
+    font-size: min(2.42vw, 4.2vh);
+    font-family: Verdana, sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* garante a fonte em todos os elementos do popup */
+.pesquisador-pop-relatorio--container * {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/* ----- botão X ----- */
+.pesquisador-pop-relatorio--botao-fechar {
+    position: absolute;
+    top: 0.3em;
+    right: 0.4em;
+    border: none;
+    background: transparent;
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    cursor: pointer;
+}
+
+.pesquisador-pop-relatorio--botao-fechar:hover {
+    color: #CD0000;
+}
+
+/* ----- título ----- */
+.pesquisador-pop-relatorio--titulo {
+    margin-bottom: 1.8em;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ----- etiqueta "Relatório de Pesquisas" ----- */
+.pesquisador-pop-relatorio--etiqueta {
+    display: inline-block;
+    margin: 0 0 0.75em 1.3em;
+    padding: 0.65em 1.1em;
+    border-radius: 2em;
+    background-color: #356394;
+    font-size: 0.6875em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* ----- área cinza ----- */
+.pesquisador-pop-relatorio--area-cinza {
+    display: flex;
+    margin: 0 0.875em;
+    padding: 0.875em 1em;
+    background-color: #DFDFDF;
+}
+
+.pesquisador-pop-relatorio--coluna-anos {
+    flex: 1;
+    padding: 0 1.25em 0 0.625em;
+    border-right: 0.125em solid #5F5F5F;
+}
+
+.pesquisador-pop-relatorio--coluna-dados {
+    flex: 1;
+    padding: 0 0.625em 0 1.5em;
+}
+
+.pesquisador-pop-relatorio--subtitulo {
+    margin-bottom: 1.1em;
+    font-size: 0.8125em;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ----- botões Selecionar anos / Todos os anos ----- */
+.pesquisador-pop-relatorio--grupo-abas {
+    display: flex;
+    gap: 1.25em;
+    margin-bottom: 0.875em;
+}
+
+.pesquisador-pop-relatorio--botao-aba {
+    flex: 1;
+    max-width: 13.5em;
+    padding: 0.5em 1.25em;
+    border: none;
+    border-radius: 2.5em;
+    font-size: 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pesquisador-pop-relatorio--botao-aba-ativo {
+    background-color: #356394;
+    color: #FFFFFF;
+}
+
+.pesquisador-pop-relatorio--botao-aba-inativo {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* ----- checkboxes ----- */
+.pesquisador-pop-relatorio--item-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 0.5625em;
+}
+
+.pesquisador-pop-relatorio--checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    flex-shrink: 0;
+    width: 1.0625em;
+    height: 1.0625em;
+    margin: 0;
+    font-size: 1em;
+    border: 0.1em solid #5E8F6B;
+    border-radius: 0.3em;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pesquisador-pop-relatorio--checkbox:checked {
+    border-color: #058914;
+    background-color: #058914;
+}
+
+.pesquisador-pop-relatorio--checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 0.28em;
+    top: 0.06em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #FFFFFF;
+    border-width: 0 0.125em 0.125em 0;
+    transform: rotate(45deg);
+}
+
+.pesquisador-pop-relatorio--rotulo {
+    display: inline;
+    margin: 0;
+    font-size: 0.625em;
+    font-weight: normal;
+    color: #000000;
+    cursor: pointer;
+}
+
+.pesquisador-pop-relatorio--rodape {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.875em 0.875em 0 0;
+}
+
+.pesquisador-pop-relatorio--botao-gerar {
+    min-width: 17.7em;
+    padding: 0.9em 3.5em;
+    border: none;
+    border-radius: 2.5em;
+    background-color: #122873;
+    font-size: 0.5625em;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pesquisador-pop-relatorio--botao-gerar:hover {
+    background-color: #0D1C54;
+}
