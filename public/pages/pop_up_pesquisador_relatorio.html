@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop_up_relatorio_minhas_acoes</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/pop_up_pesquisador_relatorio.js" defer></script>
+</head>
+<body>
+
+    <div class="pesquisador-pop-relatorio--container">
+
+        <button type="button" class="pesquisador-pop-relatorio--botao-fechar" aria-label="Fechar">X</button>
+
+
+        <h1 class="pesquisador-pop-relatorio--titulo">Relatório</h1>
+
+
+        <p class="pesquisador-pop-relatorio--etiqueta">Relatório de Pesquisas</p>
+
+
+        <div class="pesquisador-pop-relatorio--area-cinza">
+
+
+            <div class="pesquisador-pop-relatorio--coluna-anos">
+                <h2 class="pesquisador-pop-relatorio--subtitulo">Anos</h2>
+
+                <div class="pesquisador-pop-relatorio--grupo-abas">
+                    <button type="button" id="pesquisador-pop-relatorio--botao-selecionar-anos" class="pesquisador-pop-relatorio--botao-aba pesquisador-pop-relatorio--botao-aba-ativo">Selecionar anos</button>
+                    <button type="button" id="pesquisador-pop-relatorio--botao-todos-anos" class="pesquisador-pop-relatorio--botao-aba pesquisador-pop-relatorio--botao-aba-inativo">Todos os anos</button>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--ano-2022" name="anos" value="2022">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--ano-2022">2022</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--ano-2023" name="anos" value="2023">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--ano-2023">2023</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--ano-2024" name="anos" value="2024">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--ano-2024">2024</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--ano-2025" name="anos" value="2025">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--ano-2025">2025</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--ano-2026" name="anos" value="2026">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--ano-2026">2026</label>
+                </div>
+            </div>
+
+
+            <div class="pesquisador-pop-relatorio--coluna-dados">
+                <h2 class="pesquisador-pop-relatorio--subtitulo">Dados do Relatório</h2>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--dado-categoria-acao" name="categoria_acao">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--dado-categoria-acao">Categoria de Ação</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--dado-data-postagem" name="data_postagem">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--dado-data-postagem">Data de Postagem</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--dado-status" name="status">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--dado-status">Status</label>
+                </div>
+
+                <div class="pesquisador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="pesquisador-pop-relatorio--checkbox" id="pesquisador-pop-relatorio--dado-setor" name="setor">
+                    <label class="pesquisador-pop-relatorio--rotulo" for="pesquisador-pop-relatorio--dado-setor">Setor</label>
+                </div>
+            </div>
+
+        </div>
+
+ 
+        <div class="pesquisador-pop-relatorio--rodape">
+            <button type="button" class="pesquisador-pop-relatorio--botao-gerar">Gerar Relatório</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
