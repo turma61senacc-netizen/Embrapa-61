@@ -10,3 +10,32 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+
+.botao-baixar_excel{
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: #134593;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.botao-baixar_excel img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.botao-baixar_excel:hover{
+    background-color: #134593;
+    color: white;
+}
+
+.botao-baixar_excel:active{
+    background-color: #4481E0;
+    color: white;
+}
