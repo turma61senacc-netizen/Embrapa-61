@@ -1003,3 +1003,226 @@ input[type="text"] {
         width: 100%;
     }
 }
+
+.administrador-relatorios-setores--pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 24px 40px;
+    background: #f4f4f4;
+    font-family: Verdana, sans-serif;
+}
+
+.administrador-relatorios-setores--grupo {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.administrador-relatorios-setores--titulo {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.administrador-relatorios-setores--painel {
+    background: #f7f7f7;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    padding: 16px 18px 14px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.administrador-relatorios-setores--painel-pequeno {
+    padding-top: 14px;
+}
+
+.administrador-relatorios-setores--grafico {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.administrador-relatorios-setores--linha {
+    display: grid;
+    grid-template-columns: minmax(110px, 140px) minmax(160px, 1fr) 24px;
+    align-items: center;
+    column-gap: 10px;
+    min-height: 20px;
+}
+
+.administrador-relatorios-setores--label {
+    font-size: 11px;
+    color: #1d1d1d;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.administrador-relatorios-setores--barra-area {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 2px;
+    background:
+        repeating-linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.04) 0,
+            rgba(0, 0, 0, 0.04) 1px,
+            transparent 1px,
+            transparent 32px
+        );
+    overflow: hidden;
+}
+
+.administrador-relatorios-setores--barra {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc((var(--valor) / var(--max)) * 100%);
+    min-width: 10px;
+    background: linear-gradient(90deg, #69d680 0%, #3fb763 100%);
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.administrador-relatorios-setores--valor {
+    font-size: 11px;
+    color: #1d1d1d;
+    text-align: center;
+}
+
+.administrador-relatorios-setores--eixo {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-top: 8px;
+    padding-right: 24px;
+    font-size: 10px;
+    color: #5e5e5e;
+}
+
+.administrador-relatorios-setores--eixo-pequeno {
+    margin-left: 150px;
+    padding-right: 24px;
+}
+
+.administrador-relatorios-setores--subtitulo {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+    text-align: center;
+}
+
+.administrador-relatorios-setores--painel-pizza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 220px;
+}
+
+.administrador-relatorios-setores--pizza-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 220px;
+}
+
+.administrador-relatorios-setores--pizza {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #3fb763 0 35%,
+        #5ea8e6 35% 65%,
+        #f0bf59 65% 85%,
+        #b38ae6 85% 100%
+    );
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.administrador-relatorios-setores--pizza::before {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.administrador-relatorios-setores--pizza-centro {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: #111111;
+    text-align: center;
+}
+
+.administrador-relatorios-setores--pizza-centro strong {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.administrador-relatorios-setores--pizza-centro span {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.administrador-relatorios-setores--pizza-legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 180px;
+    font-size: 12px;
+    color: #1d1d1d;
+}
+
+.administrador-relatorios-setores--item-legenda {
+    display: grid;
+    grid-template-columns: 12px 1fr auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.administrador-relatorios-setores--cor {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.administrador-relatorios-setores--cor-verde {
+    background: #3fb763;
+}
+
+.administrador-relatorios-setores--cor-azul {
+    background: #5ea8e6;
+}
+
+.administrador-relatorios-setores--cor-amarelo {
+    background: #f0bf59;
+}
+
+.administrador-relatorios-setores--cor-roxo {
+    background: #b38ae6;
+}
+
+@media (max-width: 640px) {
+    .administrador-relatorios-setores--painel-pizza {
+        flex-direction: column;
+    }
+
+    .administrador-relatorios-setores--pizza-legenda {
+        width: 100%;
+        min-width: 0;
+    }
+}
