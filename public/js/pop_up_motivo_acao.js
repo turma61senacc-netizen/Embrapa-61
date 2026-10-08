@@ -2,28 +2,28 @@ const CLASSE_OCULTO   = 'validador-header--oculto';
 const CLASSE_INVALIDO = 'validador-header--campo-invalido';
 const TECLA_FECHAR    = 'Escape';
 
-const fundo          = document.getElementById('pop-validador-fundo');
-const botao_cancelar = document.getElementById('pop-validador-cancelar');
-const botao_enviar   = document.getElementById('pop-validador-enviar');
-const campo_razao    = document.getElementById('pop-validador-razao');
+const FUNDO          = document.getElementById('pop-validador-fundo');
+const BOTAO_CANCELAR = document.getElementById('pop-validador-cancelar');
+const BOTAO_ENVIAR   = document.getElementById('pop-validador-enviar');
+const CAMPO_RAZAO    = document.getElementById('pop-validador-razao');
 
 function abrir_popup() {
-  fundo.classList.remove(CLASSE_OCULTO);
-  campo_razao.focus();
+  FUNDO.classList.remove(CLASSE_OCULTO);
+  CAMPO_RAZAO.focus();
 }
 
 function fechar_popup() {
-  fundo.classList.add(CLASSE_OCULTO);
-  campo_razao.value = '';
-  campo_razao.classList.remove(CLASSE_INVALIDO);
+  FUNDO.classList.add(CLASSE_OCULTO);
+ CAMPO_RAZAO.value = '';
+ CAMPO_RAZAO.classList.remove(CLASSE_INVALIDO);
 }
 
 function enviar_razao() {
-  const texto = campo_razao.value.trim();
+  const texto = CAMPO_RAZAO.value.trim();
 
   if (!texto) {
-    campo_razao.classList.add(CLASSE_INVALIDO);
-    campo_razao.focus();
+    CAMPO_RAZAO.classList.add(CLASSE_INVALIDO);
+    CAMPO_RAZAO.focus();
     return;
   }
 
@@ -31,11 +31,11 @@ function enviar_razao() {
   fechar_popup();
 }
 
-botao_cancelar.addEventListener('click', fechar_popup);
-botao_enviar.addEventListener('click', enviar_razao);
+BOTAO_CANCELAR.addEventListener('click', fechar_popup);
+BOTAO_ENVIAR.addEventListener('click', enviar_razao);
 
-campo_razao.addEventListener('input', () => {
-  campo_razao.classList.remove(CLASSE_INVALIDO);
+CAMPO_RAZAO.addEventListener('input', () => {
+  CAMPO_RAZAO.classList.remove(CLASSE_INVALIDO);
 });
 
 document.addEventListener('keydown', (e) => {

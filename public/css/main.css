@@ -923,7 +923,7 @@ input[type="text"] {
   background: var(--cor-fundo-popup, #fff);
 }
 
-.validador--titulo {
+.validador-main-titulo {
   margin: 0 0 28px;
   text-align: center;
   font-size: 20px;
