@@ -122,11 +122,12 @@ body {
 }
 
 
+
+
 .barra-pesquisa{
     position: relative;
     display: flex;
-    display: inline-block;
-
+    align-items: center;
 }
 
 

@@ -41,6 +41,8 @@ customElements.define(`botao-verde`, BotaoVerde)
 
 
 
+
+
 class BarraPesquisa extends HTMLElement{
     connectedCallback(){
         const placeholder = this.getAttribute('placeholder') || 'Pesquise...';
