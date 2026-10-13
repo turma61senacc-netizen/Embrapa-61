@@ -1,10 +1,9 @@
-<!-- PopUp Ação postada-->
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste do popup</title>
+  <title>Acao Postada</title>
 </head>
 <body>
   <button id="btn-teste" type="button">Abrir popup</button>
@@ -15,8 +14,8 @@
 
     btnTeste.addEventListener('click', () => {
       const popup = document.createElement('popup-concluido');
-      popup.setAttribute('titulo', 'O ano foi criado!');
-      popup.setAttribute('mensagem', 'Ano adicionado ao sistema com sucesso!');
+      popup.setAttribute('titulo', 'Sua ação foi postada!');
+      popup.setAttribute('mensagem', 'Sua ação foi enviada para os avaliadores.');
       popup.setAttribute('texto-botao', 'Fechar');
 
       popup.addEventListener('fechar', () => {
