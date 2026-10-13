@@ -38,3 +38,39 @@ class BotaoVerde extends HTMLElement{
 }
 customElements.define(`botao-verde`, BotaoVerde)
 
+
+
+
+class BarraPesquisa extends HTMLElement{
+    connectedCallback(){
+        const placeholder = this.getAttribute('placeholder') || 'Pesquise...';
+        const icone = this.getAttribute('icone') || '../../../public/imagens/icone_pesquisa.png';
+
+        this.innerHTML = `
+            <div class="barra-pesquisa">
+                <input type="text" class="barra-pesquisa--input">
+                <button type="button" class="barra-pesquisa--botao" aria-label="Pesquisar">
+                    <img alt="">
+                </button>
+            </div>`;
+
+        const input = this.querySelector('.barra-pesquisa--input');
+        const botao = this.querySelector('.barra-pesquisa--botao');
+        input.placeholder = placeholder;
+        botao.querySelector('img').src = icone;
+
+        const pesquisar = () => {
+            this.dispatchEvent(new CustomEvent('pesquisar', {
+                detail: { termo: input.value.trim() },
+                bubbles: true
+            }));
+        };
+
+        botao.addEventListener('click', pesquisar);
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') pesquisar();
+        });
+    }
+}
+
+customElements.define('barra-pesquisa', BarraPesquisa);

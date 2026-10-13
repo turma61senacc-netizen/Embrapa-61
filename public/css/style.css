@@ -120,3 +120,59 @@ body {
 .botao-verde:active{
     background-color: #056510;
 }
+
+
+.barra-pesquisa{
+    position: relative;
+    display: flex;
+    display: inline-block;
+
+}
+
+
+.barra-pesquisa .barra-pesquisa--input{
+    width: 240px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 8px 36px 8px 12px;
+    border: 1px solid var(--cor-borda-campo);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--cor-texto-campo);
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+.barra-pesquisa .barra-pesquisa--input::placeholder{
+    color: var(--cor-placeholder-campo);
+    font-style: italic;
+}
+
+.barra-pesquisa .barra-pesquisa--input:focus{
+    border-color: var(--cor-foco-campo);
+}
+
+.barra-pesquisa--botao{
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.barra-pesquisa--botao img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.5;
+}
+
+.barra-pesquisa--botao:hover img{
+    opacity: 1;
+}
+ 
