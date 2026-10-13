@@ -1437,10 +1437,12 @@ input[type="text"] {
 .pesquisador-pop-relatorio--botao-gerar:hover {
     background-color: #0D1C54;
 }
+
 .validacoes-validador-tela {
-    width: min(100% - 60px, 1000px);
+    width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 4px 0 30px;
+    padding: clamp(2px, 0.2996vw, 4px) 0 clamp(14px, 2.2472vw, 30px);
     font-family: Verdana, Geneva, sans-serif;
     color: #111111;
     box-sizing: border-box;
@@ -1453,9 +1455,9 @@ input[type="text"] {
 }
 
 .validacoes-validador-titulo {
-    margin: 0 0 24px;
+    margin: 0 0 clamp(12px, 1.7978vw, 24px);
     text-align: center;
-    font-size: 21px;
+    font-size: clamp(16px, 1.5730vw, 21px);
     line-height: 1.2;
     font-weight: 700;
 }
@@ -1464,23 +1466,22 @@ input[type="text"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
+    margin-bottom: clamp(7px, 1.0487vw, 14px);
 }
 
 .validacoes-validador-botao-excel {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    height: 28px;
-    padding: 0 7px;
+    gap: clamp(2px, 0.3745vw, 5px);
+    height: clamp(17px, 2.0974vw, 28px);
+    padding: 0 clamp(3px, 0.5243vw, 7px);
     border: 1px solid #b7b7b7;
-    border-radius: 5px;
+    border-radius: clamp(3px, 0.3745vw, 5px);
     background: #ffffff;
     color: #1f5e9a;
-    font: 700 10px Verdana, Geneva, sans-serif;
+    font: 700 clamp(9px, 0.7491vw, 10px) Verdana, Geneva, sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-
 }
 
 .validacoes-validador-botao-excel:hover {
@@ -1489,25 +1490,25 @@ input[type="text"] {
 }
 
 .validacoes-validador-icone-excel {
-    width: 16px;
-    height: 16px;
+    width: clamp(10px, 1.1985vw, 16px);
+    height: clamp(10px, 1.1985vw, 16px);
     object-fit: contain;
 }
 
 .validacoes-validador-pesquisa {
     position: relative;
-    width: 158px;
-    height: 29px;
+    width: clamp(98px, 11.8352vw, 158px);
+    height: clamp(18px, 2.1723vw, 29px);
 }
 
 .validacoes-validador-campo-pesquisa {
     width: 100%;
     height: 100%;
-    padding: 0 27px 0 7px;
+    padding: 0 clamp(13px, 2.0225vw, 27px) 0 clamp(3px, 0.5243vw, 7px);
     border: 1px solid #bcbcbc;
-    border-radius: 5px;
+    border-radius: clamp(3px, 0.3745vw, 5px);
     outline: none;
-    font: italic 10px Verdana, Geneva, sans-serif;
+    font: italic clamp(9px, 0.7491vw, 10px) Verdana, Geneva, sans-serif;
     color: #555555;
 }
 
@@ -1517,27 +1518,27 @@ input[type="text"] {
 
 .validacoes-validador-icone-pesquisa {
     position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 16px;
-    height: 16px;
+    top: clamp(3px, 0.4494vw, 6px);
+    right: clamp(3px, 0.4494vw, 6px);
+    width: clamp(10px, 1.1985vw, 16px);
+    height: clamp(10px, 1.1985vw, 16px);
     object-fit: contain;
     pointer-events: none;
 }
 
 .validacoes-validador-grupo {
-    margin-bottom: 12px;
+    margin-bottom: clamp(6px, 0.8989vw, 12px);
 }
 
 .validacoes-validador-cabecalho-grupo {
     width: 100%;
-    min-height: 52px;
-    padding: 7px 15px 7px 10px;
+    min-height: clamp(32px, 3.8951vw, 52px);
+    padding: clamp(3px, 0.5243vw, 7px) clamp(7px, 1.1236vw, 15px) clamp(3px, 0.5243vw, 7px) clamp(5px, 0.7491vw, 10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid #bcbcbc;
-    border-radius: 6px;
+    border-radius: clamp(3px, 0.4494vw, 6px);
     background: #ffffff;
     cursor: pointer;
     font-family: Verdana, Geneva, sans-serif;
@@ -1546,12 +1547,12 @@ input[type="text"] {
 .validacoes-validador-cabecalho-conteudo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: clamp(6px, 0.8989vw, 12px);
 }
 
 .validacoes-validador-icone-status {
-    width: 38px;
-    height: 38px;
+    width: clamp(24px, 2.8464vw, 38px);
+    height: clamp(24px, 2.8464vw, 38px);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1571,25 +1572,25 @@ input[type="text"] {
 }
 
 .validacoes-validador-icone-grupo {
-    width: 24px;
-    height: 24px;
+    width: clamp(15px, 1.7978vw, 24px);
+    height: clamp(15px, 1.7978vw, 24px);
     object-fit: contain;
 }
 
 .validacoes-validador-nome-grupo {
-    font-size: 15px;
+    font-size: clamp(12px, 1.1236vw, 15px);
     font-weight: 700;
 }
 
 .validacoes-validador-contador {
-    min-width: 20px;
-    height: 18px;
-    padding: 0 6px;
+    min-width: clamp(12px, 1.4981vw, 20px);
+    height: clamp(11px, 1.3483vw, 18px);
+    padding: 0 clamp(3px, 0.4494vw, 6px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    font-size: 10px;
+    border-radius: clamp(6px, 0.7491vw, 10px);
+    font-size: clamp(9px, 0.7491vw, 10px);
     font-weight: 700;
 }
 
@@ -1609,8 +1610,8 @@ input[type="text"] {
 }
 
 .validacoes-validador-icone-seta-grupo {
-    width: 16px;
-    height: 16px;
+    width: clamp(10px, 1.1985vw, 16px);
+    height: clamp(10px, 1.1985vw, 16px);
     object-fit: contain;
     transform: rotate(180deg);
 }
@@ -1620,7 +1621,7 @@ input[type="text"] {
 }
 
 .validacoes-validador-lista-grupo {
-    margin-top: 12px;
+    margin-top: clamp(6px, 0.8989vw, 12px);
     overflow: hidden;
 }
 
@@ -1631,24 +1632,24 @@ input[type="text"] {
 .validacoes-validador-tabela {
     overflow: hidden;
     border: 1px solid #b7c9dc;
-    border-radius: 9px;
+    border-radius: clamp(5px, 0.6742vw, 9px);
 }
 
 .validacoes-validador-linha {
     width: 100%;
-    min-height: 26px;
+    min-height: clamp(16px, 1.9476vw, 26px);
     display: grid;
-    grid-template-columns: 1.15fr 1.1fr 1.55fr 0.9fr 0.9fr 28px;
+    grid-template-columns: 1.15fr 1.1fr 1.55fr 0.9fr 0.9fr clamp(13px, 2.0974vw, 28px);
     align-items: center;
     text-align: center;
 }
 
 .validacoes-validador-cabecalho-tabela {
-    min-height: 30px;
-    padding: 0 5px;
+    min-height: clamp(19px, 2.2472vw, 30px);
+    padding: 0 clamp(2px, 0.3745vw, 5px);
     background: #376b9f;
     color: #ffffff;
-    font-size: 11px;
+    font-size: clamp(9px, 0.8240vw, 11px);
     font-weight: 700;
 }
 
@@ -1657,12 +1658,12 @@ input[type="text"] {
 }
 
 .validacoes-validador-linha-pesquisa {
-    padding: 0 5px;
+    padding: 0 clamp(2px, 0.3745vw, 5px);
     border: 0;
     border-top: 0;
     background: #ffffff;
     color: #111111;
-    font: 10px Verdana, Geneva, sans-serif;
+    font: clamp(9px, 0.7491vw, 10px) Verdana, Geneva, sans-serif;
     cursor: pointer;
 }
 
@@ -1690,8 +1691,8 @@ input[type="text"] {
 }
 
 .validacoes-validador-icone-seta-pesquisa {
-    width: 16px;
-    height: 16px;
+    width: clamp(10px, 1.1985vw, 16px);
+    height: clamp(10px, 1.1985vw, 16px);
     object-fit: contain;
 }
 
@@ -1701,7 +1702,7 @@ input[type="text"] {
 
 .validacoes-validador-detalhes {
     display: none;
-    padding: 18px 16px 20px;
+    padding: clamp(9px, 1.3483vw, 18px) clamp(8px, 1.1985vw, 16px) clamp(10px, 1.4981vw, 20px);
     border-top: 1px solid #b7b7b7;
     background: #ffffff;
 }
@@ -1711,13 +1712,13 @@ input[type="text"] {
 }
 
 .validacoes-validador-detalhes-campo {
-    margin-bottom: 14px;
+    margin-bottom: clamp(7px, 1.0487vw, 14px);
 }
 
 .validacoes-validador-detalhes-campo label {
     display: block;
-    margin: 0 0 7px;
-    font-size: 14px;
+    margin: 0 0 clamp(3px, 0.5243vw, 7px);
+    font-size: clamp(11px, 1.0487vw, 14px);
     font-weight: 700;
 }
 
@@ -1725,48 +1726,55 @@ input[type="text"] {
 .validacoes-validador-detalhes-campo textarea {
     width: 100%;
     border: 1px solid #7c7c7c;
-    border-radius: 8px;
+    border-radius: clamp(4px, 0.5993vw, 8px);
     outline: none;
     background: #fdfdfd;
     color: #222222;
-    font: 13px Verdana, Geneva, sans-serif;
+    font: clamp(10px, 0.9738vw, 13px) Verdana, Geneva, sans-serif;
 }
 
 .validacoes-validador-detalhes-campo input {
-    height: 43px;
-    padding: 0 13px;
+    height: clamp(27px, 3.2210vw, 43px);
+    padding: 0 clamp(6px, 0.9738vw, 13px);
 }
 
 .validacoes-validador-detalhes-campo textarea {
-    min-height: 100px;
-    padding: 12px 13px;
+    min-height: clamp(62px, 7.4906vw, 100px);
+    padding: clamp(6px, 0.8989vw, 12px) clamp(6px, 0.9738vw, 13px);
     resize: vertical;
 }
 
 .validacoes-validador-comprovantes {
-    min-height: 95px;
-    padding: 10px;
+    width: 100%;
+    min-height: clamp(93px, 11.2360vw, 150px);
+    padding: clamp(9px, 1.4232vw, 19px);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    border: 1px solid #7c7c7c;
-    border-radius: 8px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-content: start;
+    gap: clamp(5px, 0.7491vw, 10px);
+    border: 1px solid #333333;
+    border-radius: clamp(6px, 0.7491vw, 10px);
+    background: #ffffff;
 }
 
 .validacoes-validador-comprovante {
     min-width: 0;
+    min-height: clamp(31px, 3.7453vw, 50px);
+    padding: clamp(2px, 0.3745vw, 5px) clamp(4px, 0.5993vw, 8px);
     display: grid;
-    grid-template-columns: 32px 1fr 20px;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 7px;
+    grid-template-columns: clamp(14px, 2.2472vw, 30px) minmax(0, 1fr) clamp(12px, 1.7978vw, 24px);
+    grid-template-rows: auto auto;
+    column-gap: clamp(3px, 0.5243vw, 7px);
     align-items: center;
-    padding: 4px;
+    background: #f0f1f3;
+    border-radius: clamp(6px, 0.7491vw, 10px);
 }
 
 .validacoes-validador-icone-arquivo {
-    width: 32px;
-    height: 32px;
+    width: clamp(19px, 2.2472vw, 30px);
+    height: clamp(25px, 2.9963vw, 40px);
     object-fit: contain;
+    grid-column: 1;
     grid-row: 1 / 3;
 }
 
@@ -1775,35 +1783,46 @@ input[type="text"] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 10px;
+    font-size: clamp(11px, 1.0487vw, 14px);
+    line-height: clamp(14px, 1.3483vw, 18px);
+    color: #111111;
 }
 
 .validacoes-validador-comprovante small {
-    color: #777777;
-    font-size: 9px;
+    min-width: 0;
+    color: #888888;
+    font-size: clamp(9px, 0.8989vw, 12px);
+    line-height: clamp(12px, 1.1236vw, 15px);
 }
 
 .validacoes-validador-icone-download {
-    width: 20px;
-    height: 20px;
+    width: clamp(15px, 1.7978vw, 24px);
+    height: clamp(16px, 1.9476vw, 26px);
     object-fit: contain;
     grid-column: 3;
     grid-row: 1 / 3;
+    justify-self: center;
+}
+
+.validacoes-validador-detalhes-campo:has(.validacoes-validador-comprovantes) > label {
+    margin-bottom: clamp(5px, 0.7491vw, 10px);
+    font-size: clamp(17px, 1.6479vw, 22px);
+    font-weight: 700;
 }
 
 .validacoes-validador-acoes {
     display: flex;
     justify-content: flex-end;
-    gap: 35px;
-    margin-top: 18px;
+    gap: clamp(17px, 2.6217vw, 35px);
+    margin-top: clamp(9px, 1.3483vw, 18px);
 }
 
 .validacoes-validador-botao-recusar,
 .validacoes-validador-botao-aprovar {
-    width: 210px;
-    height: 43px;
-    border-radius: 20px;
-    font: 14px Verdana, Geneva, sans-serif;
+    width: clamp(130px, 15.7303vw, 210px);
+    height: clamp(27px, 3.2210vw, 43px);
+    border-radius: clamp(11px, 1.4981vw, 20px);
+    font: clamp(11px, 1.0487vw, 14px) Verdana, Geneva, sans-serif;
     cursor: default;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
@@ -1827,16 +1846,23 @@ input[type="text"] {
     color: #ffffff;
 }
 
-.validacoes-validador-botao-aprovar:hover:hover {
+.validacoes-validador-botao-aprovar:hover {
     border: 0;
     background: #056510;
-    color: #ffffff;;
+    color: #ffffff;
     transform: scale(1.03);
+}
+
+@media (max-width: 1100px) {
+    .validacoes-validador-comprovantes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: clamp(8px, 0.8989vw, 12px);
+    }
 }
 
 @media (max-width: 760px) {
     .validacoes-validador-tela {
-        width: min(100% - 24px, 1000px);
+        width: 98%;
     }
 
     .validacoes-validador-tabela {
@@ -1845,19 +1871,75 @@ input[type="text"] {
 
     .validacoes-validador-cabecalho-tabela,
     .validacoes-validador-linha-pesquisa {
-        min-width: 690px;
+        min-width: clamp(428px, 51.6854vw, 690px);
     }
 
     .validacoes-validador-comprovantes {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: clamp(5px, 0.7491vw, 10px);
+        gap: clamp(4px, 0.5993vw, 8px);
+    }
+
+    .validacoes-validador-comprovante {
+        grid-template-columns: clamp(12px, 1.9476vw, 26px) minmax(0, 1fr) clamp(10px, 1.4981vw, 20px);
+        column-gap: clamp(2px, 0.3745vw, 5px);
+        padding: clamp(2px, 0.3745vw, 5px);
+    }
+
+    .validacoes-validador-icone-arquivo {
+        width: clamp(16px, 1.9476vw, 26px);
+        height: clamp(21px, 2.5468vw, 34px);
+    }
+
+    .validacoes-validador-comprovante span {
+        font-size: clamp(9px, 0.8240vw, 11px);
+    }
+
+    .validacoes-validador-comprovante small {
+        font-size: clamp(9px, 0.7491vw, 10px);
+    }
+
+    .validacoes-validador-icone-download {
+        width: clamp(12px, 1.4981vw, 20px);
+        height: clamp(14px, 1.6479vw, 22px);
     }
 
     .validacoes-validador-acoes {
-        gap: 12px;
+        gap: clamp(6px, 0.8989vw, 12px);
     }
 
     .validacoes-validador-botao-recusar,
     .validacoes-validador-botao-aprovar {
         width: 50%;
+    }
+}
+
+@media (max-width: 760px) {
+    .validacoes-validador-titulo {
+        font-size: clamp(16px, 1.5730vw, 21px);
+    }
+
+    .validacoes-validador-nome-grupo {
+        font-size: clamp(12px, 1.1236vw, 15px);
+    }
+
+    .validacoes-validador-cabecalho-tabela,
+    .validacoes-validador-linha-pesquisa {
+        font-size: clamp(10px, 0.8240vw, 11px);
+    }
+
+    .validacoes-validador-comprovantes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    .validacoes-validador-comprovante span {
+        font-size: clamp(10px, 1.0487vw, 14px);
+        line-height: 1.25;
+    }
+
+    .validacoes-validador-comprovante small {
+        font-size: clamp(9px, 0.8989vw, 12px);
+        line-height: 1.25;
     }
 }
