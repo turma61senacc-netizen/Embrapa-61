@@ -1179,3 +1179,427 @@ input[type="text"] {
 .pesquisador-pop-relatorio--botao-gerar:hover {
     background-color: #0D1C54;
 }
+.validacoes-validador-tela {
+    width: min(100% - 60px, 1000px);
+    margin: 0 auto;
+    padding: 4px 0 30px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #111111;
+    box-sizing: border-box;
+}
+
+.validacoes-validador-tela *,
+.validacoes-validador-tela *::before,
+.validacoes-validador-tela *::after {
+    box-sizing: border-box;
+}
+
+.validacoes-validador-titulo {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.validacoes-validador-ferramentas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.validacoes-validador-botao-excel {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 28px;
+    padding: 0 7px;
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1f5e9a;
+    font: 700 10px Verdana, Geneva, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.validacoes-validador-botao-excel:hover {
+    background: #134593;
+    color: #ffffff;
+}
+
+.validacoes-validador-icone-excel {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.validacoes-validador-pesquisa {
+    position: relative;
+    width: 158px;
+    height: 29px;
+}
+
+.validacoes-validador-campo-pesquisa {
+    width: 100%;
+    height: 100%;
+    padding: 0 27px 0 7px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    outline: none;
+    font: italic 10px Verdana, Geneva, sans-serif;
+    color: #555555;
+}
+
+.validacoes-validador-campo-pesquisa:focus {
+    border-color: #6e6e6e;
+}
+
+.validacoes-validador-icone-pesquisa {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.validacoes-validador-grupo {
+    margin-bottom: 12px;
+}
+
+.validacoes-validador-cabecalho-grupo {
+    width: 100%;
+    min-height: 52px;
+    padding: 7px 15px 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #bcbcbc;
+    border-radius: 6px;
+    background: #ffffff;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.validacoes-validador-cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.validacoes-validador-icone-status {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.validacoes-validador-icone-status-analise {
+    background: #fff2b9;
+}
+
+.validacoes-validador-icone-status-aprovada {
+    background: #caffd8;
+}
+
+.validacoes-validador-icone-status-negada {
+    background: #ffd1d1;
+}
+
+.validacoes-validador-icone-grupo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.validacoes-validador-nome-grupo {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.validacoes-validador-contador {
+    min-width: 20px;
+    height: 18px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.validacoes-validador-contador-analise {
+    background: #fff0a7;
+    color: #e2ad00;
+}
+
+.validacoes-validador-contador-aprovada {
+    background: #bfffc9;
+    color: #0a9a2d;
+}
+
+.validacoes-validador-contador-negada {
+    background: #ffc7c7;
+    color: #ff2e2e;
+}
+
+.validacoes-validador-icone-seta-grupo {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transform: rotate(180deg);
+}
+
+.validacoes-validador-grupo-fechado .validacoes-validador-icone-seta-grupo {
+    transform: rotate(0deg);
+}
+
+.validacoes-validador-lista-grupo {
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.validacoes-validador-grupo-fechado .validacoes-validador-lista-grupo {
+    display: none;
+}
+
+.validacoes-validador-tabela {
+    overflow: hidden;
+    border: 1px solid #b7c9dc;
+    border-radius: 9px;
+}
+
+.validacoes-validador-linha {
+    width: 100%;
+    min-height: 26px;
+    display: grid;
+    grid-template-columns: 1.15fr 1.1fr 1.55fr 0.9fr 0.9fr 28px;
+    align-items: center;
+    text-align: center;
+}
+
+.validacoes-validador-cabecalho-tabela {
+    min-height: 30px;
+    padding: 0 5px;
+    background: #376b9f;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.validacoes-validador-pesquisa-item {
+    border: 0;
+}
+
+.validacoes-validador-linha-pesquisa {
+    padding: 0 5px;
+    border: 0;
+    border-top: 0;
+    background: #ffffff;
+    color: #111111;
+    font: 10px Verdana, Geneva, sans-serif;
+    cursor: pointer;
+}
+
+.validacoes-validador-pesquisa-item:nth-child(odd) .validacoes-validador-linha-pesquisa {
+    background: #eaf2fc;
+}
+
+.validacoes-validador-linha-pesquisa > span {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.validacoes-validador-status-analise {
+    color: #e2ad00;
+}
+
+.validacoes-validador-status-aprovado {
+    color: #07952b;
+}
+
+.validacoes-validador-status-negado {
+    color: #ff1f1f;
+}
+
+.validacoes-validador-icone-seta-pesquisa {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.validacoes-validador-pesquisa-item-aberto .validacoes-validador-icone-seta-pesquisa {
+    transform: rotate(180deg);
+}
+
+.validacoes-validador-detalhes {
+    display: none;
+    padding: 18px 16px 20px;
+    border-top: 1px solid #b7b7b7;
+    background: #ffffff;
+}
+
+.validacoes-validador-pesquisa-item-aberto .validacoes-validador-detalhes {
+    display: block;
+}
+
+.validacoes-validador-detalhes-campo {
+    margin-bottom: 14px;
+}
+
+.validacoes-validador-detalhes-campo label {
+    display: block;
+    margin: 0 0 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.validacoes-validador-detalhes-campo input,
+.validacoes-validador-detalhes-campo textarea {
+    width: 100%;
+    border: 1px solid #7c7c7c;
+    border-radius: 8px;
+    outline: none;
+    background: #fdfdfd;
+    color: #222222;
+    font: 13px Verdana, Geneva, sans-serif;
+}
+
+.validacoes-validador-detalhes-campo input {
+    height: 43px;
+    padding: 0 13px;
+}
+
+.validacoes-validador-detalhes-campo textarea {
+    min-height: 100px;
+    padding: 12px 13px;
+    resize: vertical;
+}
+
+.validacoes-validador-comprovantes {
+    min-height: 95px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border: 1px solid #7c7c7c;
+    border-radius: 8px;
+}
+
+.validacoes-validador-comprovante {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 32px 1fr 20px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 7px;
+    align-items: center;
+    padding: 4px;
+}
+
+.validacoes-validador-icone-arquivo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    grid-row: 1 / 3;
+}
+
+.validacoes-validador-comprovante span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.validacoes-validador-comprovante small {
+    color: #777777;
+    font-size: 9px;
+}
+
+.validacoes-validador-icone-download {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.validacoes-validador-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+    margin-top: 18px;
+}
+
+.validacoes-validador-botao-recusar,
+.validacoes-validador-botao-aprovar {
+    width: 210px;
+    height: 43px;
+    border-radius: 20px;
+    font: 14px Verdana, Geneva, sans-serif;
+    cursor: default;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.validacoes-validador-botao-recusar {
+    border: 2px solid #c52d2d;
+    background: #ffffff;
+    color: #c52d2d;
+}
+
+.validacoes-validador-botao-recusar:hover {
+    border: 2px solid #8f0000;
+    color: #ffffff;
+    background: #8f0000;
+    transform: scale(1.03);
+}
+
+.validacoes-validador-botao-aprovar {
+    border: 0;
+    background: #2d67a2;
+    color: #ffffff;
+}
+
+.validacoes-validador-botao-aprovar:hover:hover {
+    border: 0;
+    background: #056510;
+    color: #ffffff;;
+    transform: scale(1.03);
+}
+
+@media (max-width: 760px) {
+    .validacoes-validador-tela {
+        width: min(100% - 24px, 1000px);
+    }
+
+    .validacoes-validador-tabela {
+        overflow-x: auto;
+    }
+
+    .validacoes-validador-cabecalho-tabela,
+    .validacoes-validador-linha-pesquisa {
+        min-width: 690px;
+    }
+
+    .validacoes-validador-comprovantes {
+        grid-template-columns: 1fr;
+    }
+
+    .validacoes-validador-acoes {
+        gap: 12px;
+    }
+
+    .validacoes-validador-botao-recusar,
+    .validacoes-validador-botao-aprovar {
+        width: 50%;
+    }
+}
