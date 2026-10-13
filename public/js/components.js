@@ -76,3 +76,4 @@ class BarraPesquisa extends HTMLElement{
 }
 
 customElements.define('barra-pesquisa', BarraPesquisa);
+
