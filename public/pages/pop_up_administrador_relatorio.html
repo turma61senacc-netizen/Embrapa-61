@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop_up_administrador_relatorio</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pop_up_administrador_relatorio.css">
+    <script src="../js/pop_up_administrador_relatorio.js" defer></script>
+</head>
+<body>
+
+    <div class="administrador-pop-relatorio--container" id="administrador-pop-relatorio--container">
+
+        <button type="button" class="administrador-pop-relatorio--botao-fechar" id="administrador-pop-relatorio--botao-fechar" aria-label="Fechar">X</button>
+
+        <h1 class="administrador-pop-relatorio--titulo">Relatório</h1>
+
+        <!-- ABAS -->
+        <div class="administrador-pop-relatorio--grupo-abas-principais" role="tablist">
+            <button type="button" role="tab" id="administrador-pop-relatorio--aba-acoes" class="administrador-pop-relatorio--aba administrador-pop-relatorio--aba-ativa" data-painel="administrador-pop-relatorio--painel-acoes" aria-selected="true">Relatório de Tipos de Ações</button>
+            <button type="button" role="tab" id="administrador-pop-relatorio--aba-empregados" class="administrador-pop-relatorio--aba" data-painel="administrador-pop-relatorio--painel-empregados" aria-selected="false">Relatório de Empregados</button>
+            <button type="button" role="tab" id="administrador-pop-relatorio--aba-anos" class="administrador-pop-relatorio--aba" data-painel="administrador-pop-relatorio--painel-anos" aria-selected="false">Relatório de Anos</button>
+        </div>
+
+        <!-- PAINEL: TIPOS DE AÇÕES -->
+        <div class="administrador-pop-relatorio--area-cinza administrador-pop-relatorio--painel" id="administrador-pop-relatorio--painel-acoes" role="tabpanel">
+
+            <div class="administrador-pop-relatorio--coluna-principal">
+                <h2 class="administrador-pop-relatorio--subtitulo">Ações</h2>
+
+                <div class="administrador-pop-relatorio--grupo-abas">
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-ativo administrador-pop-relatorio--botao-selecionar">Selecionar ações</button>
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-inativo administrador-pop-relatorio--botao-todos">Todas as ações</button>
+                </div>
+
+                <div class="administrador-pop-relatorio--busca">
+                    <input type="search" class="administrador-pop-relatorio--campo-busca" placeholder="Pesquise..." aria-label="Pesquisar ações">
+                    <svg class="administrador-pop-relatorio--icone-busca" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                </div>
+
+                <div class="administrador-pop-relatorio--lista-itens">
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--acao-evento-regional" name="acoes" value="coordenacao_evento_regional">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--acao-evento-regional">Coordenação de evento REGIONAL</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--acao-artigos-midia" name="acoes" value="artigos_divulgacao_midia">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--acao-artigos-midia">Artigos de divulgação na mídia</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--acao-videos-tecnicos" name="acoes" value="producao_videos_tecnicos">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--acao-videos-tecnicos">Produção de vídeos técnicos</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--acao-plano-marketing" name="acoes" value="plano_marketing">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--acao-plano-marketing">Elaboração do plano em marketing</label>
+                    </div>
+                </div>
+                <p class="administrador-pop-relatorio--sem-resultado" hidden>Nenhum resultado encontrado.</p>
+            </div>
+
+            <div class="administrador-pop-relatorio--coluna-dados">
+                <h2 class="administrador-pop-relatorio--subtitulo">Dados</h2>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-acoes-setor" name="setor">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-acoes-setor">Setor</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-acoes-status" name="status">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-acoes-status">Status</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAINEL: EMPREGADOS -->
+        <div class="administrador-pop-relatorio--area-cinza administrador-pop-relatorio--painel" id="administrador-pop-relatorio--painel-empregados" role="tabpanel" hidden>
+
+            <div class="administrador-pop-relatorio--coluna-principal">
+                <h2 class="administrador-pop-relatorio--subtitulo">Funcionários</h2>
+
+                <div class="administrador-pop-relatorio--grupo-abas">
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-ativo administrador-pop-relatorio--botao-selecionar">Selecionar empregados</button>
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-inativo administrador-pop-relatorio--botao-todos">Todos os empregados</button>
+                </div>
+
+                <div class="administrador-pop-relatorio--busca">
+                    <input type="search" class="administrador-pop-relatorio--campo-busca" placeholder="Pesquise..." aria-label="Pesquisar empregados">
+                    <svg class="administrador-pop-relatorio--icone-busca" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                </div>
+
+                <div class="administrador-pop-relatorio--lista-itens">
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--empregado-silva" name="empregados" value="fulano_da_silva">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--empregado-silva">Fulano Da Silva</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--empregado-ferreira" name="empregados" value="fulano_ferreira">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--empregado-ferreira">Fulano Ferreira</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--empregado-araujo" name="empregados" value="fulano_araujo">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--empregado-araujo">Fulano Araujo</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--empregado-oliveira" name="empregados" value="fulano_oliveira">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--empregado-oliveira">Fulano Oliveira</label>
+                    </div>
+                </div>
+                <p class="administrador-pop-relatorio--sem-resultado" hidden>Nenhum resultado encontrado.</p>
+            </div>
+
+            <div class="administrador-pop-relatorio--coluna-dados">
+                <h2 class="administrador-pop-relatorio--subtitulo">Dados</h2>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-empregados-email" name="email">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-empregados-email">Email</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-empregados-area" name="area_atuacao">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-empregados-area">Área de Atuação</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-empregados-status" name="status">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-empregados-status">Status</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAINEL: ANOS -->
+        <div class="administrador-pop-relatorio--area-cinza administrador-pop-relatorio--painel" id="administrador-pop-relatorio--painel-anos" role="tabpanel" hidden>
+
+            <div class="administrador-pop-relatorio--coluna-principal">
+                <h2 class="administrador-pop-relatorio--subtitulo">Anos</h2>
+
+                <div class="administrador-pop-relatorio--grupo-abas">
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-ativo administrador-pop-relatorio--botao-selecionar">Selecionar anos</button>
+                    <button type="button" class="administrador-pop-relatorio--botao-aba administrador-pop-relatorio--botao-aba-inativo administrador-pop-relatorio--botao-todos">Todos os anos</button>
+                </div>
+
+                <div class="administrador-pop-relatorio--busca">
+                    <input type="search" class="administrador-pop-relatorio--campo-busca" placeholder="Pesquise..." aria-label="Pesquisar anos">
+                    <svg class="administrador-pop-relatorio--icone-busca" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                </div>
+
+                <div class="administrador-pop-relatorio--lista-itens">
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--ano-2026" name="anos" value="2026">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--ano-2026">2026</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--ano-2025" name="anos" value="2025">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--ano-2025">2025</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--ano-2024" name="anos" value="2024">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--ano-2024">2024</label>
+                    </div>
+                    <div class="administrador-pop-relatorio--item-checkbox">
+                        <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--ano-2023" name="anos" value="2023">
+                        <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--ano-2023">2023</label>
+                    </div>
+                </div>
+                <p class="administrador-pop-relatorio--sem-resultado" hidden>Nenhum resultado encontrado.</p>
+            </div>
+
+            <div class="administrador-pop-relatorio--coluna-dados">
+                <h2 class="administrador-pop-relatorio--subtitulo">Dados</h2>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-anos-status" name="status">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-anos-status">Status</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-anos-enviadas" name="acoes_enviadas">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-anos-enviadas">Número de Ações Enviadas</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-anos-avaliadas" name="acoes_avaliadas">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-anos-avaliadas">Número de Ações Avaliadas</label>
+                </div>
+                <div class="administrador-pop-relatorio--item-checkbox">
+                    <input type="checkbox" class="administrador-pop-relatorio--checkbox" id="administrador-pop-relatorio--dado-anos-tipos" name="tipos_acoes">
+                    <label class="administrador-pop-relatorio--rotulo" for="administrador-pop-relatorio--dado-anos-tipos">Tipos de Ações</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="administrador-pop-relatorio--rodape">
+            <!-- Troque o "#" pela página do relatório quando ela existir -->
+            <a href="#" class="administrador-pop-relatorio--botao-gerar">Gerar Relatório</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

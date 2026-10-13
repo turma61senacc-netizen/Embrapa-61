@@ -1179,3 +1179,253 @@ input[type="text"] {
 .pesquisador-pop-relatorio--botao-gerar:hover {
     background-color: #0D1C54;
 }
+
+
+/* Variáveis com valor padrão caso não existam no main.css */
+.administrador-pop-relatorio--container {
+    --pop-relatorio-azul: var(--azul_btn, #346393);
+    --pop-relatorio-azul-escuro: var(--azul_btn_escuro, #0f1f70);
+    --pop-relatorio-verde: var(--verde_btn_hover, #058a16);
+    --pop-relatorio-cinza: #dfdfdf;
+    --pop-relatorio-cinza-aba: #e3e3e3;
+    --pop-relatorio-borda-check: #6b9370;
+
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 32px 40px;
+    font-family: var(--fonte-principal, 'Verdana', sans-serif);
+    color: var(--preto, #111);
+    box-sizing: border-box;
+}
+
+.administrador-pop-relatorio--container *,
+.administrador-pop-relatorio--container *::before,
+.administrador-pop-relatorio--container *::after {
+    box-sizing: inherit;
+}
+
+.administrador-pop-relatorio--container [hidden],
+.administrador-pop-relatorio--container[hidden] {
+    display: none !important;
+}
+
+.administrador-pop-relatorio--botao-fechar {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.administrador-pop-relatorio--titulo {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 48px;
+}
+
+/* Abas principais (3 relatórios) */
+.administrador-pop-relatorio--grupo-abas-principais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.administrador-pop-relatorio--aba {
+    flex: 0 1 305px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--pop-relatorio-cinza-aba);
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.administrador-pop-relatorio--aba-ativa {
+    background-color: var(--pop-relatorio-azul);
+    color: #fff;
+}
+
+/* Área cinza */
+.administrador-pop-relatorio--area-cinza {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 32px 60px 48px;
+    background-color: var(--pop-relatorio-cinza);
+}
+
+.administrador-pop-relatorio--subtitulo {
+    margin: 0 0 20px;
+    font-size: 21px;
+}
+
+/* Botões Selecionar / Todos */
+.administrador-pop-relatorio--grupo-abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 14px;
+}
+
+.administrador-pop-relatorio--botao-aba {
+    border: none;
+    border-radius: 999px;
+    padding: 4px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.administrador-pop-relatorio--botao-aba-ativo {
+    background-color: var(--pop-relatorio-azul);
+    color: #fff;
+}
+
+.administrador-pop-relatorio--botao-aba-inativo {
+    background-color: #fff;
+    color: var(--preto, #111);
+}
+
+/* Busca */
+.administrador-pop-relatorio--busca {
+    position: relative;
+    max-width: 360px;
+    margin: 0 0 8px 30px;
+}
+
+.administrador-pop-relatorio--campo-busca {
+    width: 100%;
+    padding: 10px 40px 10px 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.administrador-pop-relatorio--icone-busca {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+.administrador-pop-relatorio--sem-resultado {
+    margin: 8px 0 0 30px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Checkboxes */
+.administrador-pop-relatorio--lista-itens {
+    display: flex;
+    flex-direction: column;
+}
+
+.administrador-pop-relatorio--item-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.administrador-pop-relatorio--checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    display: grid;
+    place-content: center;
+    flex: none;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-color: #fff;
+    border: 2px solid var(--pop-relatorio-borda-check);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.administrador-pop-relatorio--checkbox::after {
+    content: "";
+    width: 8px;
+    height: 14px;
+    margin-top: -3px;
+    border: solid var(--pop-relatorio-azul);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.1s;
+}
+
+.administrador-pop-relatorio--checkbox:checked::after {
+    transform: rotate(45deg) scale(1);
+}
+
+.administrador-pop-relatorio--rotulo {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Rodapé / botão gerar */
+.administrador-pop-relatorio--rodape {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.administrador-pop-relatorio--botao-gerar {
+    display: inline-block;
+    width: 285px;
+    padding: 12px 0;
+    border-radius: 999px;
+    background-color: var(--pop-relatorio-azul-escuro);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    transition: ease-in-out 0.1s;
+}
+
+.administrador-pop-relatorio--botao-gerar:hover,
+.administrador-pop-relatorio--botao-gerar:focus-visible {
+    background-color: var(--pop-relatorio-verde);
+}
+
+/* Foco visível */
+.administrador-pop-relatorio--aba:focus-visible,
+.administrador-pop-relatorio--botao-aba:focus-visible,
+.administrador-pop-relatorio--botao-fechar:focus-visible,
+.administrador-pop-relatorio--checkbox:focus-visible,
+.administrador-pop-relatorio--campo-busca:focus-visible,
+.administrador-pop-relatorio--botao-gerar:focus-visible {
+    outline: 3px solid #f0a500;
+    outline-offset: 2px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .administrador-pop-relatorio--area-cinza {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+    .administrador-pop-relatorio--aba {
+        flex: 1 1 100%;
+    }
+    .administrador-pop-relatorio--botao-gerar {
+        width: 100%;
+    }
+}
