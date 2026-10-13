@@ -9,8 +9,12 @@ class BotaoExcel extends HTMLElement{
 
 customElements.define('botao-excel', BotaoExcel);
 
-class Dropdown extends HTMLElement{
+class BotaoCancelar extends HTMLElement{
     connectedCallback(){
-        const texto = this.innerHTML || "Dropdown";
+        const texto = this.innerHTML || "Cancelar";
+
+        this.innerHTML = `<button class="botao-cancelar">${texto}</button>`;
     }
 }
+
+customElements.define(`botao-cancelar`, BotaoCancelar);
