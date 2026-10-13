@@ -1,5 +1,5 @@
-const CLASSE_OCULTO   = 'validador-header--oculto';
-const CLASSE_INVALIDO = 'validador-header--campo-invalido';
+const CLASSE_OCULTO   = 'validador-main--oculto';
+const CLASSE_INVALIDO = 'validador-main--campo-invalido';
 const TECLA_FECHAR    = 'Escape';
 
 const FUNDO          = document.getElementById('pop-validador-fundo');
@@ -14,8 +14,8 @@ function abrir_popup() {
 
 function fechar_popup() {
   FUNDO.classList.add(CLASSE_OCULTO);
- CAMPO_RAZAO.value = '';
- CAMPO_RAZAO.classList.remove(CLASSE_INVALIDO);
+  CAMPO_RAZAO.value = '';
+  CAMPO_RAZAO.classList.remove(CLASSE_INVALIDO);
 }
 
 function enviar_razao() {
@@ -39,5 +39,7 @@ CAMPO_RAZAO.addEventListener('input', () => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === TECLA_FECHAR) fechar_popup();
+  if (e.key === TECLA_FECHAR && !FUNDO.classList.contains(CLASSE_OCULTO)) {
+    fechar_popup();
+  }
 });
