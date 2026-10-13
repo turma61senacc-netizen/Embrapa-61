@@ -77,8 +77,8 @@ class PopupConcluido extends HTMLElement {
         }
 
         .pop-main--botao:hover {
-          opacity: 0.9;
-        }
+          opacity: 0.9;     
+          background:#058914;   }
       </style>
 
       <div class="pop-main">
