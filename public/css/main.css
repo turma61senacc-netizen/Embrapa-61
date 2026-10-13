@@ -1437,3 +1437,16 @@ input[type="text"] {
 .pesquisador-pop-relatorio--botao-gerar:hover {
     background-color: #0D1C54;
 }
+
+
+.comite-tabela-colaboradores-container{
+    justify-items: center;
+    
+   
+}
+.comite-tabela-colaboradores-tabela{
+    justify-self: center;
+    
+   
+}
+

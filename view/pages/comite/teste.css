@@ -1,0 +1,25 @@
+.a{
+    justify-content: center;
+    display: flex;
+}
+
+.b{
+    justify-content:space-evenly;
+    display: flex;
+    
+}
+.campo_pesquisa{
+    width: 15%;
+    height: 4%;
+}
+.Tabela{
+    display:grid;
+    grid-template-columns: (3,1fr);
+    gap: 10px;
+}
+
+.header {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
