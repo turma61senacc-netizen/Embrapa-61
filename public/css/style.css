@@ -43,3 +43,80 @@ body {
     background-color: #4481E0;
     color: white;
 }
+
+.botao-cancelar{
+    display: inline-flex;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 17.813rem;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #CD0000;
+    border: 2.5px solid #CD0000;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao-cancelar:hover{
+    background-color: #CD0000;
+    color: white;
+    border: none;
+}
+
+.botao-cancelar:active{
+    background-color: #8F0000;
+    color: white;
+    border: none;
+}
+
+.botao-azul{
+    display: inline-flex;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 17.813rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #102174;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao-azul:hover{
+    background-color: #057712;
+}
+
+.botao-azul:active{
+    background-color: #056510;
+}
+
+.botao-verde{
+    display: inline-flex;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 17.813rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #058914;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao-verde:hover{
+    background-color: #057712;
+}
+
+.botao-verde:active{
+    background-color: #056510;
+}
