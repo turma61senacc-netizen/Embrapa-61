@@ -18,3 +18,22 @@ class BotaoCancelar extends HTMLElement{
 }
 
 customElements.define(`botao-cancelar`, BotaoCancelar);
+
+class BotaoAzul extends HTMLElement{
+    connectedCallback(){
+        const texto = this.innerHTML || "Confirmar";
+
+        this.innerHTML= `<button class="botao-azul">${texto}</button>`;
+    }
+}
+
+customElements.define(`botao-azul`, BotaoAzul)
+
+class BotaoVerde extends HTMLElement{
+    connectedCallback(){
+        const texto = this.innerHTML || "Confirmar";
+
+    this.innerHTML=`<button class="botao-verde">${texto}</button>`
+    }
+}
+customElements.define(`botao-verde`, BotaoVerde)
