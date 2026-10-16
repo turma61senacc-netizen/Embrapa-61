@@ -18,8 +18,28 @@
                 <botao-excel></botao-excel>
                 <!-- componente da barra de pesquisa ficará aqui -->
             </div>
-            <div class="administrador-main--container_gestao_empregados">
-
+            <form method="post" class="administrador-main--container_gestao_empregados">
+                <fieldset>
+                    <label for="nome_empregado" class="administrador-main--titulo_input">Nome do Empregado:</p>
+                    <!-- componente de campo de input para nome-->
+                    <label for="email_empregado" class="administrador-main--titulo_input">Email do Empregado:</p>
+                    <!-- componente de campo de input para email-->
+                    <div class="administrador-main--container_funcao_empregado">
+                        <label class="administrador-main--subtitulo_input">Tipo de função:</p>
+                        <input type="checkbox" id="pesquisador" name="funcao">
+                        <label for="pesquisador">Pesquisador</label>
+                        <input type="checkbox" id="validador" name="funcao">
+                        <label for="validador">Validador</label>
+                        <input type="checkbox" id="comite" name="funcao">
+                        <label for="comite">Comitê</label>
+                        <input type="checkbox" id="administrador" name="funcao">
+                        <label for="administrador">Administrador</label>
+                    </div>
+                    <select id="dropdown_setor" disabled>
+                        <option value="">Setor</option>
+                        <!-- aqui vai ficar a lógica para puxar os setores do banco de dados -->
+                    </select>
+                </fieldset>
             </div>
         </div>
     </main>
