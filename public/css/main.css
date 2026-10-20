@@ -1438,7 +1438,7 @@ input[type="text"] {
     background-color: #0D1C54;
 }
 
-.administrador-main--container_principal{
+.administrador-main--container_principal_gestao_empregados{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1447,7 +1447,7 @@ input[type="text"] {
     gap: 2.813rem;
 }
 
-.administrador-main--titulo_pagina{
+.administrador-main--titulo_pagina_gestao_empregados{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 2.25rem;

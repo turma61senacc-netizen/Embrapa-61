@@ -11,21 +11,23 @@
 </head>
 <body>
     <main>
-        <div class="administrador-main--container_principal">
-            <p class="administrador-main--titulo_pagina">Gestão de Empregado</p>
-            <div class="administrador-main--botoes">
+        <div class="administrador-main--container_principal_gestao_empregados">
+            <p class="administrador-main--titulo_pagina_gestao_empregados">Gestão de Empregado</p>
+            <div class="administrador-main--botoes_gestao_empregados">
                 <botao-verde>Cadastrar Empregado</botao-verde>
                 <botao-excel></botao-excel>
                 <!-- componente da barra de pesquisa ficará aqui -->
             </div>
             <form method="post" class="administrador-main--container_gestao_empregados">
                 <fieldset>
-                    <label for="nome_empregado" class="administrador-main--titulo_input">Nome do Empregado:</p>
+                    <label for="nome_empregado" class="administrador-main--titulo_input_gestao_empregados">Nome do Empregado:</p>
                     <!-- componente de campo de input para nome-->
-                    <label for="email_empregado" class="administrador-main--titulo_input">Email do Empregado:</p>
+                    <label for="email_empregado" class="administrador-main--titulo_input_gestao_empregados">Email do Empregado:</p>
+                    <!-- componente de campo de input para email-->
+                    <label for="email_empregado" class="administrador-main--titulo_input_gestao_empregados">Matrícula:</p>
                     <!-- componente de campo de input para email-->
                     <div class="administrador-main--container_funcao_empregado">
-                        <label class="administrador-main--subtitulo_input">Tipo de função:</p>
+                        <label class="administrador-main--subtitulo_input_gestao_empregados">Tipo de função:</p>
                         <input type="checkbox" id="pesquisador" name="funcao">
                         <label for="pesquisador">Pesquisador</label>
                         <input type="checkbox" id="validador" name="funcao">
