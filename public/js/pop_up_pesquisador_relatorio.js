@@ -5,7 +5,7 @@ const BTN_SELECIONAR = document.getElementById('pesquisador-pop-relatorio--botao
 const BTN_TODOS = document.getElementById('pesquisador-pop-relatorio--botao-todos-anos');
 const CHECKBOXES_ANOS = document.querySelectorAll('input[id^="pesquisador-pop-relatorio--ano-"]');
 
-function ativar_botao(botao_ativo, botao_inativo) {
+function ativarBotao(botao_ativo, botao_inativo) {
     botao_ativo.classList.add(CLASSE_ATIVO);
     botao_ativo.classList.remove(CLASSE_INATIVO);
     botao_inativo.classList.add(CLASSE_INATIVO);
@@ -26,9 +26,9 @@ CHECKBOXES_ANOS.forEach((checkbox) => {
     checkbox.addEventListener('change', () => {
         const todos_marcados = [...CHECKBOXES_ANOS].every((item) => item.checked);
         if (todos_marcados) {
-            ativar_botao(BTN_TODOS, BTN_SELECIONAR);
+            ativarBotao(BTN_TODOS, BTN_SELECIONAR);
         } else {
-            ativar_botao(BTN_SELECIONAR, BTN_TODOS);
+            ativarBotao(BTN_SELECIONAR, BTN_TODOS);
         }
     });
 });
