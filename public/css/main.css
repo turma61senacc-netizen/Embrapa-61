@@ -1438,9 +1438,20 @@ input[type="text"] {
     background-color: #0D1C54;
 }
 
+.administrador-main--layout_gestao_empregados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 280px;
+    padding: 98px 75px 28px 75px;
+    min-height: 100vh;
+    width: calc(100% - 280px);
+}
+
 .administrador-main--container_principal_gestao_empregados{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 83.333%;
     width: 95.37%;
@@ -1450,5 +1461,31 @@ input[type="text"] {
 .administrador-main--titulo_pagina_gestao_empregados{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 1.875vw, 4.5rem);
+}
+
+.administrador-main--botoes_gestao_empregados{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.administrador-main--container_gestao_empregados{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.administrador-main--container_funcao_empregado{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.administrador-main--opcao_funcao{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px;
+    gap: 20px;
 }

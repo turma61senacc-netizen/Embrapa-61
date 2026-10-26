@@ -5,11 +5,14 @@
 .menu-aside--menu_lateral{
     display: flex;
     position: fixed;
+    top: 0;
+    left: 0;
     flex-direction: column;
     height: 100vh;
     background: #356394;
     width: 280px;
     gap: 30px;
+    z-index: 1000;
 }
 
 .menu-aside--logo_menu_lateral{

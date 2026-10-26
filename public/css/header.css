@@ -8,6 +8,7 @@
     left: 280px;
     right: 0px;
     background-color: #356394;
+    z-index: 999;
 }
 
 .menu-header--elementos_menu{

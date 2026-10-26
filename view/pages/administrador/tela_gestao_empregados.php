@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Empregados</title>
+    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../../../public/css/body.css">
+    <link rel="stylesheet" href="../../../public/css/main.css">
+    <link rel="stylesheet" href="../../../public/css/aside.css">
+    <link rel="stylesheet" href="../../../public/css/header.css">
+    <script src="../../../public/js/components.js" defer></script>
+</head>
+<body>
+    <?php require __DIR__ . '/../menu_lateral_superior.php'; ?>
+
+    <main class="administrador-main--layout_gestao_empregados">
+        <div class="administrador-main--container_principal_gestao_empregados">
+            <p class="administrador-main--titulo_pagina_gestao_empregados">Gestão de Empregado</p>
+            <div class="administrador-main--botoes_gestao_empregados">
+                <botao-verde>Cadastrar Empregado</botao-verde>
+                <botao-excel></botao-excel>
+                <!-- componente da barra de pesquisa ficará aqui -->
+            </div>
+            <form method="post" class="administrador-main--container_gestao_empregados">
+                <fieldset>
+                    <label for="nome_empregado" class="administrador-main--titulo_input_gestao_empregados">Nome do Empregado:</label>
+                    <!-- componente de campo de input para nome -->
+                    <input type="text" id="nome_empregado" name="nome_empregado">
+                    <label for="email_empregado" class="administrador-main--titulo_input_gestao_empregados">Email do Empregado:</label>
+                    <!-- componente de campo de input para email -->
+                     <input type="text" id="email_empregado" name="email_empregado">
+                    <label for="matricula_empregado" class="administrador-main--titulo_input_gestao_empregados">Matrícula:</label>
+                    <!-- componente de campo de input para matrícula -->
+                     <input type="text" id="matricula_empregado" name="matricula_empregado">
+                    <div class="administrador-main--container_funcao_empregado">
+                        <span class="administrador-main--subtitulo_input_gestao_empregados">Tipo de função:</span>
+                        <div class="administrador-main--opcao_funcao">
+                            <input type="checkbox" id="pesquisador" name="funcao[]" value="pesquisador">
+                            <label for="pesquisador">Pesquisador</label>
+                        </div>
+                        <div class="administrador-main--opcao_funcao">
+                            <input type="checkbox" id="validador" name="funcao[]" value="validador">
+                            <label for="validador">Validador</label>
+                        </div>
+                        <div class="administrador-main--opcao_funcao">
+                            <input type="checkbox" id="comite" name="funcao[]" value="comite">
+                            <label for="comite">Comitê</label>
+                        </div>
+                        <div class="administrador-main--opcao_funcao">
+                            <input type="checkbox" id="administrador" name="funcao[]" value="administrador">
+                            <label for="administrador">Administrador</label>
+                        </div>
+                    </div>
+                    <select id="dropdown_setor" name="setor" disabled>
+                        <option value="">Setor</option>
+                        <!-- aqui vai ficar a lógica para puxar os setores do banco de dados -->
+                    </select>
+                    <div class="administrador-main--botoes_formulario_gestao_empregados">
+                        <botao-cancelar></botao-cancelar>
+                        <botao-azul>Aprovar</botao-azul>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
