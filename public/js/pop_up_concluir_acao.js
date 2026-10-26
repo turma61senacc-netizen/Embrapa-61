@@ -1,3 +1,4 @@
+
 class PopupConcluido extends HTMLElement {
   static get observedAttributes() {
     return ['titulo', 'mensagem', 'texto-botao'];
@@ -77,15 +78,17 @@ class PopupConcluido extends HTMLElement {
         }
 
         .pop-main--botao:hover {
-          opacity: 0.9;     
-          background:#058914;   }
+          opacity: 0.9;
+          background: #058914;
+        }
       </style>
 
       <div class="pop-main">
         <div class="pop-main--icone">
           <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
             <polyline points="8,26 20,38 40,12"
-              stroke="#3b4a5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              stroke="#3b4a5a" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <h2 class="pop-main--titulo"></h2>
@@ -108,17 +111,25 @@ class PopupConcluido extends HTMLElement {
   }
 
   atualizar() {
-    // textContent evita injeção de HTML vindo dos atributos
+    // textContent evita a injeção de HTML pelos atributos
     this.shadowRoot.querySelector('.pop-main--titulo').textContent =
       this.getAttribute('titulo') ?? 'Concluído!';
+
     this.shadowRoot.querySelector('.pop-main--mensagem').textContent =
       this.getAttribute('mensagem') ?? '';
+
     this.shadowRoot.querySelector('.pop-main--botao').textContent =
       this.getAttribute('texto-botao') ?? 'Fechar';
   }
 
   fechar() {
-    this.dispatchEvent(new CustomEvent('fechar', { bubbles: true, composed: true }));
+    this.dispatchEvent(
+      new CustomEvent('fechar', {
+        bubbles: true,
+        composed: true
+      })
+    );
+
     this.remove();
   }
 }
