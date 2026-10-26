@@ -43,3 +43,76 @@ body {
     background-color: #4481E0;
     color: white;
 }
+
+/*=======================================*/
+/*STYLE DO COMPONENTE INPUT PESQUISA*/
+/*=======================================*/
+
+campo-pesquisa {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  font-family: Verdana, 'DejaVu Sans', sans-serif;
+}
+
+campo-pesquisa .campo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 56px;
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+campo-pesquisa .campo:focus-within {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+campo-pesquisa input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 18px;
+  color: #222;
+}
+
+campo-pesquisa input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+campo-pesquisa button {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+campo-pesquisa button:hover {
+  color: #333;
+}
+
+campo-pesquisa button:focus-visible {
+  outline: 2px solid #333;
+}
+
+campo-pesquisa svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+/*=======================================*/
