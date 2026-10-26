@@ -582,13 +582,13 @@ dialog::backdrop {
     padding: 4%;
 }
 
-.login-logo {
+.login-header-logo {
     width: 25%;
     height: auto;
     align-self: center;
 }
 
-.login-titulo {
+.login-header-titulo {
     font-size: 30px;
     text-align: center;
     font-family: 'Verdana', sans-serif;
@@ -597,7 +597,7 @@ dialog::backdrop {
     margin-top: 3.5%;
 }
 
-.login-paragrafo {
+.login-main-paragrafo {
     font-size: 15px;
     
     text-align: center;
@@ -608,7 +608,7 @@ dialog::backdrop {
     margin: 0 auto;
 }
 
-.login-input {
+.login-main-input {
     background-image: url(../imagens/icone_usuario.png);
     background-position: 8px center;
     background-repeat: no-repeat;
@@ -625,7 +625,7 @@ dialog::backdrop {
     font-family: 'Verdana', sans-serif;
 }
 
-.login-funcao {
+.login-main-funcao {
     font-size: 12px;
     font-family: 'Verdana', sans-serif;
     margin: 0 auto;
@@ -635,7 +635,7 @@ dialog::backdrop {
     color: black;
 }
 
-.login-dropdown {
+.login-main-dropdown {
     height: 7%;
     width: 55%;
     margin: 0 auto;
@@ -649,7 +649,7 @@ dialog::backdrop {
     color: #686868;
 }
 
-.login-botao {
+.login-main-botao {
     background-color: #058914;
     border: none;
     height: 15%;
@@ -662,7 +662,7 @@ dialog::backdrop {
     cursor: pointer;
 }
 
-.login-botao:hover {
+.login-main-botao:hover {
     background-color: #04620F;
     transition: 0.5s;
 }
