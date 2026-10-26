@@ -39,7 +39,7 @@ class BotaoVerde extends HTMLElement{
 customElements.define(`botao-verde`, BotaoVerde)
 
 //Usado na tela_gestao_acoes.html
-class TabelaAcoes extends HTMLElement{
+class TabelaAcoes extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -51,8 +51,11 @@ class TabelaAcoes extends HTMLElement{
     }
 
     configurarBotaoAdicionar() {
+        // Agora busca o botão de dentro do próprio Shadow DOM
         const BTN_NOVA_ACAO = this.shadowRoot.querySelector('#btn-nova-acao');
         const TABELA_VAZIA = this.shadowRoot.querySelector('#corpo-tabela');
+
+        if (!BTN_NOVA_ACAO) return;
 
         BTN_NOVA_ACAO.addEventListener('click', () => {
             const tr = document.createElement('tr');
@@ -60,11 +63,11 @@ class TabelaAcoes extends HTMLElement{
             tr.innerHTML = `
                 <td contenteditable="true" class="celula-nome" data-placeholder="Digite o nome da ação..."></td>
                 <td>
-                    <select class="select-setor">
+                    <select class="selecionar-setor">
                         <option value="" disabled selected hidden>Setor</option>
-                        <option value="tecnologia">SIPT</option>
-                        <option value="marketing"></option>
-                        <option value="rh">Recursos Humanos</option>
+                        <option value="sipt">SIPT</option>
+                        <option value="spat">SPAT</option>
+                        <option value="nco">NCO</option>
                     </select>
                 </td>
                 <td>
@@ -81,7 +84,6 @@ class TabelaAcoes extends HTMLElement{
             TABELA_VAZIA.appendChild(tr);
 
             tr.querySelector('.celula-nome').focus();
-
             tr.querySelector('.btn-remover').addEventListener('click', () => tr.remove());
         });
     }
@@ -100,68 +102,37 @@ class TabelaAcoes extends HTMLElement{
                     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
                 }
 
-                .titulo {
-                    text-align: center;
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #000;
-                    margin-top: 0;
-                    margin-bottom: 24px;
-                }
-
-                .barra-ferramentas {
+                .barra-topo {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
                 }
 
-                .botoes-esquerda {
-                    display: flex;
-                    gap: 12px;
+                .titulo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #000;
+                    margin: 0;
                 }
 
-                .btn-verde {
-                    background-color: #008744;
-                    color: white;
-                    border: none;
-                    padding: 10px 18px;
-                    border-radius: 6px;
-                    font-weight: 600;
+                .btn-add {
+                    padding: 10px 16px; 
+                    background-color: #386799; 
+                    color: white; 
+                    border: none; 
+                    border-radius: 6px; 
+                    font-weight: bold; 
                     cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 14px;
+                    transition: background 0.2s;
                 }
-
-                .btn-excel {
-                    background-color: white;
-                    color: #185abc;
-                    border: 1px solid #dadce0;
-                    padding: 10px 18px;
-                    border-radius: 6px;
-                    font-weight: 500;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 14px;
-                }
-
-                .input-pesquisa {
-                    padding: 10px 16px;
-                    border: 1px solid #dadce0;
-                    border-radius: 20px;
-                    width: 220px;
-                    font-size: 14px;
-                    outline: none;
+                .btn-add:hover {
+                    background-color: #2a527a;
                 }
 
                 table {
                     width: 100%;
                     border-collapse: collapse;
-                    overflow: hidden;
                 }
 
                 th {
@@ -196,7 +167,7 @@ class TabelaAcoes extends HTMLElement{
                     color: #b0b8c1;
                 }
 
-                .select-setor {
+                .selecionar-setor {
                     border: none;
                     background: transparent;
                     color: #4a607a;
@@ -249,37 +220,22 @@ class TabelaAcoes extends HTMLElement{
                     padding: 0 5px;
                 }
                 .btn-remover:hover { color: #dc3545; }
-                </style>
+            </style>
 
-                <h2 class="titulo">Gestão de Ações</h2>
-
-                <div class="barra-ferramentas">
-                    <div class="botoes-esquerda">
-                        <button class="btn-verde" id="btn-nova-acao">
-                            <span>✚</span> Nova Ação
-                        </button>
-                        <button class="btn-excel">
-                            <span>📊</span> Baixar em Excel
-                        </button>
-                    </div>
-                    <input type="text" class="input-pesquisa" placeholder="Pesquise...">
-                </div>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width: 50%;">Nome</th>
-                            <th style="width: 30%;">Setor</th>
-                            <th style="width: 20%;">Status</th>
-                        </tr>
-                    </thead>
-                    <TABELA_VAZIA id="corpo-tabela">
-                        <!-- Inicia limpo e sem linhas -->
-                    </TABELA_VAZIA>
-                </table>
-            `;
-}
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Nome</th>
+                        <th style="width: 30%;">Setor</th>
+                        <th style="width: 20%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                    <!-- Inicia limpo e sem linhas -->
+                </tbody>
+            </table>
+        `;
+    }
 }
 
-// Registro correto e isolado fora da classe
-customElements.define('gestao-acoes', GestaoAcoes);
+customElements.define('gestao-acoes', TabelaAcoes);
