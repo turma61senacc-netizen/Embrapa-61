@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Painel Principal</title>
+    <link rel="stylesheet" href="../../../public/css/main.css">
+    <link rel="stylesheet" href="../../../public/css/style.css">
+
+</head>
+<body>
+
+<main class="comite-main--painel-principal">
+  <div class="comite-main--container">
+    
+    <header class="comite-main--header">
+      <button type="button" class="comite-main--botao-excel" id="comite-main--botao-excel">
+        <img 
+          src="../../imagens/example.png" 
+          alt="Ícone Excel" 
+          class="comite-main--icone-excel" 
+        />
+        <span>Baixar em Excel</span>
+      </button>
+
+      <h1 class="comite-main--titulo">Relatórios</h1>
+    </header>
+
+    <section class="comite-main--filtros">
+      
+      <div class="comite-main--grupo-campo">
+        <label for="comite-main--select-tipo" class="comite-main--label">Tipo:</label>
+        <select id="comite-main--select-tipo" class="comite-main--select">
+          <option value="aberto">Aberto</option>
+          <option value="fechado">Fechado</option>
+        </select>
+      </div>
+
+      <div class="comite-main--grupo-campo comite-main--grupo-ano">
+        <label class="comite-main--label">Ano:</label>
+        <div class="comite-main--inputs-ano">
+          <input type="number" id="comite-main--input-ano-inicio" class="comite-main--input" placeholder="De">
+          <input type="number" id="comite-main--input-ano-fim" class="comite-main--input" placeholder="Até">
+        </div>
+      </div>
+
+      <div class="comite-main--grupo-campo">
+        <label for="comite-main--select-pesquisador" class="comite-main--label">Pesquisador:</label>
+        <select id="comite-main--select-pesquisador" class="comite-main--select">
+          <option value="todos">Todos</option>
+        </select>
+      </div>
+
+    </section>
+
+    <section class="comite-main--preview-secao">
+      <h2 class="comite-main--subtitulo">Pré-visualização:</h2>
+      
+      <div class="comite-main--preview-card">
+        <img 
+          src="../../../public/imagens/icone_preencher_campo.png" 
+          alt="Ícone Pré-visualização" 
+          class="comite-main--icone-documento" 
+        />
+        <p class="comite-main--mensagem-vazia">Preencha todos os campos para a visualização do relatório</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+</body>
+</html>
