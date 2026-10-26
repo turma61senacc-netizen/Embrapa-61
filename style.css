@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 0 32px 50px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    position: relative;
+
+    width: 100%;
+    height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.cabecalho h1 {
+    position: absolute;
+
+    top: 29px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    font-size: 40px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #000000;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BOTÃO CRIAR ANO
+========================= */
+
+.btn-criar {
+    position: absolute;
+
+    top: 64px;
+    right: 0;
+
+    width: 181px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #164b95;
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-criar:hover {
+    background-color: #123e7c;
+}
+
+
+/* =========================
+   ÍCONE +
+========================= */
+
+.icone-plus {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 300;
+
+    line-height: 1;
+}
+/* =========================
+   GRID
+========================= */
+
+.calendarios {
+    display: grid;
+
+    grid-template-columns: repeat(4, 302px);
+
+    column-gap: 76px;
+    row-gap: 42px;
+
+    justify-content: start;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card-calendario {
+    width: 302px;
+    height: 396.5px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d2dfef;
+    border-radius: 15px;
+
+    box-shadow: 0 2px 8px rgba(42, 83, 130, 0.18);
+}
+
+
+/* =========================
+   TOPO DO CARD
+========================= */
+
+.card-topo {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 12px;
+}
+
+.card-topo > span {
+    font-size: 17px;
+    font-style: italic;
+
+    color: #111111;
+}
+
+
+/* =========================
+   SWITCH
+========================= */
+
+.switch {
+    position: relative;
+
+    width: 64px;
+    height: 25px;
+
+    display: inline-block;
+}
+
+.switch input {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: #d0d0d0;
+
+    border: 1px solid #999999;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 23px;
+    height: 23px;
+
+    top: 0;
+    left: 0;
+
+    background-color: #ffffff;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2868ba;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(39px);
+}
+
+
+/* =========================
+   ÍCONE DO CALENDÁRIO
+========================= */
+
+.icone-calendario {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 82px;
+}
+
+.icone-calendario svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: #000000;
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.icone-calendario circle {
+    fill: #000000;
+
+    stroke: none;
+}
+
+
+/* =========================
+   ANO
+========================= */
+
+.card-calendario h2 {
+    margin-top: 17px;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #000000;
+}
+
+
+/* =========================
+   BOTÃO EDITAR
+========================= */
+
+.btn-editar {
+    width: 191px;
+    height: 49px;
+
+    margin-top: 38px;
+
+    border: 2px solid #1d579e;
+    border-radius: 8px;
+
+    background-color: #306bc0;
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-editar:hover {
+    background-color: #ffffff;
+
+    color: #2868ba;
+
+    border: 2px solid #2868ba;
+}
+
+.btn-editar:active {
+    background-color: #f2f2f2;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1400px) {
+
+    .calendarios {
+        grid-template-columns: repeat(3, 302px);
+    }
+
+}
+
+
+@media (max-width: 1050px) {
+
+    .calendarios {
+        grid-template-columns: repeat(2, 302px);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 0 20px 40px;
+    }
+
+    .calendarios {
+        grid-template-columns: 302px;
+    }
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+    .btn-criar {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================
+   ESTADO: FECHADO / ABERTO
+========================= */
+
+.card-calendario .status {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.card-calendario.fechado .status {
+    color: #d32020;
+}
+
+.card-calendario.aberto .status {
+    color: #3fae4f;
+}
+
+/* Switch aberto em verde */
+.switch input:checked + .slider {
+    background-color: #0f8a1f;
+    border-color: #0b6e18;
+}
+
+/* Botão Editar quando o ano está fechado */
+.card-calendario.fechado .btn-editar {
+    background-color: #cfd2d6;
+    border: 2px solid #7a7a7a;
+    color: #000000;
+
+    cursor: not-allowed;
+}
+
+.card-calendario.fechado .btn-editar:hover,
+.card-calendario.fechado .btn-editar:active {
+    background-color: #cfd2d6;
+    border: 2px solid #7a7a7a;
+    color: #000000;
+}
