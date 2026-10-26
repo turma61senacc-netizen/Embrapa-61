@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validadores</title>
+    <link rel="stylesheet" href="../../../public/css/main.css">
 </head>
 <body>
-    
+
+    <h1 class="administrador-main--titulo">Validadores</h1>
+
+    <button type="button" class="administrador-main--botao-novo-setor">
+        <img src="../../../public/imagens/icone_adicionar_acao.png" alt="" class="administrador-main--icone-adicionar">
+        Novo Setor
+    </button>
+    <input type="text" class="administrador-main--input-pesquisa" placeholder="Pesquise...">
+
+    <div class="administrador-main--tabela">
+
+        <div class="administrador-main--cabecalho">
+            <div class="administrador-main--coluna">Setor</div>
+            <div class="administrador-main--coluna">Status</div>
+        </div>
+
+        <div class="administrador-main--corpo">
+
+            <div class="administrador-main--linha">
+                <div class="administrador-main--coluna administrador-main--coluna-setor">
+                    <button type="button" class="administrador-main--botao-editar" aria-label="Editar setor SPT">
+                        <img src="../../../public/imagens/icone_editar.png" alt="" class="administrador-main--icone-editar">
+                    </button>
+                    SPT
+                </div>
+                <div class="administrador-main--coluna"><input type="checkbox" class="administrador-main--toggle-status"></div>
+            </div>
+
+            <div class="administrador-main--linha">
+                <div class="administrador-main--coluna administrador-main--coluna-setor">
+                    <button type="button" class="administrador-main--botao-editar" aria-label="Editar setor SPIT">
+                        <img src="../../../public/imagens/icone_editar.png" alt="" class="administrador-main--icone-editar">
+                    </button>
+                    SPIT
+                </div>
+                <div class="administrador-main--coluna"><input type="checkbox" class="administrador-main--toggle-status"></div>
+            </div>
+
+            <div class="administrador-main--linha">
+                <div class="administrador-main--coluna administrador-main--coluna-setor">
+                    <button type="button" class="administrador-main--botao-editar" aria-label="Editar setor NCO">
+                        <img src="../../../public/imagens/icone_editar.png" alt="" class="administrador-main--icone-editar">
+                    </button>
+                    NCO
+                </div>
+                <div class="administrador-main--coluna"><input type="checkbox" class="administrador-main--toggle-status"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../../public/js/script-administrador-validadores-setores.js"></script>
 </body>
 </html>
