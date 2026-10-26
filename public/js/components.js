@@ -51,8 +51,7 @@ class TabelaAcoes extends HTMLElement {
     }
 
     configurarBotaoAdicionar() {
-        // Agora busca o botão de dentro do próprio Shadow DOM
-        const BTN_NOVA_ACAO = this.shadowRoot.querySelector('#btn-nova-acao');
+        const BTN_NOVA_ACAO = document.querySelector('#btn-nova-acao');
         const TABELA_VAZIA = this.shadowRoot.querySelector('#corpo-tabela');
 
         if (!BTN_NOVA_ACAO) return;

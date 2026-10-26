@@ -120,3 +120,16 @@ body {
 .botao-verde:active{
     background-color: #056510;
 }
+
+.barra-botoes {
+    max-width: 1000px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupo-esquerda {
+    display: flex;
+    gap: 12px;
+}
