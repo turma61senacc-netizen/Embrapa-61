@@ -7,17 +7,29 @@
     <script src="../../../public/js/components.js" defer></script>
     <link rel="stylesheet" href="../../../public/css/style.css">
 </head>
-
-    
 <body>
-    <div class="barra-botoes">
-        <div class="grupo-esquerda">
-            <botao-verde id="btn-nova-acao">Nova Ação</botao-verde>
-            <botao-excel></botao-excel>
-        </div>
-    </div>
 
-    <gestao-acoes></gestao-acoes>
+    <h2 style="text-align: center; font-family: sans-serif;">Gestão de Ações</h2>
+
+    <!-- Web Component da Tabela -->
+    <tabela-gestao-acoes id="tabelaAcoes"></tabela-gestao-acoes>
+
+    <script>
+        const tabela = document.getElementById('tabelaAcoes');
+
+        // 1. Escuta o clique do botão que veio de DENTRO do Web Component
+        tabela.addEventListener('solicitarAberturaPopup', () => {
+            
+            // Aqui você executará a lógica de abrir o seu modal/popup.
+            // Exemplo simulado de inserção de dados vindo do seu futuro popup:
+            const confirmacaoSimulada = confirm("[Simulação do seu Popup] Deseja simular a criação de uma linha de Gestão de Funcionários?");
+            
+            if (confirmacaoSimulada) {
+                // 2. Envia os dados coletados no popup diretamente para a tabela adicionar a linha
+                tabela.adicionarNovaLinha("Treinamento de Integração - RH", "Recursos Humanos");
+            }
+        });
+    </script>
 
 </body>
 </html>

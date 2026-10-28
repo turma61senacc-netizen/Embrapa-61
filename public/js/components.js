@@ -38,8 +38,7 @@ class BotaoVerde extends HTMLElement{
 }
 customElements.define(`botao-verde`, BotaoVerde)
 
-//Usado na tela_gestao_acoes.html
-class TabelaAcoes extends HTMLElement {
+class TabelaGestaoAcoes extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -47,44 +46,7 @@ class TabelaAcoes extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        this.configurarBotaoAdicionar();
-    }
-
-    configurarBotaoAdicionar() {
-        const BTN_NOVA_ACAO = document.querySelector('#btn-nova-acao');
-        const TABELA_VAZIA = this.shadowRoot.querySelector('#corpo-tabela');
-
-        if (!BTN_NOVA_ACAO) return;
-
-        BTN_NOVA_ACAO.addEventListener('click', () => {
-            const tr = document.createElement('tr');
-            
-            tr.innerHTML = `
-                <td contenteditable="true" class="celula-nome" data-placeholder="Digite o nome da ação..."></td>
-                <td>
-                    <select class="selecionar-setor">
-                        <option value="" disabled selected hidden>Setor</option>
-                        <option value="sipt">SIPT</option>
-                        <option value="spat">SPAT</option>
-                        <option value="nco">NCO</option>
-                    </select>
-                </td>
-                <td>
-                    <div class="coluna-status">
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                        <button class="btn-remover" title="Excluir Linha">×</button>
-                    </div>
-                </td>
-            `;
-
-            TABELA_VAZIA.appendChild(tr);
-
-            tr.querySelector('.celula-nome').focus();
-            tr.querySelector('.btn-remover').addEventListener('click', () => tr.remove());
-        });
+        this.setupEvents();
     }
 
     render() {
@@ -92,134 +54,140 @@ class TabelaAcoes extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                    max-width: 1000px;
-                    margin: 0 auto;
-                    background: white;
-                    padding: 24px;
-                    border-radius: 12px;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 20px;
+                    background-color: #ffffff;
                 }
-
-                .barra-topo {
+                .header-container {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    margin-bottom: 24px;
+                    margin-bottom: 20px;
                 }
-
-                .titulo {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #000;
-                    margin: 0;
+                .buttons-group {
+                    display: flex;
+                    gap: 12px;
                 }
-
-                .btn-add {
-                    padding: 10px 16px; 
-                    background-color: #386799; 
-                    color: white; 
-                    border: none; 
-                    border-radius: 6px; 
-                    font-weight: bold; 
+                /* Botões ajustados com dimensões fixas em px baseados na imagem */
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 10px 18px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 6px;
                     cursor: pointer;
                     transition: background 0.2s;
+                    line-height: 1;
                 }
-                .btn-add:hover {
-                    background-color: #2a527a;
+                .btn-primary {
+                    background-color: #008744;
+                    color: white;
                 }
-
+                .btn-primary:hover {
+                    background-color: #006b35;
+                }
+                .btn-secondary {
+                    background-color: #ffffff;
+                    color: #1a4a75;
+                    border: 1px solid #dcdcdc;
+                }
+                .btn-secondary:hover {
+                    background-color: #f7f9fa;
+                }
+                .btn-icon {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                }
                 table {
                     width: 100%;
                     border-collapse: collapse;
+                    border-radius: 8px 8px 0 0;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
                 }
-
                 th {
-                    background-color: #386799;
+                    background-color: #3b6e9c;
                     color: white;
-                    font-weight: 600;
                     padding: 14px 20px;
-                    text-align: left;
                     font-size: 15px;
+                    font-weight: 600;
+                    text-align: left;
                 }
-
-                th:first-child { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
-                th:last-child { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
-
                 td {
-                    padding: 16px 20px;
+                    padding: 12px 20px;
                     border-bottom: 1px solid #eef2f5;
-                    color: #333;
+                    color: #333333;
                     font-size: 14px;
                 }
-
-                tr:nth-child(even) td {
-                    background-color: #f4f8fc;
+                tr:nth-child(even) {
+                    background-color: #f4f8fb;
                 }
-
-                .celula-nome {
-                    outline: none;
-                    cursor: text;
+                tr:hover {
+                    background-color: #e9f1f7;
                 }
-                .celula-nome:empty:before {
-                    content: attr(data-placeholder);
-                    color: #b0b8c1;
-                }
-
-                .selecionar-setor {
-                    border: none;
-                    background: transparent;
-                    color: #4a607a;
-                    font-weight: 500;
-                    font-size: 14px;
+                /* Elemento Select estilizado com medidas fixas */
+                select {
+                    padding: 6px 10px;
+                    border: 1px solid #cccccc;
+                    border-radius: 4px;
+                    background-color: transparent;
+                    color: #555555;
                     cursor: pointer;
-                    outline: none;
+                    font-size: 14px;
                 }
-
-                .coluna-status {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    max-width: 120px;
-                }
-
+                /* Switch de Status estilizado estritamente em px */
                 .switch {
                     position: relative;
                     display: inline-block;
                     width: 44px;
                     height: 22px;
                 }
-                .switch input { opacity: 0; width: 0; height: 0; }
+                .switch input { 
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
                 .slider {
                     position: absolute;
                     cursor: pointer;
                     top: 0; left: 0; right: 0; bottom: 0;
-                    background-color: #cbd5e1;
+                    background-color: #ccc;
                     transition: .3s;
                     border-radius: 22px;
                 }
                 .slider:before {
                     position: absolute;
                     content: "";
-                    height: 16px; width: 16px;
-                    left: 3px; bottom: 3px;
+                    height: 16px;
+                    width: 16px;
+                    left: 3px;
+                    bottom: 3px;
                     background-color: white;
                     transition: .3s;
                     border-radius: 50%;
                 }
-                input:checked + .slider { background-color: #4ade80; }
-                input:checked + .slider:before { transform: translateX(22px); }
-
-                .btn-remover {
-                    background: transparent;
-                    border: none;
-                    color: #aaa;
-                    font-size: 20px;
-                    cursor: pointer;
-                    padding: 0 5px;
+                input:checked + .slider {
+                    background-color: #008744;
                 }
-                .btn-remover:hover { color: #dc3545; }
+                input:checked + .slider:before {
+                    transform: translateX(22px);
+                }
             </style>
+
+            <div class="header-container">
+                <div class="buttons-group">
+                    <button class="btn btn-primary" id="btnNovaAcao">
+                        <span>+</span> Nova Ação
+                    </button>
+                    <button class="btn btn-secondary">
+                        <img src="../../../public/imagens/icone_excel.png" class="btn-icon"> Baixar em Excel
+                    </button>
+                </div>
+            </div>
 
             <table>
                 <thead>
@@ -229,12 +197,71 @@ class TabelaAcoes extends HTMLElement {
                         <th style="width: 20%;">Status</th>
                     </tr>
                 </thead>
-                <tbody id="corpo-tabela">
-                    <!-- Inicia limpo e sem linhas -->
+                <tbody id="tabelaCorpo">
+                    <tr>
+                        <td>Coordenação de evento REGIONAL</td>
+                        <td>
+                            <select>
+                                <option>Setor</option>
+                                <option>TI</option>
+                                <option>Marketing</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Artigos de divulgação na mídia</td>
+                        <td>
+                            <select>
+                                <option>Setor</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         `;
     }
+
+    setupEvents() {
+        const btnNovaAcao = this.shadowRoot.getElementById('btnNovaAcao');
+        btnNovaAcao.addEventListener('click', () => {
+            const eventoAbrirPopup = new CustomEvent('solicitarAberturaPopup', {
+                bubbles: true,
+                composed: true
+            });
+            this.dispatchEvent(eventoAbrirPopup);
+        });
+    }
+
+    adicionarNovaLinha(nomeAcao, setorSelecionado) {
+        const tbody = this.shadowRoot.getElementById('tabelaCorpo');
+        const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+            <td>${nomeAcao}</td>
+            <td>
+                <select>
+                    <option>${setorSelecionado || 'Setor'}</option>
+                    <option>TI</option>
+                    <option>Marketing</option>
+                </select>
+            </td>
+            <td>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </td>
+        `;
+
+        tbody.insertBefore(tr, tbody.firstChild);
+    }
 }
 
-customElements.define('gestao-acoes', TabelaAcoes);
+customElements.define('tabela-gestao-acoes', TabelaGestaoAcoes);
+
