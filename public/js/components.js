@@ -68,7 +68,6 @@ class TabelaGestaoAcoes extends HTMLElement {
                     display: flex;
                     gap: 12px;
                 }
-                /* Botões ajustados com dimensões fixas em px baseados na imagem */
                 .btn {
                     display: flex;
                     align-items: center;
@@ -129,7 +128,6 @@ class TabelaGestaoAcoes extends HTMLElement {
                 tr:hover {
                     background-color: #e9f1f7;
                 }
-                /* Elemento Select estilizado com medidas fixas */
                 select {
                     padding: 6px 10px;
                     border: 1px solid #cccccc;
@@ -139,7 +137,6 @@ class TabelaGestaoAcoes extends HTMLElement {
                     cursor: pointer;
                     font-size: 14px;
                 }
-                /* Switch de Status estilizado estritamente em px */
                 .switch {
                     position: relative;
                     display: inline-block;
@@ -202,9 +199,9 @@ class TabelaGestaoAcoes extends HTMLElement {
                         <td>Coordenação de evento REGIONAL</td>
                         <td>
                             <select>
-                                <option>Setor</option>
-                                <option>TI</option>
-                                <option>Marketing</option>
+                                <option>NCO</option>
+                                <option>SIPT</option>
+                                <option>SP</option>
                             </select>
                         </td>
                         <td>
@@ -215,7 +212,9 @@ class TabelaGestaoAcoes extends HTMLElement {
                         <td>Artigos de divulgação na mídia</td>
                         <td>
                             <select>
-                                <option>Setor</option>
+                                <option>NCO</option>
+                                <option>SIPT</option>
+                                <option>SP</option>
                             </select>
                         </td>
                         <td>
@@ -246,9 +245,9 @@ class TabelaGestaoAcoes extends HTMLElement {
             <td>${nomeAcao}</td>
             <td>
                 <select>
-                    <option>${setorSelecionado || 'Setor'}</option>
-                    <option>TI</option>
-                    <option>Marketing</option>
+                    <option>${setorSelecionado || 'NCO'}</option>
+                    <option>SIPT</option>
+                    <option>SPAT</option>
                 </select>
             </td>
             <td>
