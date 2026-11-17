@@ -1,0 +1,222 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.criar-acao-container {
+    position: fixed;
+    top: 7.17vh;
+    left: 14.55vw;
+    width: 85.45vw;
+    height: 92.83vh;
+    padding: 2.5vh 3vw;
+    background: #fff;
+    overflow: hidden;
+}
+
+.criar-acao-titulo {
+    margin: 0 0 4.2vh;
+    text-align: center;
+    font-size: 2.99vh;
+    font-weight: bold;
+}
+
+.criar-acao-card {
+    width: 100%;
+    height: 72vh;
+    padding: 1vw;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    border-radius: 1vw;
+    box-shadow: 0 1px 3px #00000020;
+}
+
+.criar-acao-campo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.43vh;
+}
+
+.criar-acao-campo label {
+    margin-bottom: 0.84vh;
+    font-size: 1.79vh;
+    font-weight: bold;
+}
+
+.criar-acao-linha-superior {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.66vw;
+}
+
+.criar-acao-nome {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.criar-acao-data {
+    width: 11.3vw;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.criar-acao-campo input,
+.criar-acao-campo textarea,
+.criar-acao-campo select {
+    width: 100%;
+    border: 1px solid #888;
+    border-radius: 0.4vw;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1.67vh;
+    outline: none;
+}
+
+.criar-acao-campo input,
+.criar-acao-campo select {
+    height: 4.3vh;
+    padding: 0 0.8vw;
+}
+
+.criar-acao-descricao {
+    margin-top: 2.87vh;
+}
+
+#criar-acao-descricao {
+    height: 13.38vh;
+    padding: 0.8vh;
+    resize: none;
+    text-align: center;
+}
+
+.criar-acao-acao {
+    margin-top: 1.79vh;
+}
+
+.criar-acao-url,
+.criar-acao-comprovantes {
+    margin-top: 0.96vh;
+}
+
+#criar-acao-select {
+    text-align: center;
+    text-align-last: center;
+}
+
+#criar-acao-url,
+#criar-acao-url::placeholder,
+#criar-acao-descricao::placeholder {
+    text-align: center;
+}
+
+#criar-acao-url::placeholder,
+#criar-acao-descricao::placeholder {
+    color: #aaa;
+    font-weight: bold;
+}
+
+.criar-acao-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8vw;
+    width: 100%;
+    height: 6.33vh;
+    border: 1px dashed #999;
+    border-radius: 0.35vw;
+    background: #f0f1f3;
+    cursor: pointer;
+}
+
+.criar-acao-upload img {
+    width: 2.13vw;
+    height: 3.83vh;
+    object-fit: contain;
+}
+
+.criar-acao-upload span {
+    display: flex;
+    align-items: center;
+    gap: 0.33vw;
+    font-size: 1.43vh;
+}
+
+.criar-acao-upload small {
+    font-size: 1.31vh;
+}
+
+.criar-acao-botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1.91vh;
+}
+
+.criar-acao-cancelar,
+.criar-acao-postar {
+    width: 9.63vw;
+    height: 3.83vh;
+    border-radius: 1.5vw;
+    font-family: inherit;
+    font-size: 1.55vh;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.criar-acao-cancelar {
+    background: #fff;
+    color: #e00000;
+    border: 1px solid #e00000;
+}
+
+.criar-acao-cancelar:hover {
+    background: #e00000;
+    color: #fff;
+}
+
+.criar-acao-postar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6vh;
+}
+
+.criar-acao-postar-area p {
+    margin: 0;
+    font-size: 1.2vh;
+    color: #172983;
+}
+
+.criar-acao-postar {
+    background: #182c7c;
+    color: #fff;
+    border: 1px solid #182c7c;
+}
+
+.criar-acao-postar:hover {
+    background: #058914;
+    border-color: #058914;
+}
+
+.criar-acao-postar:active {
+    background: #04620f;
+    border-color: #04620f;
+}
+
+.criar-acao-campo input:focus,
+.criar-acao-campo textarea:focus,
+.criar-acao-campo select:focus {
+    border-color: #376697;
+}

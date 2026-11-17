@@ -3,19 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/main.css">
+
+    <link rel="stylesheet" href="../../../public/css/criar_acao.css">
+    <link rel="stylesheet" href="../../../public/css/aside.css">
+    <link rel="stylesheet" href="../../../public/css/header.css">
+
+    <title>Criar Ação - Pesquisador</title>
 </head>
 <body>
 
+    <header>
+        <div class="menu-header--menu_superior">
+            <div class="menu-header--elementos_menu">
+                <p class="menu-header--texto_bold menu-header--dados_usuario" id="nome_usuario">
+                    Placeholder Nome
+                </p>
+
+                <p class="menu-header--texto menu-header--dados_usuario">|</p>
+
+                <p class="menu-header--texto_bold menu-header--dados_usuario">
+                    Placeholder Função
+                </p>
+            </div>
+
+            <button type="button" class="menu-header--botao_logout menu-header--texto">
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <aside>
+        <nav class="menu-aside--menu_lateral">
+
+            <div class="menu-aside--logo_menu_lateral">
+                <img
+                    src="../../../public/imagens/embrapa-logo-fundo-transparente.png"
+                    class="menu-aside--imagem_logo"
+                    alt="Logo Embrapa">
+            </div>
+
+            <div class="menu-aside--opcoes-menu">
+
+                <a href="#" class="menu-aside--opcao_menu_ativo">
+                    <img class="menu-aside--icone" src="#" alt="">
+                    Painel Principal
+                </a>
+
+                <a href="#" class="menu-aside--opcao_menu_inativo">
+                    <img class="menu-aside--icone" src="#" alt="">
+                    Minhas Ações
+                </a>
+
+            </div>
+        </nav>
+    </aside>
+
     <main class="criar-acao-container">
+
         <h1 class="criar-acao-titulo">Criar ação</h1>
 
         <section class="criar-acao-card">
 
             <div class="criar-acao-linha-superior">
-                <div class="criar-acao-campo criar-acao-nome">
 
-                    <label for="criar-acao-nome">Nome:</label>
+                <div class="criar-acao-campo criar-acao-nome">
+                    <label for="criar-acao-nome">Título Da Ação:</label>
+
                     <input
                         type="text"
                         id="criar-acao-nome"
@@ -24,15 +77,17 @@
 
                 <div class="criar-acao-campo criar-acao-data">
                     <label for="criar-acao-data">Data de Execução:</label>
+
                     <input
-                        type="text"
-                        placeholder="__/__/___"
+                        type="date"
                         id="criar-acao-data">
                 </div>
+
             </div>
 
             <div class="criar-acao-campo criar-acao-descricao">
                 <label for="criar-acao-descricao">Descrição:</label>
+
                 <textarea
                     id="criar-acao-descricao"
                     placeholder="Digite a descrição do artigo aqui..."></textarea>
@@ -50,6 +105,7 @@
 
                 <div class="criar-acao-campo criar-acao-url">
                     <label for="criar-acao-url">Comprovante URL:</label>
+
                     <input
                         type="text"
                         id="criar-acao-url"
@@ -60,7 +116,10 @@
                     <label>Comprovantes:</label>
 
                     <div class="criar-acao-upload">
-                        <img src="../../../public/imagens/Arquivo_Upload.png" alt="Upload">
+                        <img
+                            src="../../../public/imagens/Arquivo_Upload.png"
+                            alt="Upload">
+
                         <span>
                             <b>Arraste seus arquivos aqui ou clique para fazer Upload</b>
                             <small>(PDF, DOCX, Imagens...)</small>
@@ -69,16 +128,24 @@
                 </div>
 
                 <div class="criar-acao-botoes">
-                    <button class="criar-acao-cancelar">Cancelar</button>
+
+                    <button class="criar-acao-cancelar">
+                        Cancelar
+                    </button>
 
                     <div class="criar-acao-postar-area">
                         <p>Sua postagem será revisada em breve</p>
-                        <button class="criar-acao-postar">Postar</button>
+
+                        <button class="criar-acao-postar">
+                            Postar
+                        </button>
                     </div>
+
                 </div>
 
             </div>
         </section>
     </main>
+
 </body>
 </html>
