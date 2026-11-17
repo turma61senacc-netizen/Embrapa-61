@@ -59,7 +59,7 @@ class PopupConcluido extends HTMLElement {
 
         .pop-main--mensagem {
           margin: 0 0 auto;
-          font-size: 18px;
+          font-size: 16px;
           color: #222222;
         }
 
