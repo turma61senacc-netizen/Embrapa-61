@@ -1,0 +1,313 @@
+/* ---------- Estrutura ---------- */
+
+.pesquisador-edicao--acao--container--tabela--edicao,
+.pesquisador-edicao--acao--container--tabela--edicao *,
+.pesquisador-edicao--acao--container--tabela--edicao *::before,
+.pesquisador-edicao--acao--container--tabela--edicao *::after {
+    box-sizing: border-box;
+}
+
+.pesquisador-edicao--acao--container--tabela--edicao {
+    --cor-borda: #333;
+    --cor-azul: #172983;
+    --cor-vermelho: #CD0000;
+    --cor-verde: #058914;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pesquisador-edicao--acao--titulo {
+    margin: 1.5vh 0;
+    font-size: clamp(1.25rem, 1.8vw, 2rem);
+}
+
+.pesquisador-edicao--acao--tabela--edicao {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2.5vh 1.5vw;
+    border: 2px solid #ddd;
+}
+
+/* ---------- Cabeçalho: título + data ---------- */
+
+.pesquisador-edicao--acao--titulo--data--realizacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5vw;
+}
+
+.pesquisador-edicao--acao--titulo--acao {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.pesquisador-edicao--acao--data--realizacao {
+    flex: 0 0 auto;
+    min-width: 19%;
+}
+
+.pesquisador-edicao--acao--label--data--realizacao {
+    white-space: nowrap;
+}
+
+/* ---------- Labels ---------- */
+
+.pesquisador-edicao--acao--label--titulo--acao,
+.pesquisador-edicao--acao--label--data--realizacao,
+.pesquisador-edicao--acao--label--descricao-acao,
+.pesquisador-edicao--acao--label--categoria--acao,
+.pesquisador-edicao--acao--label--comprovantes--url {
+    display: block;
+    margin: 0 0 0.8vh;
+    font-weight: bold;
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+}
+
+/* ---------- Campos ---------- */
+
+.pesquisador-edicao--acao--input--titulo--acao,
+.pesquisador-edicao--acao--input--data--realizacao,
+.pesquisador-edicao--acao--select--categoria--acao,
+.pesquisador-edicao--acao--input--categoria--acao,
+.pesquisador-edicao--acao--input--comprovantes--url,
+.pesquisador-edicao--acao--textarea--descricao--acao {
+    width: 100%;
+    margin-bottom: 1.8vh;
+    padding: 0 1vw;
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5vw;
+    font-family: inherit;
+    font-size: clamp(0.8rem, 0.95vw, 1.05rem);
+}
+
+.pesquisador-edicao--acao--input--titulo--acao,
+.pesquisador-edicao--acao--input--data--realizacao,
+.pesquisador-edicao--acao--input--categoria--acao,
+.pesquisador-edicao--acao--input--comprovantes--url {
+    height: 5vh;
+}
+
+.pesquisador-edicao--acao--textarea--descricao--acao {
+    min-height: 14vh;
+    padding: 1.2vh 1vw;
+    line-height: 1.4;
+    resize: vertical;
+}
+
+/* ---------- Comprovantes (arquivos) ---------- */
+
+.pesquisador-edicao--acao--comprovantes--cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8vh;
+}
+
+.pesquisador-edicao--acao--comprovantes {
+    margin: 0;
+    font-size: clamp(0.9rem, 1.05vw, 1.15rem);
+}
+
+.pesquisador-edicao--acao--lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh 0.5vw;
+    min-height: 10vh;
+    padding: 1.2vh 1vw;
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5vw;
+}
+
+/* Itens da lista (gerados via JS) */
+
+.pesquisador-edicao--acao--arquivo {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    flex: 0 0 calc((100% - 2vw) / 5);
+    min-width: 0;
+    padding: 0.8vh 0.6vw;
+    background: #eff0f2;
+    border-radius: 0.4vw;
+}
+
+.pesquisador-edicao--acao--arquivo--icone {
+    flex-shrink: 0;
+    width: 1.6vw;
+    height: auto;
+}
+
+.pesquisador-edicao--acao--arquivo--info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1vh;
+}
+
+.pesquisador-edicao--acao--arquivo--nome {
+    font-size: clamp(0.7rem, 0.85vw, 0.95rem);
+    line-height: 1.2;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pesquisador-edicao--acao--arquivo--tamanho {
+    font-size: clamp(0.6rem, 0.7vw, 0.85rem);
+    line-height: 1.2;
+    color: #888;
+}
+
+.pesquisador-edicao--acao--arquivo--acoes {
+    display: flex;
+    gap: 0.2vw;
+}
+
+.pesquisador-edicao--acao--arquivo--botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #808080;
+    cursor: pointer;
+}
+
+.pesquisador-edicao--acao--arquivo--botao svg {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.pesquisador-edicao--acao--arquivo--botao:hover {
+    color: #333;
+}
+
+.pesquisador-edicao--acao--arquivo--botao:focus-visible {
+    outline: 2px solid #3b74ff;
+    outline-offset: 2px;
+    border-radius: 0.3vw;
+}
+
+/* ---------- Botões de ação ---------- */
+
+.pesquisador-edicao--acao--botoes--edicao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5vh;
+}
+
+.pesquisador-edicao--acao--botao--cancelar,
+.pesquisador-edicao--acao--botao--atualizar {
+    width: 20%;
+    height: 5vh;
+    border-radius: 100vh;
+    font-family: inherit;
+    font-size: clamp(0.85rem, 1.05vw, 1.1rem);
+    cursor: pointer;
+}
+
+.pesquisador-edicao--acao--botao--cancelar {
+    background-color: #fff;
+    border: 2px solid var(--cor-vermelho);
+    color: var(--cor-vermelho);
+}
+
+.pesquisador-edicao--acao--botao--cancelar:hover {
+    background-color: var(--cor-vermelho);
+    color: #fff;
+}
+
+.pesquisador-edicao--acao--botao--atualizar {
+    background-color: var(--cor-azul);
+    border: 2px solid var(--cor-azul);
+    color: #fff;
+}
+
+.pesquisador-edicao--acao--botao--atualizar:hover {
+    background-color: var(--cor-verde);
+    border-color: var(--cor-verde);
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 1024px) {
+    .pesquisador-edicao--acao--tabela--edicao {
+        width: 90%;
+        padding: 2.5vh 3vw;
+    }
+
+    .pesquisador-edicao--acao--arquivo {
+        flex-basis: calc((100% - 0.5vw) / 2);
+    }
+
+    .pesquisador-edicao--acao--arquivo--icone {
+        width: 3vw;
+    }
+
+    .pesquisador-edicao--acao--arquivo--botao svg {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .pesquisador-edicao--acao--tabela--edicao {
+        width: 95%;
+    }
+
+    .pesquisador-edicao--acao--titulo--data--realizacao {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .pesquisador-edicao--acao--titulo--acao,
+    .pesquisador-edicao--acao--data--realizacao {
+        width: 100%;
+    }
+
+    .pesquisador-edicao--acao--input--titulo--acao,
+    .pesquisador-edicao--acao--input--data--realizacao,
+    .pesquisador-edicao--acao--input--categoria--acao,
+    .pesquisador-edicao--acao--input--comprovantes--url,
+    .pesquisador-edicao--acao--textarea--descricao--acao {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        border-radius: 1.5vw;
+    }
+
+    .pesquisador-edicao--acao--lista {
+        padding: 1.2vh 3vw;
+        border-radius: 1.5vw;
+        gap: 1vh 2vw;
+    }
+
+    .pesquisador-edicao--acao--arquivo {
+        flex-basis: 100%;
+        gap: 2vw;
+        padding: 0.8vh 2vw;
+        border-radius: 1.5vw;
+    }
+
+    .pesquisador-edicao--acao--arquivo--icone {
+        width: 8vw;
+    }
+
+    .pesquisador-edicao--acao--arquivo--botao svg {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .pesquisador-edicao--acao--botao--cancelar,
+    .pesquisador-edicao--acao--botao--atualizar {
+        width: 45%;
+    }
+}

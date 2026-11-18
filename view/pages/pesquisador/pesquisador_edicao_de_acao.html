@@ -3,51 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../public/css/main.css">
+    <title>Editar ação</title>
+    <!-- <link rel="stylesheet" href="style (5).css"> -->
+    <link rel="stylesheet" href="../../../public/css/pesquisador_edicao_acao.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/aside.css">
+    <link rel="stylesheet" href="../../public/css/header.css">
 </head>
 <body>
-    <div class="pesquisador-main--editar-acao-centralizar">
-        <div class="pesquisador-main--editar-acao-edicao">
-            <div class="pesquisador-main--editar-acao-cabecalho">
-                <div class="pesquisador-main--editar-acao-postar_acao_topo">
-                    <label for="pesquisador-main--editar-acao-titulo_acao" class="pesquisador-main--editar-acao-titulo">Nome:</label><br>
-                    <input type="text" id="pesquisador-main--editar-acao-titulo_acao" placeholder="Nome da Ação" required><br>
+     <!-- <header>
+        <div class="menu-header--menu_superior">
+            <div class="menu-header--elementos_menu">
+                <p class="menu-header--texto_bold menu-header--dados_usuario" id="nome_usuario">Placeholder Nome</p>
+                <p class="menu-header--texto menu-header--dados_usuario">|</p>
+                <p class="menu-header--texto_bold menu-header--dados_usuario">Placeholder Função</p>
+            </div>
+            <button type="button" class="menu-header--botao_logout menu-header--texto">Logout</button>
+        </div>
+    </header>
+    <aside>
+        <nav class="menu-aside--menu_lateral">
+            <div class="menu-aside--logo_menu_lateral">
+            <img src="../../public/imagens/embrapa-logo-fundo-transparente.png" class="menu-aside--imagem_logo" alt="Logo Embrapa">   <!--Logo da embrapa -->
+            <!-- </div>
+
+            <div class="menu-aside--opcoes-menu">
+                <a href="#" class="menu-aside--opcao_menu_ativo"><img class="menu-aside--icone" src="#" alt="">Painel Principal</a>
+                <a href="#" class="menu-aside--opcao_menu_inativo"><img class="menu-aside--icone" src="#" alt="">Painel Principal</a>
+            </div>
+        </nav>
+    </aside> --> 
+    
+    <div class="pesquisador-edicao--acao--container--tabela--edicao">
+        <h1 class="pesquisador-edicao--acao--titulo">Edição</h1>
+
+        <div class="pesquisador-edicao--acao--tabela--edicao">
+
+            <div class="pesquisador-edicao--acao--titulo--data--realizacao">
+                <div class="pesquisador-edicao--acao--titulo--acao">
+                    <label for="pesquisador-edicao--acao--campo--titulo" class="pesquisador-edicao--acao--label--titulo--acao">Título da ação:</label>
+                    <input type="text" id="pesquisador-edicao--acao--campo--titulo" class="pesquisador-edicao--acao--input--titulo--acao" placeholder="Palestra">
                 </div>
-                <div class="pesquisador-main--editar-acao-postar_acao_topo">
-                    <label for="pesquisador-main--editar-acao-nome_acao" class="pesquisador-main--editar-acao-titulo">Pesquisador:</label><br>
-                    <input type="text" id="pesquisador-main--editar-acao-nome_acao" placeholder="Nome do Pesquisador" required><br>
-                </div>
-                <div class="pesquisador-main--editar-acao-postar_acao_topo">
-                    <label for="pesquisador-main--editar-acao-data_acao" class="pesquisador-main--editar-acao-titulo">Data de Execução:</label><br>
-                    <input type="date" id="pesquisador-main--editar-acao-data_acao" placeholder="00/00/0000" required>
+
+                <div class="pesquisador-edicao--acao--data--realizacao">
+                    <label for="pesquisador-edicao--acao--campo--data--realizacao" class="pesquisador-edicao--acao--label--data--realizacao">Data de Realização:</label>
+                    <input type="date" id="pesquisador-edicao--acao--campo--data--realizacao" class="pesquisador-edicao--acao--input--data--realizacao">
                 </div>
             </div>
-        
-            <label for="pesquisador-main--editar-acao-descricao" class="pesquisador-main--editar-acao-titulo">Descrição:</label><br>
-            <textarea
-                id="pesquisador-main--editar-acao-descricao"
-                name="descricao"
-                rows="5"
-                placeholder="Digite a descrição da sua ação aqui...">
-            </textarea>
-    
-            <label for="pesquisador-main--editar-acao">Ação:</label>
-            <input type="text" id="pesquisador-main--editar-acao">
-    
-            <label for="pesquisador-main--editar-acao-url">Comprovante URL:</label>
-            <input type="text" id="pesquisador-main--editar-acao-url">
-    
-            <h2 class="pesquisador-main--editar-acao-comprovante">Comprovantes:</h2>
 
-            <label class="pesquisador-main--editar-acao-botao-upload" for="pesquisador-main--editar-acao-arquivos">Adicionar arquivos</label>
-            <input type="file" id="pesquisador-main--editar-acao-arquivos" multiple hidden>
+            <label for="pesquisador-edicao--acao--campo--descricao" class="pesquisador-edicao--acao--label--descricao-acao">Descrição:</label>
+            <textarea id="pesquisador-edicao--acao--campo--descricao" class="pesquisador-edicao--acao--textarea--descricao--acao" name="descricao" rows="5" placeholder="Digite a descrição da sua ação aqui..."></textarea>
 
-            <div class="pesquisador-main--editar-acao-lista" id="pesquisador-main--editar-acao-listaArquivos"></div>
-            
-            <div class="pesquisador-main--editar-acao-botoes_edicao">
-                <button class="pesquisador-main--editar-acao-botao_cancelar">Cancelar</button>
-                <button class="pesquisador-main--editar-acao-botao_atualizar">Atualizar</button>
+
+            <label for="pesquisador-edicao--acao--campo--categoria--acao" class="pesquisador-edicao--acao--label--categoria--acao">Categoria da ação:</label>
+            <!-- Categoria de ação por select -->
+            <!-- <select id="pesquisador-edicao--acao--campo--categoria--acao" class="pesquisador-edicao--acao--select--categoria--acao">
+                <option value="" disabled selected hidden>Selecione uma categoria</option>
+                <option value="palestra">Palestra</option>
+                <option value="oficina">Oficina</option>
+                <option value="visita_tecnica">Visita Técnica</option>
+                <option value="evento">Evento</option>
+            </select> -->
+            <!-- ... -->
+
+            <!-- Categoria de ação por input -->
+            <input type="text" id="pesquisador-edicao--acao--campo--categoria" class="pesquisador-edicao--acao--input--categoria--acao" placeholder="Digite a categoria da ação">
+            <!-- ... -->
+
+
+                
+            <label for="pesquisador-edicao--acao--campo--url" class="pesquisador-edicao--acao--label--comprovantes--url">Comprovantes URL:</label>
+            <input type="text" id="pesquisador-edicao--acao--campo--url" class="pesquisador-edicao--acao--input--comprovantes--url" placeholder="Cole aqui o link do comprovante">
+
+            <div class="pesquisador-edicao--acao--comprovantes--cabecalho">
+                <h2 class="pesquisador-edicao--acao--comprovantes">Comprovantes:</h2>
+            </div>
+
+            <div class="pesquisador-edicao--acao--lista" id="pesquisador-edicao--acao--lista--arquivos"></div>
+
+            <div class="pesquisador-edicao--acao--botoes--edicao">
+                <button type="button" class="pesquisador-edicao--acao--botao--cancelar">Cancelar</button>
+                <button type="button" class="pesquisador-edicao--acao--botao--atualizar">Atualizar</button>
             </div>
         </div>
     </div>
