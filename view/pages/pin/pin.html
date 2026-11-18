@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificação de PIN | Embrapa Gado de Corte</title>
+  <link rel="stylesheet" href="../../../public/css/pin.css" />
+</head>
+<body>
+  <main class="pin-main--background">
+    <section class="pin-main--card" aria-labelledby="pin-main--titulo">
+      <button class="pin-main--botao-voltar" id="pin-main--botao-voltar" type="button" aria-label="Voltar" title="Voltar">
+        <img class="pin-main--icone-voltar" src="../../../public/imagens/Icone_Voltar_Pagina.png" alt="" />
+      </button>
+
+      <img class="pin-main--logo" src="../../../public/imagens/logo_embrapa.png" alt="Embrapa Gado de Corte" />
+
+      <h1 class="pin-main--titulo" id="pin-main--titulo">Digite o PIN enviado para seu E-mail</h1>
+
+      <form class="pin-main--formulario" id="pin-main--formulario">
+        <label class="pin-main--campo" for="pin-main--input">
+          <input
+            class="pin-main--input"
+            id="pin-main--input"
+            name="pin"
+            type="password"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            placeholder="Digite seu PIN aqui."
+            aria-label="PIN enviado por e-mail"
+            minlength="4"
+            maxlength="8"
+            required
+          />
+        </label>
+
+        <button class="pin-main--botao-verificar" type="submit">VERIFICAR</button>
+        <p class="pin-main--mensagem" id="pin-main--mensagem" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="../../../public/js/pin.js"></script>
+</body>
+</html>

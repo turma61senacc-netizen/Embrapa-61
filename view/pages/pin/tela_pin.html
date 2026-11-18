@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <link rel="stylesheet" href="../../../public/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo | Embrapa Gado de Corte</title>
+  <link rel="stylesheet" href="../../../public/css/style.css">
 </head>
 <body>
-    <main class="Background">
-        
-        <div class="Card">
-            <button id="botao-voltar-menu"><img src="../../../public/imagens/Icone_Voltar_Pagina.png" alt="Voltar para a tela de login"></button>
-            <img class="Logo" src="../../../public/imagens/embrapa-logo-fundo-transparente.png" alt="Logo Embrapa">
-            <h1 class="TituloPin">Digite o PIN enviado para seu E-mail</h1>
-            <input class="InputPin" type="email" placeholder="Digite seu PIN.">
+  <img class="fundo" src="../../../public/imagens/fundo_login.jpg" alt="" />
 
-            <button class="botao-verificar-pin">VERIFICAR</button>
-        </div>
-    </main>
+  <main class="cartao">
+    <button class="fechar" type="button" aria-label="Fechar" title="Fechar">
+      <img src="../../../public/imagens/Icone_Voltar_Pagina.png" width="34" height="34" style="object-fit: contain" alt="" />
+    </button>
+    <img class="logo" src="../../../public/imagens/logo_embrapa.png" alt="Embrapa Gado de Corte" />
+
+    <h1>Digite o PIN enviado para seu E-mail</h1>
+
+    <form id="form-entrada">
+      <label class="campo" for="pin">
+        <input id="pin" name="pin" type="password" inputmode="numeric" autocomplete="one-time-code" placeholder="Digite seu PIN aqui." aria-label="PIN enviado por e-mail" minlength="4" maxlength="8" required />
+      </label>
+      <button type="submit">VERIFICAR</button>
+      <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="../../../public/js/script.js"></script>
 </body>
 </html>
