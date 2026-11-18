@@ -11,34 +11,75 @@
         <div class="container1">
             <h1 class="txt_dash">Dashboard</h1>
             <!-- FAZER CONEXÃO COM O BANCO  -->
-            <select class="dropdown_ano" name="selecao_ano" id="selecao_ano">
-                <option value="">Selecione um ano</option>
-                <option value="">PLACEHOUDER</option>
-                <option value="">PLACEHOUDER</option>
-
-            </select>
+            <div class="te">
+                <select class="dropdown_ano" name="selecao_ano" id="selecao_ano">
+                    <option value="">Selecione um ano</option>
+                    <option value="">PLACEHOUDER</option>
+                    <option value="">PLACEHOUDER</option>
+                    
+                </select>
+            </div>
         </div>
         <div class="container-cards">
             <div class="card-acoes-realiazadas">
                 <p>Total de ações realizadas:</p>
-                <p>220</p>
+                <p class="txt_numero">220</p>
             </div>
 
             <div class="card-acoes-aprovadas">
                 <p>Aprovadas:</p>
-                <p>220</p>
+                <p class="txt_numero">110</p>
             </div>
 
             <div class="card-acoes-em-analise">
                 <p>Total de ações realizadas:</p>
-                <p>220</p>
+                <p class="txt_numero">55</p>
             </div>
 
             <div class="card-acoes-negadas">
                 <p>Total de ações realizadas:</p>
-                <p>220</p>
+                <p class="txt_numero">55</p>
             </div>
 
+
+        </div>
+
+        <!-- <div>
+            <div class="container-grafico">
+                <div class="grafico">
+                    <canvas id="grafico"></canvas>
+                </div>
+            </div>
+
+        </div> -->
+        <div class="container-resumo">
+            <h1>Resumo Rápido</h1>
+
+            <div class="container-resumos">
+                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
+                <div>
+                    <h4>Maior Volume</h4>
+                    <h6>Março/2026</h6>
+                    <h6>28 Ações</h6>
+                </div>
+            </div>
+
+            <div class="container-resumos">
+                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
+                <div>
+                    <h4>Menor Volume</h4>
+                    <h6>Julho/2026</h6>
+                    <h6>12 Ações</h6>
+                </div>
+            </div>
+
+            <div class="container-resumos">
+                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
+                <div>
+                    <h4>Menor Volume</h4>
+                    <h6>Aumento de 12% em relação ao mês anterior</h6>
+                </div>
+            </div>
 
         </div>
     </div>
