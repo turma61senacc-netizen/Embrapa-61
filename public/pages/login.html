@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo | Embrapa Gado de Corte</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="login-container-principal">
+    <svg class="login--fundo--ondas" aria-hidden="true" viewBox="0 0 1358 761" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1358" height="761" fill="#356394" />
+      <path d="M710 0H1358V560C1135 539 1053 422 972 302C860 135 746 35 710 0Z" fill="#285783" opacity=".52" />
+      <path d="M806 0H1358V461C1161 445 1062 324 981 213C907 112 845 46 806 0Z" fill="#24537d" opacity=".62" />
+      <path d="M906 0H1358V365C1177 351 1092 244 1010 139C968 85 935 31 906 0Z" fill="#204b72" opacity=".62" />
+      <path d="M993 0H1358V286C1245 278 1172 216 1112 136C1071 82 1054 24 1051 0Z" fill="#1d466c" opacity=".65" />
+      <path d="M1123 0H1358V183C1248 181 1189 114 1179 0Z" fill="#1b4267" opacity=".56" />
+      <path d="M0 112C184 219 314 300 485 314C647 327 715 364 834 493C918 584 1001 687 1054 761H0Z" fill="#2e5c89" opacity=".5" />
+      <path d="M0 209C192 320 313 330 398 403C473 465 479 591 618 761H0Z" fill="#285580" opacity=".7" />
+      <path d="M0 315C136 380 261 388 304 439C355 499 346 608 416 703C434 729 449 748 462 761H0Z" fill="#224e76" opacity=".88" />
+      <path d="M0 481C112 540 246 554 271 619C290 666 287 721 331 761H0Z" fill="#1e486e" opacity=".85" />
+      <path d="M0 583C71 622 164 618 193 665C210 692 209 731 230 761H0Z" fill="#1a4267" opacity=".85" />
+      <path d="M0 678C52 705 110 708 119 761H0Z" fill="#153d60" opacity=".65" />
+    </svg>
+
+    <main class="login--cartao--container">
+      <img class="login--logo--imagem" src="../imagens/logo_embrapa.png" alt="Logo Embrapa Gado de Corte" />
+
+      <h1 class="login--titulo--texto">Bem-vindo</h1>
+      <p class="login--instrucao--texto">Por favor, preencha os<br />campos com seus dados.</p>
+
+      <form id="login--formulario--login">
+        <label class="login--input-container--email" for="login--input--email">
+          <svg class="login--icone--usuario" width="20" height="26" viewBox="0 0 22 28" fill="none" aria-hidden="true">
+            <circle cx="11" cy="7.5" r="5" stroke="currentColor" stroke-width="1.6" />
+            <path d="M1.5 25.5c.3-6.3 4.3-9.5 9.5-9.5s9.2 3.2 9.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <input id="login--input--email" name="email" type="email" placeholder="Digite seu E-mail aqui." aria-label="Seu e-mail" autocomplete="email" required />
+        </label>
+        <button id="login--botao--entrar" type="submit">ENTRAR</button>
+        <p class="login--mensagem--status" id="login--p--mensagem" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+  </div>
+  <script src="../js/login.js"></script>
+</body>
+</html>
