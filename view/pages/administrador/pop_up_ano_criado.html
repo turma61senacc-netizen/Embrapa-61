@@ -1,0 +1,31 @@
+<!-- PopUp Ano Criado -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ano Criado</title>
+</head>
+<body>
+  <button id="btn-teste" type="button">Abrir popup</button>
+
+  
+  <script>
+    const btnTeste = document.getElementById('btn-teste');
+
+    btnTeste.addEventListener('click', () => {
+      const popup = document.createElement('popup-concluido');
+      popup.setAttribute('titulo', 'O ano foi criado!');
+      popup.setAttribute('mensagem', 'Ano adicionado ao sistema com sucesso!');
+      popup.setAttribute('texto-botao', 'Fechar');
+
+      popup.addEventListener('fechar', () => {
+        console.log('Popup fechado');
+      });
+
+      document.body.appendChild(popup);
+    });
+  </script>
+  <script src="../../../public/js/pop_up_concluir_acao.js"></script>
+</body>
+</html>
