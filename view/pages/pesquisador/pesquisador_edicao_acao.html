@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar ação</title>
-    <!-- <link rel="stylesheet" href="style (5).css"> -->
     <link rel="stylesheet" href="../../../public/css/pesquisador_edicao_acao.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <link rel="stylesheet" href="../../public/css/aside.css">
-    <link rel="stylesheet" href="../../public/css/header.css">
+    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../../../public/css/aside.css">
+    <link rel="stylesheet" href="../../../public/css/header.css">
+
 </head>
 <body>
+    <!-- Código Menu -->
      <!-- <header>
         <div class="menu-header--menu_superior">
             <div class="menu-header--elementos_menu">
@@ -21,18 +22,20 @@
             <button type="button" class="menu-header--botao_logout menu-header--texto">Logout</button>
         </div>
     </header>
+
     <aside>
         <nav class="menu-aside--menu_lateral">
             <div class="menu-aside--logo_menu_lateral">
-            <img src="../../public/imagens/embrapa-logo-fundo-transparente.png" class="menu-aside--imagem_logo" alt="Logo Embrapa">   <!--Logo da embrapa -->
-            <!-- </div>
+                <img src="../../public/imagens/embrapa-logo-fundo-transparente.png" class="menu-aside--imagem_logo" alt="Logo Embrapa">
+            </div>
 
             <div class="menu-aside--opcoes-menu">
                 <a href="#" class="menu-aside--opcao_menu_ativo"><img class="menu-aside--icone" src="#" alt="">Painel Principal</a>
                 <a href="#" class="menu-aside--opcao_menu_inativo"><img class="menu-aside--icone" src="#" alt="">Painel Principal</a>
             </div>
         </nav>
-    </aside> --> 
+    </aside> -->
+    <!-- ... -->
     
     <div class="pesquisador-edicao--acao--container--tabela--edicao">
         <h1 class="pesquisador-edicao--acao--titulo">Edição</h1>
@@ -52,34 +55,27 @@
             </div>
 
             <label for="pesquisador-edicao--acao--campo--descricao" class="pesquisador-edicao--acao--label--descricao-acao">Descrição:</label>
-            <textarea id="pesquisador-edicao--acao--campo--descricao" class="pesquisador-edicao--acao--textarea--descricao--acao" name="descricao" rows="5" placeholder="Digite a descrição da sua ação aqui..."></textarea>
+            <textarea id="pesquisador-edicao--acao--campo--descricao" class="pesquisador-edicao--acao--textarea--descricao--acao" name="descricao" rows="5" placeholder="Digite a descrição da sua ação aqui...">lore ipsum dolor sit amet</textarea>
 
 
             <label for="pesquisador-edicao--acao--campo--categoria--acao" class="pesquisador-edicao--acao--label--categoria--acao">Categoria da ação:</label>
-            <!-- Categoria de ação por select -->
-            <!-- <select id="pesquisador-edicao--acao--campo--categoria--acao" class="pesquisador-edicao--acao--select--categoria--acao">
-                <option value="" disabled selected hidden>Selecione uma categoria</option>
+            <select id="pesquisador-edicao--acao--campo--categoria--acao" class="pesquisador-edicao--acao--select--categoria--acao">
+                <option value="" disabled selected hidden>Selecione a categoria</option>
                 <option value="palestra">Palestra</option>
                 <option value="oficina">Oficina</option>
                 <option value="visita_tecnica">Visita Técnica</option>
                 <option value="evento">Evento</option>
-            </select> -->
-            <!-- ... -->
-
-            <!-- Categoria de ação por input -->
-            <input type="text" id="pesquisador-edicao--acao--campo--categoria" class="pesquisador-edicao--acao--input--categoria--acao" placeholder="Digite a categoria da ação">
-            <!-- ... -->
-
-
-                
-            <label for="pesquisador-edicao--acao--campo--url" class="pesquisador-edicao--acao--label--comprovantes--url">Comprovantes URL:</label>
-            <input type="text" id="pesquisador-edicao--acao--campo--url" class="pesquisador-edicao--acao--input--comprovantes--url" placeholder="Cole aqui o link do comprovante">
+            </select>
 
             <div class="pesquisador-edicao--acao--comprovantes--cabecalho">
                 <h2 class="pesquisador-edicao--acao--comprovantes">Comprovantes:</h2>
+            
             </div>
 
-            <div class="pesquisador-edicao--acao--lista" id="pesquisador-edicao--acao--lista--arquivos"></div>
+            <div class="pesquisador-edicao--acao--lista" id="pesquisador-edicao--acao--lista--arquivos">
+                lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+
+            </div>
 
             <div class="pesquisador-edicao--acao--botoes--edicao">
                 <button type="button" class="pesquisador-edicao--acao--botao--cancelar">Cancelar</button>

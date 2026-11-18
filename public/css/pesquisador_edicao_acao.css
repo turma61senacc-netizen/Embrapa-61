@@ -18,6 +18,7 @@
     align-items: center;
     padding-bottom: 3vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: auto;
 }
 
 .pesquisador-edicao--acao--titulo {
@@ -71,10 +72,37 @@
 
 /* ---------- Campos ---------- */
 
+/* Hover do dropdown do campo da categoria de ação */
+.pesquisador-edicao--acao--select--categoria--acao {
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.pesquisador-edicao--acao--select--categoria--acao:hover {
+    background-color: #c4c4c4;
+}
+
+.pesquisador-edicao--acao--select--categoria--acao:focus {
+    outline: none;
+    /* border-color: var(--cor-azul); */
+    /* box-shadow: 0 0 0 2px rgba(23, 41, 131, 0.25); */
+}
+
+.pesquisador-edicao--acao--select--categoria--acao:invalid {
+    color: #757575;
+}
+
+.pesquisador-edicao--acao--select--categoria--acao option {
+    color: #000;
+    background-color: #fff;
+}
+/* ... */
+
 .pesquisador-edicao--acao--input--titulo--acao,
 .pesquisador-edicao--acao--input--data--realizacao,
 .pesquisador-edicao--acao--select--categoria--acao,
-.pesquisador-edicao--acao--input--categoria--acao,
+/* .pesquisador-edicao--acao--input--categoria--acao, */
 .pesquisador-edicao--acao--input--comprovantes--url,
 .pesquisador-edicao--acao--textarea--descricao--acao {
     width: 100%;
@@ -88,7 +116,7 @@
 
 .pesquisador-edicao--acao--input--titulo--acao,
 .pesquisador-edicao--acao--input--data--realizacao,
-.pesquisador-edicao--acao--input--categoria--acao,
+/* .pesquisador-edicao--acao--input--categoria--acao, */
 .pesquisador-edicao--acao--input--comprovantes--url {
     height: 5vh;
 }
