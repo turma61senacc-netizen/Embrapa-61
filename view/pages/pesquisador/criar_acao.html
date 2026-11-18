@@ -1,146 +1,162 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../../../public/css/criar_acao.css">
-    <link rel="stylesheet" href="../../../public/css/aside.css">
-    <link rel="stylesheet" href="../../../public/css/header.css">
-
     <title>Criar Ação - Pesquisador</title>
 </head>
 <body>
 
-    <header>
-        <div class="menu-header--menu_superior">
-            <div class="menu-header--elementos_menu">
-                <p class="menu-header--texto_bold menu-header--dados_usuario" id="nome_usuario">
-                    Placeholder Nome
-                </p>
+    <main class="pesquisador-criarAcao--container--principal">
 
-                <p class="menu-header--texto menu-header--dados_usuario">|</p>
+        <h1 class="pesquisador-criarAcao--titulo--pagina">Criar ação</h1>
 
-                <p class="menu-header--texto_bold menu-header--dados_usuario">
-                    Placeholder Função
-                </p>
-            </div>
+        <section class="pesquisador-criarAcao--container--formulario">
 
-            <button type="button" class="menu-header--botao_logout menu-header--texto">
-                Logout
-            </button>
-        </div>
-    </header>
+            <div class="pesquisador-criarAcao--container--linhaSuperior">
 
-    <aside>
-        <nav class="menu-aside--menu_lateral">
-
-            <div class="menu-aside--logo_menu_lateral">
-                <img
-                    src="../../../public/imagens/embrapa-logo-fundo-transparente.png"
-                    class="menu-aside--imagem_logo"
-                    alt="Logo Embrapa">
-            </div>
-
-            <div class="menu-aside--opcoes-menu">
-
-                <a href="#" class="menu-aside--opcao_menu_ativo">
-                    <img class="menu-aside--icone" src="#" alt="">
-                    Painel Principal
-                </a>
-
-                <a href="#" class="menu-aside--opcao_menu_inativo">
-                    <img class="menu-aside--icone" src="#" alt="">
-                    Minhas Ações
-                </a>
-
-            </div>
-        </nav>
-    </aside>
-
-    <main class="criar-acao-container">
-
-        <h1 class="criar-acao-titulo">Criar ação</h1>
-
-        <section class="criar-acao-card">
-
-            <div class="criar-acao-linha-superior">
-
-                <div class="criar-acao-campo criar-acao-nome">
-                    <label for="criar-acao-nome">Título Da Ação:</label>
+                <div class="pesquisador-criarAcao--container--nome">
+                    <label class="pesquisador-criarAcao--label--campo" for="pesquisador-criarAcao--input--nome">
+                        Título Da Ação:
+                    </label>
 
                     <input
                         type="text"
-                        id="criar-acao-nome"
+                        id="pesquisador-criarAcao--input--nome"
+                        class="pesquisador-criarAcao--input--nome"
                         placeholder="Digite o nome do artigo aqui...">
                 </div>
 
-                <div class="criar-acao-campo criar-acao-data">
-                    <label for="criar-acao-data">Data de Execução:</label>
+                <div class="pesquisador-criarAcao--container--data">
+                    <label class="pesquisador-criarAcao--label--campo" for="pesquisador-criarAcao--input--data">
+                        Data de Execução:
+                    </label>
 
                     <input
                         type="date"
-                        id="criar-acao-data">
+                        id="pesquisador-criarAcao--input--data"
+                        class="pesquisador-criarAcao--input--data">
                 </div>
 
             </div>
 
-            <div class="criar-acao-campo criar-acao-descricao">
-                <label for="criar-acao-descricao">Descrição:</label>
+            <div class="pesquisador-criarAcao--container--descricao">
+                <label class="pesquisador-criarAcao--label--campo" for="pesquisador-criarAcao--textarea--descricao">
+                    Descrição:
+                </label>
 
                 <textarea
-                    id="criar-acao-descricao"
+                    id="pesquisador-criarAcao--textarea--descricao"
+                    class="pesquisador-criarAcao--textarea--descricao"
                     placeholder="Digite a descrição do artigo aqui..."></textarea>
             </div>
 
-            <div class="criar-acao-formulario">
+            <div class="pesquisador-criarAcao--container--campos">
 
-                <div class="criar-acao-campo criar-acao-acao">
-                    <label for="criar-acao-select">Ação:</label>
+                <div class="pesquisador-criarAcao--container--categoria">
 
-                    <select id="criar-acao-select">
-                        <option>Selecionar ação</option>
-                    </select>
+                    <label class="pesquisador-criarAcao--label--campo">
+                        Categoria da Ação:
+                    </label>
+
+                    <details class="pesquisador-criarAcao--dropdown">
+
+                        <summary class="pesquisador-criarAcao--botao--categoria">
+                            <span class="pesquisador-criarAcao--categoria--padrao">Selecionar ação</span>
+                            <span class="pesquisador-criarAcao--categoria--palestra">Palestra</span>
+                            <span class="pesquisador-criarAcao--categoria--pesquisa">Pesquisa</span>
+                            <span class="pesquisador-criarAcao--categoria--entrevista">Entrevista</span>
+                        </summary>
+
+                        <div class="pesquisador-criarAcao--lista--categoria">
+
+                            <input
+                                type="radio"
+                                name="categoria"
+                                id="pesquisador-criarAcao--radio--palestra"
+                                value="palestra">
+
+                            <label for="pesquisador-criarAcao--radio--palestra">
+                                Palestra
+                            </label>
+
+                            <input
+                                type="radio"
+                                name="categoria"
+                                id="pesquisador-criarAcao--radio--pesquisa"
+                                value="pesquisa">
+
+                            <label for="pesquisador-criarAcao--radio--pesquisa">
+                                Pesquisa
+                            </label>
+
+                            <input
+                                type="radio"
+                                name="categoria"
+                                id="pesquisador-criarAcao--radio--entrevista"
+                                value="entrevista">
+
+                            <label for="pesquisador-criarAcao--radio--entrevista">
+                                Entrevista
+                            </label>
+
+                        </div>
+                    </details>
                 </div>
 
-                <div class="criar-acao-campo criar-acao-url">
-                    <label for="criar-acao-url">Comprovante URL:</label>
+                <div class="pesquisador-criarAcao--container--url">
+                    <label class="pesquisador-criarAcao--label--campo" for="pesquisador-criarAcao--input--url">
+                        Comprovante URL:
+                    </label>
 
                     <input
                         type="text"
-                        id="criar-acao-url"
+                        id="pesquisador-criarAcao--input--url"
+                        class="pesquisador-criarAcao--input--url"
                         placeholder="Digite a URL do seu link...">
                 </div>
 
-                <div class="criar-acao-campo criar-acao-comprovantes">
-                    <label>Comprovantes:</label>
+                <div class="pesquisador-criarAcao--container--comprovantes">
+                    <label class="pesquisador-criarAcao--label--campo">
+                        Comprovantes:
+                    </label>
 
-                    <div class="criar-acao-upload">
+                    <div class="pesquisador-criarAcao--container--upload">
+
                         <img
                             src="../../../public/imagens/Arquivo_Upload.png"
+                            class="pesquisador-criarAcao--imagem--upload"
                             alt="Upload">
 
-                        <span>
+                        <span class="pesquisador-criarAcao--texto--upload">
                             <b>Arraste seus arquivos aqui ou clique para fazer Upload</b>
-                            <small>(PDF, DOCX, Imagens...)</small>
+                            <small class="pesquisador-criarAcao--texto--formatos">
+                                (PDF, DOCX, Imagens...)
+                            </small>
                         </span>
+
                     </div>
                 </div>
 
-                <div class="criar-acao-botoes">
+                <div class="pesquisador-criarAcao--container--botoes">
 
-                    <button class="criar-acao-cancelar">
+                    <button class="pesquisador-criarAcao--botao--cancelar">
                         Cancelar
                     </button>
 
-                    <div class="criar-acao-postar-area">
-                        <p>Sua postagem será revisada em breve</p>
+                    <div class="pesquisador-criarAcao--container--postar">
 
-                        <button class="criar-acao-postar">
+                        <p class="pesquisador-criarAcao--texto--revisao">
+                            Sua postagem será revisada em breve
+                        </p>
+
+                        <button class="pesquisador-criarAcao--botao--postar">
                             Postar
                         </button>
-                    </div>
 
+                    </div>
                 </div>
 
             </div>
