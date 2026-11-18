@@ -1437,16 +1437,88 @@ input[type="text"] {
 .pesquisador-pop-relatorio--botao-gerar:hover {
     background-color: #0D1C54;
 }
-
-
-.comite-tabela-colaboradores-container{
-    justify-items: center;
-    
-   
+/* Tela de Colaboradores - Comitê */
+.comite-colaboradores--container {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-.comite-tabela-colaboradores-tabela{
-    justify-self: center;
-    
-   
+
+.comite-colaboradores--container *,
+.comite-colaboradores--container *::before,
+.comite-colaboradores--container *::after {
+  box-sizing: border-box;
 }
+
+.comite-colaboradores--container .comite-colaboradores--tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela thead {
+  background-color: #142777;
+  color: #ffffff;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela th {
+  padding: 8px 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela td {
+  padding: 6px 12px;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela tbody tr:nth-child(even) {
+  background-color: #e8f1ff;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela tbody tr:hover {
+  background-color: #d5e5ff;
+  transition: background-color 0.2s ease;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela td.comite-colaboradores--status-valido {
+  color: #008f28;
+  font-weight: 500;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela td.comite-colaboradores--status-nulo {
+  color: #1755b8;
+  font-weight: 500;
+}
+
+.comite-colaboradores--container .comite-colaboradores--tabela td.comite-colaboradores--status-invalido {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .comite-colaboradores--container .comite-colaboradores--tabela {
+    font-size: 12px;
+  }
+
+  .comite-colaboradores--container .comite-colaboradores--tabela th,
+  .comite-colaboradores--container .comite-colaboradores--tabela td {
+    padding: 8px;
+  }
+}
+
 
