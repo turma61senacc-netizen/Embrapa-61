@@ -1439,7 +1439,12 @@ input[type="text"] {
 }
 /* Tela de Colaboradores - Comitê */
 .comite-colaboradores--container {
-  width: 100%;
+    width: 90%;
+    height: 90vh;
+    height: 90dvh;
+    margin-block: 5vh;
+    margin-block: 5dvh;
+    margin-inline: auto;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
@@ -1452,6 +1457,7 @@ input[type="text"] {
 
 .comite-colaboradores--container .comite-colaboradores--tabela-container {
   width: 100%;
+    height: 100%;
   overflow-x: auto;
   border-radius: 12px;
   background-color: #ffffff;
@@ -1460,6 +1466,7 @@ input[type="text"] {
 
 .comite-colaboradores--container .comite-colaboradores--tabela {
   width: 100%;
+    height: 100%;
   border-collapse: collapse;
   text-align: center;
   font-size: 14px;
@@ -1517,6 +1524,96 @@ input[type="text"] {
 
   .comite-colaboradores--container .comite-colaboradores--tabela th,
   .comite-colaboradores--container .comite-colaboradores--tabela td {
+    padding: 8px;
+  }
+}
+/* Tela de Colaboradores */
+.colaboradores-container {
+    width: 90%;
+    height: 90vh;
+    height: 90dvh;
+    margin-block: 5vh;
+    margin-block: 5dvh;
+    margin-inline: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.colaboradores-container *,
+.colaboradores-container *::before,
+.colaboradores-container *::after {
+  box-sizing: border-box;
+}
+
+.colaboradores-container .tabela-container {
+  width: 100%;
+    height: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.colaboradores-container .tabela-colaboradores {
+  width: 100%;
+    height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+}
+
+.colaboradores-container .tabela-colaboradores thead {
+  background-color: #142777;
+  color: #ffffff;
+}
+
+.colaboradores-container .tabela-colaboradores th {
+  padding: 8px 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.colaboradores-container .tabela-colaboradores td {
+  padding: 6px 12px;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.colaboradores-container .tabela-colaboradores tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.colaboradores-container .tabela-colaboradores tbody tr:nth-child(even) {
+  background-color: #e8f1ff;
+}
+
+.colaboradores-container .tabela-colaboradores tbody tr:hover {
+  background-color: #d5e5ff;
+  transition: background-color 0.2s ease;
+}
+
+.colaboradores-container .tabela-colaboradores td.status-valido {
+  color: #008f28;
+  font-weight: 500;
+}
+
+.colaboradores-container .tabela-colaboradores td.status-nulo {
+  color: #1755b8;
+  font-weight: 500;
+}
+
+.colaboradores-container .tabela-colaboradores td.status-invalido {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .colaboradores-container .tabela-colaboradores {
+    font-size: 12px;
+  }
+
+  .colaboradores-container .tabela-colaboradores th,
+  .colaboradores-container .tabela-colaboradores td {
     padding: 8px;
   }
 }
