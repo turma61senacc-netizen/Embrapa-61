@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/tempadm.css">
 </head>
 <body>
@@ -13,76 +13,98 @@
             <!-- FAZER CONEXÃO COM O BANCO  -->
             <div class="te">
                 <select class="dropdown_ano" name="selecao_ano" id="selecao_ano">
-                    <option value="">Selecione um ano</option>
-                    <option value="">PLACEHOUDER</option>
-                    <option value="">PLACEHOUDER</option>
-                    
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
                 </select>
             </div>
         </div>
+
         <div class="container-cards">
             <div class="card-acoes-realiazadas">
-                <p>Total de ações realizadas:</p>
+                <p class="txt_titulo_card">Total de ações realizadas:</p>
                 <p class="txt_numero">220</p>
             </div>
 
             <div class="card-acoes-aprovadas">
-                <p>Aprovadas:</p>
+                <p class="txt_titulo_card">✔ Aprovadas</p>
                 <p class="txt_numero">110</p>
+                <p class="txt_pct">50%</p>
+                <div class="barra" style="--p:50%"><span></span></div>
             </div>
 
             <div class="card-acoes-em-analise">
-                <p>Total de ações realizadas:</p>
+                <p class="txt_titulo_card">◷ Em análise</p>
                 <p class="txt_numero">55</p>
+                <p class="txt_pct">25%</p>
+                <div class="barra" style="--p:25%"><span></span></div>
             </div>
 
             <div class="card-acoes-negadas">
-                <p>Total de ações realizadas:</p>
+                <p class="txt_titulo_card">✕ Negadas</p>
                 <p class="txt_numero">55</p>
+                <p class="txt_pct">25%</p>
+                <div class="barra" style="--p:25%"><span></span></div>
             </div>
-
-
         </div>
 
-        <!-- <div>
+        <div class="container-baixo">
+
+            <!-- GRÁFICO (sem canvas e sem biblioteca: só CSS) -->
             <div class="container-grafico">
-                <div class="grafico">
-                    <canvas id="grafico"></canvas>
+                <h1>Distribuição das Ações</h1>
+                <div class="grafico-linha">
+                    <div class="rosca-wrap">
+                        <div class="rosca"></div>
+                        <div class="rosca-centro">Total<strong>220</strong>Ações</div>
+                        <span class="fatia" style="left:171px; top:67px">50%</span>
+                        <span class="fatia" style="left:61px; top:168px">25%</span>
+                        <span class="fatia" style="left:22px; top:61px">25%</span>
+                    </div>
+                    <ul class="legenda">
+                        <li><i style="background:#058914"></i> Aprovadas <small>110 (50%)</small></li>
+                        <li><i style="background:#0088FF"></i> Em análise <small>55 (25%)</small></li>
+                        <li><i style="background:#FD7B01"></i> Negadas <small>55 (25%)</small></li>
+                    </ul>
                 </div>
             </div>
 
-        </div> -->
-        <div class="container-resumo">
-            <h1>Resumo Rápido</h1>
+            <div class="container-resumo">
+                <h1>Resumo Rápido</h1>
 
-            <div class="container-resumos">
-                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
-                <div>
-                    <h4>Maior Volume</h4>
-                    <h6>Março/2026</h6>
-                    <h6>28 Ações</h6>
+                <div class="container-resumos">
+                    <div class="img_resumo verde">
+                        <svg viewBox="0 0 24 24"><path d="M12 20V4M5 11l7-7 7 7"/></svg>
+                    </div>
+                    <div>
+                        <h4>Maior Volume</h4>
+                        <h6>Março/2026</h6>
+                        <h6>28 Ações</h6>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container-resumos">
-                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
-                <div>
-                    <h4>Menor Volume</h4>
-                    <h6>Julho/2026</h6>
-                    <h6>12 Ações</h6>
+                <div class="container-resumos">
+                    <div class="img_resumo laranja">
+                        <svg viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+                    </div>
+                    <div>
+                        <h4>Menor Volume</h4>
+                        <h6>Julho/2026</h6>
+                        <h6>12 Ações</h6>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container-resumos">
-                <img class="img_resumo" src="../../../public/imagens/seta_baixo.png" alt="Resumo" >
-                <div>
-                    <h4>Menor Volume</h4>
-                    <h6>Aumento de 12% em relação ao mês anterior</h6>
+                <div class="container-resumos">
+                    <div class="img_resumo azul">
+                        <svg viewBox="0 0 24 24"><path d="M5 20V10h4v10M10 20V4h4v16M15 20v-8h4v8"/></svg>
+                    </div>
+                    <div>
+                        <h4>Comparação</h4>
+                        <h6>Aumento de <span class="verde-txt">12%</span> em relação ao mês anterior</h6>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
-    
 </body>
 </html>
